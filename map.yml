@@ -1,0 +1,3 @@
+map_name: ww2_risk_of_defeat
+games:
+- {game_name: WW2 Risk of Defeat, file_name: ww2_risk_of_defeat.xml}

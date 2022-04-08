@@ -1,0 +1,6 @@
+ <!--  National Objectives (A number of NOs are done with Conditions further down) -->
+    <!-- German Objectives -->
+	
+    <attachment name="conditionAttachment_Control_Continent_Europe" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="directOwnershipTerritories" value="Crete"/>
+    </attachment>
