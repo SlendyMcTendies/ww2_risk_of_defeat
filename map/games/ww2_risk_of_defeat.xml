@@ -6597,28 +6597,43 @@ A link to a PDF file will be included in upcoming version which breaks down how 
 0.0.5
 <br>
 <br>
-<u>Rebalanced Territory PU gain:</u><br>
+<u>Rebalanced Territory PU gain</u><br>
 >Tsinghai is no longer a capital; Kiangsu is now the Chinese Capital.<br>
->Tsinghai generates 1 PU instead of 5<br>
->Manilla generates 3 PU instead of 2<br>
->Davao generates 2PU instead of 1<br>
->Western Australia generates 2 PU instead of 1<br>
->Peru generates 2 PU instead of 1<br>
->Eastern United States generates 12 PU instead of 20<br>
->Italian Somaliland and British Somaliland generate 2 PU instead of 1<br>
->Sierra Leone generates 2 PU instead of 1<br>
->Morocco generates 2 PU instead of 1<br>
+>Tsinghai generates 1 PU instead of 5.<br>
+>Manilla generates 3 PU instead of 2.<br>
+>Davao generates 2PU instead of 1.<br>
+>Western Australia generates 2 PU instead of 1.<br>
+>Peru generates 2 PU instead of 1.<br>
+>Italian Somaliland and British Somaliland generate 2 PU instead of 1.<br>
+>Sierra Leone generates 2 PU instead of 1.<br>
+>Morocco generates 2 PU instead of 1.<br>
+>East, Central, and Western United States territories grnerate 6 PU each instead of 20, 12, and 10.<br>
 <br>
-<u>Implemented "Continent Bonuses":</u><br>
->Australia, Pacific Islands, and South America give 7 Bonus PU when all territories are controlled<br>
->Africa gives 14 Bonus PU when all territories are controlled<br>
->North America gives 21 Bonus PU when all territories are controlled<br>
->Europe Gives 35 Bonus PU when all territories are controlled<br>
->Asia gives 49 Bonus PU when all territories are controlled<br>
+<u>Implemented "Continent Bonuses"</u><br>
+>[GREY]   Pacific Islands give 3 Bonus PU when all territories are controlled.<br>
+>[RED]    South America gives 3 Bonus PU when all territories are controlled.<br>
+>[PURPLE] Australia gives 4 Bonus PU when all territories are controlled.<br>
+>[BROWN]  Africa gives 6 Bonus PU when all territories are controlled.<br>
+>[YELLOW] North America gives 6 Bonus PU when all territories are controlled.<br>
+>[BLUE]   Europe gives 14 Bonus PU when all territories are controlled.<br>
+>[GREEN]  Asia gives 20 Bonus PU when all territories are controlled.<br>
 <br>
->TODO: Colorize territory names for coresponding continents<br>
->TODO: Rewrite Politics System from 'Path to Victory'<br>
->TODO: Add Paratroopers & Paratrooper Attack Bonus<br>
+>Territory PU Numbers colorized to reflect their Continent.<br>
+<br>
+>Territory Selection adjusted to give 5 Infantry, 4 Tanks, 1 Minor Factory for a (maximum) total of 10 Territories gained at the start of a game<br>
+<br>
+<u>Automated Victory System</u><br>
+>Two victory conditions exist which will trigger Victory for a player and their allies.<br>
+>If a single player controls at least 11 out of the 21 Victory Cities/Victory Territories, victory is claimed for that player and all of their allies.<br>
+>If a group of allied players control at least 18 out of the 21 Victory Cities/Victory Territories, Victory is claimed for that Alliance.<br>
+<br>
+<u>Politics System</u><br>
+>All players begin in a Neutral stance with every other player.<br>
+>Players may [Request Alliance], [Break Alliance], [Request Ceasefire], or [Declare War] with other players during the Politics phase depending on their current political standing.<br>
+>Ceasefires and Alliances require the other party to agree.<br>
+>Players must be Neutral (either by [Request Ceasefire] or by [Break Alliance]) to request an Alliance or to Declare War on another player.<br>
+>Players cannot Declare War on an Allied player, they must first become Neutral via [Break Alliance].<br>
+>Players cannot Request Alliance to a player they are at War with, they must first become Neutral via [Request Ceasefire].<br>
 <br>
 <br>
 0.0.4
@@ -6634,7 +6649,6 @@ A link to a PDF file will be included in upcoming version which breaks down how 
 >Factory Upgrades work on territories with 2 production<br>
 >You cannot build Major Factories right away on territories with less than 3 production (you must first build a minor factory, then upgrade to a major factory)<br>
 >Major Factory cost increased to 60PU, Factory Upgrade cost increased to 40PU<br>
->Bombers now have Transport Capacity of 5 - Allowing for Paratroopers<br>
 >Capitals are no longer required - Capital assignments have been removed<br>
 >Major Factories now produce a maximum of 9 Units<br>
 >Airfields and Harbors can produce up to 3 air or sea units respectively<br>
