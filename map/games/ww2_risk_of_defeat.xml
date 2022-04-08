@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.0.5"/>
+        <info name="WW2 Risk of Defeat" version="0.1.0"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -1548,7 +1548,6 @@
       <step name="frenchNonCombatMove" delegate="move" player="French" display="Non Combat Move"/>
       <step name="frenchPlace" delegate="place" player="French"/>
       <step name="frenchEndTurn" delegate="endTurn" player="French">
-      
 	  </step>
       <step name="endRoundStep" delegate="endRound"/>
     </sequence>
@@ -2366,7 +2365,7 @@
     <attachment name="unitAttachment" attachTo="factory_minor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-      <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="3"/>
@@ -2378,7 +2377,7 @@
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-      <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="9"/>
@@ -2391,7 +2390,7 @@
       <option name="isFactory" value="true"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-      <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="maxConstructionsPerTypePerTerr" value="2"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="9"/>
       <option name="maxDamage" value="18"/>
@@ -2404,16 +2403,16 @@
     <attachment name="unitAttachment" attachTo="airfield" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
 	  <option name="isFactory" value="true"/>
-	  <option name="canProduceXUnits" value="3"/>
+	  <option name="canProduceXUnits" value="5"/>
       <option name="canBeDamaged" value="true"/>
       <option name="maxDamage" value="6"/>
       <option name="maxOperationalDamage" value="2"/>
       <option name="isAirBase" value="true"/>
-      <option name="maxScrambleCount" value="3"/>
+      <option name="maxScrambleCount" value="5"/>
       <option name="isConstruction" value="true"/>
       <option name="constructionType" value="airfield_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-      <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="maxConstructionsPerTypePerTerr" value="2"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
       <option name="movement" value="0"/>
       <option name="givesMovement" value="1:fighter"/>
@@ -2429,7 +2428,7 @@
     <attachment name="unitAttachment" attachTo="harbour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
 	  <option name="isFactory" value="true"/>
-	  <option name="canProduceXUnits" value="3"/>
+	  <option name="canProduceXUnits" value="5"/>
       <option name="canBeDamaged" value="true"/>
       <option name="maxDamage" value="6"/>
       <option name="maxOperationalDamage" value="2"/>
@@ -2437,7 +2436,7 @@
       <option name="isConstruction" value="true"/>
       <option name="constructionType" value="harbour_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-      <option name="maxConstructionsPerTypePerTerr" value="1"/>
+      <option name="maxConstructionsPerTypePerTerr" value="2"/>
       <option name="movement" value="0"/>
       <option name="givesMovement" value="1:transport"/>
       <option name="givesMovement" value="1:submarine"/>
@@ -2768,7 +2767,7 @@
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Western United States" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-		<option name="production" value="10"/>
+		<option name="production" value="6"/>
 		<option name="victoryCity" value="1"/>		
 		</attachment>
 
@@ -2785,7 +2784,7 @@
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Eastern United States" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-		<option name="production" value="12"/>
+		<option name="production" value="6"/>
 		<option name="capital" value="none"/>
 		<option name="victoryCity" value="1"/>
 		</attachment>
@@ -2804,7 +2803,7 @@
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Central United States" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-		<option name="production" value="12"/>
+		<option name="production" value="6"/>
 		<option name="victoryCity" value="1"/>
 		</attachment>
 
@@ -3412,153 +3411,129 @@
 		<attachment name="territoryAttachment" attachTo="1 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="2 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="7 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="6 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="21 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="23 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="5 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="11 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="18 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="20 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="22 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="23 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="27 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="36 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="37 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="38 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-
 		<option name="blockadeZone" value="true"/>
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="43 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-
 		<option name="blockadeZone" value="true"/>
-
 		</attachment>
+
 		<attachment name="territoryAttachment" attachTo="132 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="40 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="42 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="59 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="44 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="45 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="55 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="64 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
-
-
 		</attachment>
+		
 		<attachment name="territoryAttachment" attachTo="65 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
 		<option name="blockadeZone" value="true"/>
 		</attachment>
+		
 		<!-- E40 -->
 		<attachment name="territoryAttachment" attachTo="81 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>      
@@ -3569,66 +3544,82 @@
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="73 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="73 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="74 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="74 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="82 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="82 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="84 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="84 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="87 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="87 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="91 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="91 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="95 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="95 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="99 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="99 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="100 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="100 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="101 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="101 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="104 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="104 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="108 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="108 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
-    <attachment name="territoryAttachment" attachTo="109 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+    
+	<attachment name="territoryAttachment" attachTo="109 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
+	
     <attachment name="territoryAttachment" attachTo="112 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
+	
     <attachment name="territoryAttachment" attachTo="122 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
+	
     <attachment name="territoryAttachment" attachTo="128 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
@@ -3688,7 +3679,7 @@
 <attachment name="canalAttachmentTsugaru" attachTo="7 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Tsugaru Strait"/>
       <option name="landTerritories" value="Japan:Hokkaido"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber:submarine"/>
+      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
     </attachment>
     <attachment name="canalAttachmentTsugaru" attachTo="6 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Tsugaru Strait"/>
@@ -4643,7 +4634,7 @@
 	<option name="conditions" value="conditionAttachment_Russian_Italian_War"/>
 	<option name="relationshipChange" value="Russians:Italians:Neutrality"/>
 	<option name="text" value="Russian_Italian_Ceasefire"/>
-	<option name="actionAccept" value="Italian"/>
+	<option name="actionAccept" value="Italians"/>
 	<option name="attemptsPerTurn" value="1"/>
 </attachment>
 
@@ -5968,27 +5959,64 @@
 <!-- Notify all players that a Player or Allied Players are near Victory -->
 <!--              by having 9+vc out of 21vc -->
 
-<!-- Notify All Players Test Solo Victory-->
+<!-- Notify All Players Test (Default Code)-->
+<!--
+    <attachment foreach="$AllPlayers$" name="conditionAttachmentNotify@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+		<option name="alliedOwnershipTerritories" value="$Victory$" count="9"/>
+	</attachment>
+    <attachment foreach="$AllPlayers$" name="triggerAttachmentNotify@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+		<option name="trigger" value="conditionAttachmentNotify@AllPlayers@"/>
+		<option name="notification" value="Notify@AllPlayers@"/>
+		<option name="players" value="$AllPlayers$"/>
+	</attachment>
+-->
+
+<!-- Notify All Players (TEST CODE)-->
+<!--Check for nearing Victory-->
+	<attachment name="conditionAttachmentNotifyGermans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+		<option name="directOwnershipTerritories" value="Poland:Germany:Russia:Leningrad:Stalingrad:Kiangsu:Japan:Western United States:Central United States:Eastern United States:Manilla:Hawaiian Islands:Kwangtung:United Kingdom:Ontario:Egypt:Malaya:Eastern India:Southern Italy:New South Wales:France" count="9"/>
+	</attachment>
+	<attachment name="conditionAttachmentNotifyRussians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+		<option name="directOwnershipTerritories" value="Poland:Germany:Russia:Leningrad:Stalingrad:Kiangsu:Japan:Western United States:Central United States:Eastern United States:Manilla:Hawaiian Islands:Kwangtung:United Kingdom:Ontario:Egypt:Malaya:Eastern India:Southern Italy:New South Wales:France" count="9"/>
+	</attachment>
+	
+<!--Notify all players when check passes-->
+    <attachment name="triggerAttachmentNotifyGermans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+		<option name="trigger" value="conditionAttachmentNotifyGermans"/>
+		<option name="notification" value="NotifyGermans"/>
+		<option name="players" value="$AllPlayers$"/>
+	</attachment>
+	<attachment name="triggerAttachmentNotifyRussians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+		<option name="trigger" value="conditionAttachmentNotifyRussians"/>
+		<option name="notification" value="NotifyRussians"/>
+		<option name="players" value="$AllPlayers$"/>
+	</attachment>
+
+
+
+
+<!--Modified Code
     <attachment foreach="$AllPlayers$" name="conditionAttachmentNotifySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="directOwnershipTerritories" value="$Victory$" count="9"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentNotifySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-		<option name="trigger" value="conditionAttachmentNotifySolo@AllPlayers@"/>  <!-- see notification.properties -->
+		<option name="trigger" value="conditionAttachmentNotifySolo@AllPlayers@"/>
 		<option name="notification" value="NotifySolo@AllPlayers@"/>
 		<option name="players" value="$AllPlayers$"/>
 	</attachment>
-	
+-->
+
 <!--Notify All Players Test Allied Voctory-->
+<!--Modified Code
 	<attachment foreach="$AllPlayers$" name="conditionAttachmentNotifyAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="alliedOwnershipTerritories" value="$Victory$" count="14"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentNotifyAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-		<option name="trigger" value="conditionAttachmentNotifyAllied@AllPlayers@"/>  <!-- see notification.properties -->
+		<option name="trigger" value="conditionAttachmentNotifyAllied@AllPlayers@"/>
 		<option name="notification" value="NotifyAllied@AllPlayers@"/>
 		<option name="players" value="$AllPlayers$"/>
 	</attachment>
-
-
+-->
 
 <!-- ======================================= GO VICTORY ======================================= -->
 <!-- Trigger Victory for a Player or Alliance -->
@@ -6216,10 +6244,10 @@
     <property name="Low Luck for AntiAircraft" value="false" editable="true">
       <boolean/>
     </property>
-    <property name="Low Luck for Technology" value="false" editable="true">
+    <property name="Low Luck for Technology" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Low Luck for Bombing and Territory Damage" value="false" editable="true">
+    <property name="Low Luck for Bombing and Territory Damage" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Use Politics" value="true" editable="false">
@@ -6231,13 +6259,13 @@
     <property name="Use Triggers" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Tech Development" value="false" editable="true">
+    <property name="Tech Development" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Super Sub Defence Bonus" value="0" editable="true">
+    <property name="Super Sub Defence Bonus" value="0" editable="false">
       <number min="0" max="1"/>
     </property>
-    <property name="LHTR Heavy Bombers" value="true" editable="true">
+    <property name="LHTR Heavy Bombers" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Heavy Bomber Dice Rolls" value="2" editable="false">
@@ -6258,7 +6286,7 @@
     <property name="Units Repair Hits Start Turn" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Two HitPoint Units Require Repair Facilities" value="true" editable="true">
+    <property name="Two HitPoint Units Require Repair Facilities" value="true" editable="false">
       <boolean/>
     </property>
     <!-- Display Options -->
@@ -6288,19 +6316,19 @@
     <property name="Use Shipyards" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble Rules In Effect" value="true" editable="true">
+    <property name="Scramble Rules In Effect" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scrambled Units Return To Base" value="true" editable="true">
+    <property name="Scrambled Units Return To Base" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble To Sea Only" value="false" editable="true">
+    <property name="Scramble To Sea Only" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble From Island Only" value="false" editable="true">
+    <property name="Scramble From Island Only" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Scramble To Any Amphibious Assault" value="true" editable="true">
+    <property name="Scramble To Any Amphibious Assault" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Airborne Attacks Only In Existing Battles" value="true" editable="false">
@@ -6488,13 +6516,13 @@
     <property name="Limit Rocket Damage Per Turn" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="maxFactoriesPerTerritory" value="2" editable="true">
+    <property name="maxFactoriesPerTerritory" value="2" editable="false">
       <number min="1" max="4"/>
     </property>
     <property name="Placement Restricted By Factory" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Unit Placement Restrictions" value="true" editable="true">
+    <property name="Unit Placement Restrictions" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Raids May Be Preceeded By Air Battles" value="true" editable="true">
@@ -6556,13 +6584,15 @@
             <b>Gameplay by SlendyMcTendies</b>
             <br/>
 			<br/>
-            <b>Map by Adam514 (aka AdamtheEnginerd) & Regularkid (aka Joe)</b>
+            <b>Original Map by Adam514 (aka AdamtheEnginerd) & Regularkid (aka Joe)</b>
+			<br/>
+			<b>Edited Map by SlendyMcTendies</b>
 			<br/>
 			<br/>
-			<b>Playtesters: B4TheReign & Spiralhillfool</b>
+			<b>Playtesters: B4TheReign, Spiralhillfool, GraciousGOD</b>
             <br/>
 			<br/>
-            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.0.5</b></span>
+            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.1.0</b></span>
         </div>
 <br>
 <hr>
@@ -6594,6 +6624,18 @@ A link to a PDF file will be included in upcoming version which breaks down how 
 <b>Change Log</b>
 <br>
 <br>
+0.1.0
+<br>
+<br>
+>East, Central, and Western United States territories generate 6 PU each instead of 20, 12, and 10.<br>
+>Airfield maxmimum Scrable increased to 5.<br>
+>Airfield and Harbor maximum unit production increased to 5.<br>
+>Maximum number of Factories, Airfields, and Harbors per territory increased to 2.<br>
+<br>
+>TODO: Remove useless Map Options.<br>
+>TODO: Remove useless Tech Development code.<br>
+<br>
+<br>
 0.0.5
 <br>
 <br>
@@ -6607,7 +6649,6 @@ A link to a PDF file will be included in upcoming version which breaks down how 
 >Italian Somaliland and British Somaliland generate 2 PU instead of 1.<br>
 >Sierra Leone generates 2 PU instead of 1.<br>
 >Morocco generates 2 PU instead of 1.<br>
->East, Central, and Western United States territories grnerate 6 PU each instead of 20, 12, and 10.<br>
 <br>
 <u>Implemented "Continent Bonuses"</u><br>
 >[GREY]   Pacific Islands give 3 Bonus PU when all territories are controlled.<br>
