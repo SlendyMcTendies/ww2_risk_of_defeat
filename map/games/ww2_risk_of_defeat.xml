@@ -1347,7 +1347,6 @@
 	</resourceList>
 	
 	<playerList>
-
 		<!-- In turn order -->
 		<player name="Germans" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="Russians" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
@@ -1358,25 +1357,6 @@
 		<player name="Italians" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="French" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="none" optional="false" canBeDisabled="false" defaultType="DoesNothing" isHidden="true"/>
-
-		<!-- Alliances -->
-		<!--
-		<alliance player="Russians" alliance="Allies"/>
-		<alliance player="Americans" alliance="Allies"/>
-		<alliance player="Chinese" alliance="Allies"/>
-		<alliance player="British" alliance="Allies"/>
-		<alliance player="UK_Pacific" alliance="Allies"/>
-		<alliance player="ANZAC" alliance="Allies"/>
-		<alliance player="French" alliance="Allies"/>
-		<alliance player="Germans" alliance="Axis"/>
-		<alliance player="Japanese" alliance="Axis"/>
-		<alliance player="Italians" alliance="Axis"/>
-		<alliance player="Dutch" alliance="Dutch"/>
-		<alliance player="Mongolians" alliance="Mongolians"/>
-		<alliance player="Neutral_Axis" alliance="Neutral_Axis"/>
-		<alliance player="Neutral_Allies" alliance="Neutral_Allies"/>
-		<alliance player="Neutral_True" alliance="Neutral_True"/>
-		-->
 	</playerList>
 	<unitList>
 		<unit name="infantry"/>
@@ -1403,18 +1383,7 @@
  <relationshipTypes>
     <relationshipType name="Allied"/>
     <relationshipType name="War"/>
-    <!--
-	<relationshipType name="Unprovoked"/>
-	-->
     <relationshipType name="Neutrality"/>
-    <!--
-	<relationshipType name="Concordant"/>
-    <relationshipType name="Custodianship"/>
-    <relationshipType name="Friendly"/>
-    <relationshipType name="Strict_Neutral"/>
-    <relationshipType name="Friendly_Neutral"/>
-    <relationshipType name="Unfriendly_Neutral"/>
-	-->
   </relationshipTypes>
 
 <gamePlay>
@@ -1552,7 +1521,7 @@
       <step name="endRoundStep" delegate="endRound"/>
     </sequence>
   </gamePlay>
-       <production>
+	<production>
     <!-- Unit Production Cost -->
     <productionRule name="buyInfantry">
       <cost resource="PUs" quantity="3"/>
@@ -1634,97 +1603,7 @@
       <cost resource="PUs" quantity="5"/>
       <result resourceOrUnit="aaGun" quantity="1"/>
     </productionRule>
-    <!-- Advanced Industrial Production -->
-    <!--<productionRule name="buyInfantryIndustrialTechnology">
-                        <cost resource="PUs" quantity="3" />
-                        <result resourceOrUnit="infantry" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyMech_InfantryIndustrialTechnology">
-                        <cost resource="PUs" quantity="4" />
-                        <result resourceOrUnit="mech_infantry" quantity="1"/>
-                </productionRule>
-                
-				<productionRule name="buyArtilleryIndustrialTechnology">
-                        <cost resource="PUs" quantity="4" />
-                        <result resourceOrUnit="artillery" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyArmourIndustrialTechnology">
-                        <cost resource="PUs" quantity="6" />
-                        <result resourceOrUnit="armour" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyFighterIndustrialTechnology">
-                        <cost resource="PUs" quantity="10" />
-                        <result resourceOrUnit="fighter" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyTactical_BomberIndustrialTechnology">
-                        <cost resource="PUs" quantity="11" />
-                        <result resourceOrUnit="tactical_bomber" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyBomberIndustrialTechnology">
-                        <cost resource="PUs" quantity="12" />
-                        <result resourceOrUnit="bomber" quantity="1"/>
-                </productionRule>
-                
-				<productionRule name="buyTransportIndustrialTechnology">
-                        <cost resource="PUs" quantity="6" />
-                        <result resourceOrUnit="transport" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyCarrierIndustrialTechnology">
-                        <cost resource="PUs" quantity="13" />
-                        <result resourceOrUnit="carrier" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyDestroyerIndustrialTechnology">
-                        <cost resource="PUs" quantity="7" />
-                        <result resourceOrUnit="destroyer" quantity="1"/>
-                </productionRule>
-				
-				<productionRule name="buyCruiserIndustrialTechnology">
-                        <cost resource="PUs" quantity="9" />
-                        <result resourceOrUnit="destroyer" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyBattleshipIndustrialTechnology">
-                        <cost resource="PUs" quantity="17" />
-                        <result resourceOrUnit="battleship" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buySubmarineIndustrialTechnology">
-                        <cost resource="PUs" quantity="5" />
-                        <result resourceOrUnit="submarine" quantity="1"/>
-                </productionRule>
-                
-                
-				<productionRule name="buyFactory_MinorIndustrialTechnology">
-                        <cost resource="PUs" quantity="12" />
-                        <result resourceOrUnit="factory_minor" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyFactory_MajorIndustrialTechnology">
-                        <cost resource="PUs" quantity="30" />
-                        <result resourceOrUnit="factory_major" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyAirfieldIndustrialTechnology">
-                        <cost resource="PUs" quantity="10" />
-                        <result resourceOrUnit="airfield" quantity="1"/>
-                </productionRule>
-
-                <productionRule name="buyHarbourIndustrialTechnology">
-                        <cost resource="PUs" quantity="10" />
-                        <result resourceOrUnit="harbour" quantity="1"/>
-                </productionRule>
-                
-                <productionRule name="buyAAGunIndustrialTechnology">
-                        <cost resource="PUs" quantity="6" />
-                        <result resourceOrUnit="aaGun" quantity="1"/>
-                </productionRule>-->
+	
     <!-- SHIPYARD PRICES -->
     <productionRule name="buyTransportShipyards">
       <cost resource="PUs" quantity="6"/>
@@ -1827,34 +1706,7 @@
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbour"/>
     </productionFrontier>
-    <productionFrontier name="productionChinese_Burma_Road_Open">
-      <frontierRules name="buyInfantry"/>
-      <frontierRules name="buyArtillery"/>
-    </productionFrontier>
-    <productionFrontier name="productionChinese_Burma_Road_Closed">
-      <frontierRules name="buyInfantry"/>
-    </productionFrontier>
-    <!--<productionFrontier name="productionIndustrialTechnology">
-                        <frontierRules name="buyInfantryIndustrialTechnology"/>
-                        <frontierRules name="buyMech_InfantryIndustrialTechnology"/>
-						<frontierRules name="buyArtilleryIndustrialTechnology"/>
-                        <frontierRules name="buyArmourIndustrialTechnology"/>
-                        <frontierRules name="buyFighterIndustrialTechnology"/>
-						<frontierRules name="buyTactical_BomberIndustrialTechnology"/>
-                        <frontierRules name="buyBomberIndustrialTechnology"/>
-                        <frontierRules name="buyTransportIndustrialTechnology"/>
-                        <frontierRules name="buySubmarineIndustrialTechnology"/>
-                        <frontierRules name="buyCarrierIndustrialTechnology"/>
-                        <frontierRules name="buyDestroyerIndustrialTechnology"/>
-						<frontierRules name="buyCruiserIndustrialTechnology"/>
-                        <frontierRules name="buyBattleshipIndustrialTechnology"/>
-                        <frontierRules name="buyAAGunIndustrialTechnology"/>
-						<frontierRules name="buyFactory_MinorIndustrialTechnology"/>
-						<frontierRules name="buyFactory_MajorIndustrialTechnology"/>
-                        <frontierRules name="buyAirfieldIndustrialTechnology"/>
-                        <frontierRules name="buyHarbourIndustrialTechnology"/>
-                </productionFrontier>-->
-	<productionFrontier name="productionShipyards">
+    <productionFrontier name="productionShipyards">
 		<frontierRules name="buyTransportShipyards"/>
 		<frontierRules name="buySubmarineShipyards"/>
 		<frontierRules name="buyCarrierShipyards"/>
@@ -2270,7 +2122,7 @@
       <option name="attack" value="3"/>
       <option name="defense" value="3"/>
       <option name="isStrategicBomber" value="true"/>
-      <option name="canScramble" value="true"/>
+      <option name="canScramble" value="false"/> <!--default: true-->
       <option name="maxScrambleDistance" value="1"/>
       <option name="airAttack" value="1"/>
       <option name="blockade" value="2"/>
@@ -2336,9 +2188,9 @@
 		<option name="isSea" value="true"/>
 		<option name="attack" value="0"/>
 		<option name="defense" value="1"/>
-		<option name="carrierCapacity" value="2"/>
+		<option name="carrierCapacity" value="3"/>
 		<option name="isAirBase" value="true"/>
-		<option name="maxScrambleCount" value="1"/>
+		<option name="maxScrambleCount" value="2"/>
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="0"/>
 		<option name="requiresUnits" value="harbour:factory_major"/>
@@ -2358,7 +2210,6 @@
       <option name="defense" value="1"/>
       <option name="blockade" value="2"/>
 	  <option name="requiresUnits" value="harbour"/>
-      <!-- TODO?: submarines now prevent amphibious assaults unless there is an owned warship present -->
     </attachment>
 	
     <!-- Factory Minor -->
@@ -5952,50 +5803,8 @@
 	<option name="attemptsPerTurn" value="1"/>
 </attachment>
 
-<!-- Political System(.txt) End -->
-
 <!--VICTORY SYSTEM-->
-
-<!-- Notify all players that a Player or Allied Players are near Victory -->
-<!--              by having 9+vc out of 21vc -->
-
-<!-- Notify All Players Test (Default Code)-->
-<!--
-    <attachment foreach="$AllPlayers$" name="conditionAttachmentNotify@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="alliedOwnershipTerritories" value="$Victory$" count="9"/>
-	</attachment>
-    <attachment foreach="$AllPlayers$" name="triggerAttachmentNotify@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-		<option name="trigger" value="conditionAttachmentNotify@AllPlayers@"/>
-		<option name="notification" value="Notify@AllPlayers@"/>
-		<option name="players" value="$AllPlayers$"/>
-	</attachment>
--->
-
-<!-- Notify All Players (TEST CODE)-->
-<!--Check for nearing Victory-->
-	<attachment name="conditionAttachmentNotifyGermans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="directOwnershipTerritories" value="Poland:Germany:Russia:Leningrad:Stalingrad:Kiangsu:Japan:Western United States:Central United States:Eastern United States:Manilla:Hawaiian Islands:Kwangtung:United Kingdom:Ontario:Egypt:Malaya:Eastern India:Southern Italy:New South Wales:France" count="9"/>
-	</attachment>
-	<attachment name="conditionAttachmentNotifyRussians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="directOwnershipTerritories" value="Poland:Germany:Russia:Leningrad:Stalingrad:Kiangsu:Japan:Western United States:Central United States:Eastern United States:Manilla:Hawaiian Islands:Kwangtung:United Kingdom:Ontario:Egypt:Malaya:Eastern India:Southern Italy:New South Wales:France" count="9"/>
-	</attachment>
-	
-<!--Notify all players when check passes-->
-    <attachment name="triggerAttachmentNotifyGermans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-		<option name="trigger" value="conditionAttachmentNotifyGermans"/>
-		<option name="notification" value="NotifyGermans"/>
-		<option name="players" value="$AllPlayers$"/>
-	</attachment>
-	<attachment name="triggerAttachmentNotifyRussians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-		<option name="trigger" value="conditionAttachmentNotifyRussians"/>
-		<option name="notification" value="NotifyRussians"/>
-		<option name="players" value="$AllPlayers$"/>
-	</attachment>
-
-
-
-
-<!--Modified Code
+<!-- Notify All Players that a Player is near Victory -->
     <attachment foreach="$AllPlayers$" name="conditionAttachmentNotifySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="directOwnershipTerritories" value="$Victory$" count="9"/>
 	</attachment>
@@ -6004,10 +5813,8 @@
 		<option name="notification" value="NotifySolo@AllPlayers@"/>
 		<option name="players" value="$AllPlayers$"/>
 	</attachment>
--->
 
-<!--Notify All Players Test Allied Voctory-->
-<!--Modified Code
+<!--Notify All Players that an Alliance is near Victory-->
 	<attachment foreach="$AllPlayers$" name="conditionAttachmentNotifyAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="alliedOwnershipTerritories" value="$Victory$" count="14"/>
 	</attachment>
@@ -6016,13 +5823,9 @@
 		<option name="notification" value="NotifyAllied@AllPlayers@"/>
 		<option name="players" value="$AllPlayers$"/>
 	</attachment>
--->
 
-<!-- ======================================= GO VICTORY ======================================= -->
 <!-- Trigger Victory for a Player or Alliance -->
-<!-- by having 11+vc out of 21vc  -->
-
-<!-- Solo Victory Test -->
+<!--Solo Victory Trigger-->
     <attachment foreach="$AllPlayers$" name="conditionAttachmentVictorySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="directOwnershipTerritories" value="$Victory$" count="11"/>
 	</attachment>
@@ -6032,7 +5835,7 @@
 		<option name="players" value="@AllPlayers@"/>
 	</attachment>
 	
-<!--Allied Victory Test-->
+<!--Allied Victory Trigger-->
 	<attachment foreach="$AllPlayers$" name="conditionAttachmentVictoryAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="alliedOwnershipTerritories" value="$Victory$" count="18"/>
 	</attachment>
@@ -6078,16 +5881,6 @@
 				</unitInitialize>
 	
  <resourceInitialize>
-	<!--DEFAULT VALUES
-      <resourceGiven player="Germans" resource="PUs" quantity="30"/>
-      <resourceGiven player="Russians" resource="PUs" quantity="36"/>
-      <resourceGiven player="Japanese" resource="PUs" quantity="27"/>
-      <resourceGiven player="British" resource="PUs" quantity="28"/>
-      <resourceGiven player="Italians" resource="PUs" quantity="10"/>
-      <resourceGiven player="Americans" resource="PUs" quantity="53"/>
-      <resourceGiven player="Chinese" resource="PUs" quantity="12"/>
-      <resourceGiven player="French" resource="PUs" quantity="19"/>
-	  -->
 	  <resourceGiven player="Germans" resource="PUs" quantity="30"/>
       <resourceGiven player="Russians" resource="PUs" quantity="30"/>
       <resourceGiven player="Japanese" resource="PUs" quantity="30"/>
@@ -6101,15 +5894,6 @@
 <relationshipInitialize>
 	
 	<!--Germany-->
-	<!--DEFAULT VALUES
-	<relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Japanese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="British" type="War" roundValue="1"/>
-	<relationship player1="Germans" player2="Italians" type="Allied" roundValue="1"/>
-	<relationship player1="Germans" player2="French" type="War" roundValue="1"/>
-	-->
 	<relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
 	<relationship player1="Germans" player2="Japanese" type="Neutrality" roundValue="1"/>
 	<relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
@@ -6119,14 +5903,6 @@
 	<relationship player1="Germans" player2="French" type="Neutrality" roundValue="1"/>
 	
 	<!--Russia-->
-	<!--DEFAULT VALUES
-	<relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
-	-->
 	<relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
 	<relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
 	<relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
@@ -6135,13 +5911,6 @@
 	<relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
 
 	<!--Japan-->
-	<!--DEFAULT VALUES
-	<relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="Chinese" type="War" roundValue="1"/>
-	<relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
-	-->
 	<relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
 	<relationship player1="Japanese" player2="Chinese" type="Neutrality" roundValue="1"/>
 	<relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
@@ -6149,39 +5918,21 @@
 	<relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
 
 	<!--America-->
-	<!--DEFAULT VALUES
-	<relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
-	-->
 	<relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
 	<relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
 	<relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
 	<relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
 
 	<!--China-->
-	<!--DEFAULT VALUES
-	<relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
-	-->
 	<relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
 	<relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
 	<relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
 
 	<!--Britain-->
-	<!--DEFAULT VALUES
-	<relationship player1="British" player2="Italians" type="War" roundValue="1"/>
-	<relationship player1="British" player2="French" type="Allied" roundValue="1"/>
-	-->
 	<relationship player1="British" player2="Italians" type="Neutrality" roundValue="1"/>
 	<relationship player1="British" player2="French" type="Neutrality" roundValue="1"/>
 
 	<!--Italy-->
-	<!--DEFAULT VALUES
-	<relationship player1="Italians" player2="French" type="War" roundValue="1"/>
-	-->
 	<relationship player1="Italians" player2="French" type="Neutrality" roundValue="1"/>
 </relationshipInitialize>
         </initialize>
@@ -6218,12 +5969,11 @@
     </property>
 	
     <!-- victory options -->
-	<!--
-    <property name="Triggered Victory" value="true" editable="true">
+    <property name="Triggered Victory" value="true" editable="false">
       <boolean/>
     </property>
-	-->
-    <property name="Honorable Surrender" value="true" editable="true">
+	
+    <property name="Honorable Surrender" value="false" editable="false">
       <boolean/>
     </property>
 	<!--
@@ -6256,7 +6006,7 @@
     <property name="National Objectives" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Use Triggers" value="false" editable="false">
+    <property name="Use Triggers" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Tech Development" value="false" editable="false">
@@ -6382,7 +6132,7 @@
     <property name="Units Can Be Destroyed Instead Of Captured" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Units Can Be Changed On Capture" value="true" editable="true">
+    <property name="Units Can Be Changed On Capture" value="false" editable="false">
       <boolean/>
     </property>
     <property name="More Constructions with Factory" value="false" editable="false">
