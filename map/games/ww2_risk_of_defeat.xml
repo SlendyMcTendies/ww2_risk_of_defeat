@@ -5132,7 +5132,7 @@
 <attachment name="politicalActionAttachment_Chinese_American_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Chinese_War"/>
 	<option name="relationshipChange" value="Chinese:Americans:Neutrality"/>
-	<option name="text" value="Chinese_Amercian_Ceasefire"/>
+	<option name="text" value="Chinese_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
 	
 	<option name="costResources" value="2:Influence"/>
