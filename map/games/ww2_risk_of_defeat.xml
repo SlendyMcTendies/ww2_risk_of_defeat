@@ -1344,6 +1344,7 @@
         </map>
 	<resourceList>
 		<resource name="PUs"/>
+		<resource name="Influence"/>
 	</resourceList>
 	
 	<playerList>
@@ -1493,7 +1494,6 @@
       </step>
       <step name="britishNoAirCheckPlace" delegate="placeNoAirCheck" player="British"/>
       <step name="britishEndTurn" delegate="endTurn" player="British">
-        <stepProperty name="skipPosting" value="true"/>
       </step>
       <!-- Italians Game Sequence -->
       <step name="italiansTech" delegate="tech" player="Italians"/>
@@ -2109,8 +2109,9 @@
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="2"/>
       <option name="airAttack" value="1"/>
-	  <option name="bombingTargets" value="factory_minor:factory_major:airfield:harbour"/>
+	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbour"/>
 	  <option name="requiresUnits" value="airfield:factory_minor"/>
+	  <option name="requiresUnits" value="airfield:factory_upgrade"/>
 	  <option name="requiresUnits" value="airfield:factory_major"/>
     </attachment>
 	
@@ -2154,6 +2155,7 @@
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="1"/>
 		<option name="requiresUnits" value="harbour:factory_major"/>
+		<option name="requiresUnits" value="harbour:factory_upgrade"/>
 		<option name="requiresUnits" value="harbour:factory_minor"/>
 	</attachment>
 	
@@ -2194,6 +2196,7 @@
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="0"/>
 		<option name="requiresUnits" value="harbour:factory_major"/>
+		<option name="requiresUnits" value="harbour:factory_upgrade"/>
 		<option name="requiresUnits" value="harbour:factory_minor"/>
 		<!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
 		<option name="whenCombatDamaged" value="unitsMayNotLandOnCarrier" count="1:2"/>
@@ -2301,7 +2304,7 @@
 	
     <!-- AA Gun -->
     <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isAAforCombatOnly" value="true"/>
+      <option name="isAAforCombatOnly" value="false"/>
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
       <option name="transportCost" value="6"/>
@@ -4202,6 +4205,7 @@
 	<option name="conditions" value="conditionAttachment_German_Russian_Neutrality"/>
 	<option name="relationshipChange" value="Germans:Russians:War"/>
 	<option name="text" value="German_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Japanese_War" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4247,6 +4251,7 @@
 	<option name="text" value="German_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
 	<option name="attemptsPerTurn" value="1"/>
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Russian_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4346,6 +4351,7 @@
 	<option name="text" value="German_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
 	<option name="attemptsPerTurn" value="1"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Japanese_Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5022,7 +5028,7 @@
 <attachment name="politicalActionAttachment_Chinese_American_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:Americans:War"/>
-	<option name="text" value="Chinese_Americans_War"/>
+	<option name="text" value="Chinese_American_War"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_British_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5803,6 +5809,17 @@
 	<option name="attemptsPerTurn" value="1"/>
 </attachment>
 
+<!--Influence Regeneration-->
+<attachment name="conditionAttachment_GermansLessThanThreeInfluence" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="resource" value="Influence" count="0-2"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceRegenerate_Germans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_GermansLessThanThreeInfluence"/>
+	<option name="when" value="after:germansEndTurn"/>
+	<option name="resource" value="Influence" count="3"/> <!--Should Set Influence to 3, but could also ADD 3 Influence-->
+</attachment>
+
 <!--VICTORY SYSTEM-->
 <!-- Notify All Players that a Player is near Victory -->
     <attachment foreach="$AllPlayers$" name="conditionAttachmentNotifySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -5889,6 +5906,14 @@
       <resourceGiven player="Americans" resource="PUs" quantity="30"/>
       <resourceGiven player="Chinese" resource="PUs" quantity="30"/>
       <resourceGiven player="French" resource="PUs" quantity="30"/>
+	  <resourceGiven player="Germans" resource="Influence" quantity="1"/>
+	  <resourceGiven player="Russians" resource="Influence" quantity="1"/>
+	  <resourceGiven player="Japanese" resource="Influence" quantity="1"/>
+	  <resourceGiven player="Americans" resource="Influence" quantity="1"/>
+	  <resourceGiven player="Chinese" resource="Influence" quantity="1"/>
+	  <resourceGiven player="British" resource="Influence" quantity="1"/>
+	  <resourceGiven player="Italians" resource="Influence" quantity="1"/>
+	  <resourceGiven player="French" resource="Influence" quantity="1"/>
 </resourceInitialize>
 	
 <relationshipInitialize>
@@ -6321,6 +6346,12 @@
     <property name="Neutral Flyover Allowed" value="true" editable="false">
       <boolean/>
     </property>
+	<!--Custom Properties-->
+	<!--
+	<property name="Influence Regeneration" value="3" editable="true">
+		<number min="1" max="10"/>
+	</property>
+	-->
 
 <property name="mapName" value="ww2_risk_of_defeat" editable="false"/>
 <property name="notes">
