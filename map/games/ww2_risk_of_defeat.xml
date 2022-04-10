@@ -1917,113 +1917,42 @@
     </attachment>
     <!-- Players Tech -->
     <attachment name="techAttachment" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+	  <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="British" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="Italians" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="French" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
     <attachment name="techAttachment" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-      <option name="superSub" value="false"/>
-      <option name="jetPower" value="false"/>
-      <option name="shipyards" value="false"/>
-      <option name="aARadar" value="false"/>
-      <option name="longRangeAir" value="false"/>
-      <option name="heavyBomber" value="false"/>
-      <option name="improvedArtillerySupport" value="false"/>
-      <option name="rocket" value="false"/>
-      <option name="increasedFactoryProduction" value="false"/>
-      <option name="warBonds" value="false"/>
+      <option name="paratroopers" value="true"/>
     </attachment>
 	
 <!-- Unit Attachments -->
     <!-- Infantry -->
     <attachment name="unitAttachment" attachTo="infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
-      <option name="transportCost" value="5"/>
+      <option name="transportCost" value="3"/>
       <option name="isInfantry" value="true"/>
-	  <option name="isParatroop" value="true"/>
+	  <!--<option name="isParatroop" value="true"/>--> <!--Not sure if this does anything-->
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
       <option name="isAirTransportable" value="true"/>
 	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
@@ -2031,10 +1960,11 @@
     <!-- Mech Infantry -->
     <attachment name="unitAttachment" attachTo="mech_infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
-      <option name="transportCost" value="6"/>
+      <option name="transportCost" value="5"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
 	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="receivesAbilityWhenWith" value="canBlitz:armour"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
@@ -2043,10 +1973,11 @@
 	<!-- Artillery -->
     <attachment name="unitAttachment" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
-      <option name="transportCost" value="6"/>
+      <option name="transportCost" value="5"/>
       <option name="attack" value="2"/>
       <option name="defense" value="2"/>
 	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
@@ -2060,6 +1991,7 @@
       <option name="defense" value="3"/>
       <option name="isLandTransport" value="true"/>
 	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
@@ -2067,14 +1999,14 @@
     <!-- Marine -->
     <attachment name="unitAttachment" attachTo="marine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
-      <option name="transportCost" value="4"/>
+      <option name="transportCost" value="3"/>
       <option name="isMarine" value="true"/>
-	  <option name="isParatroop" value="true"/>
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
-      <option name="isAirTransportable" value="true"/> <!--true-->
+      <option name="isAirTransportable" value="false"/> <!--true-->
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
 	  <option name="requiresUnits" value="factory_major"/>
     </attachment>
 	
@@ -2105,7 +2037,7 @@
       <option name="defense" value="1"/>
       <option name="isStrategicBomber" value="true"/>
       <option name="isAirTransport" value="true"/> <!--true-->
-      <option name="transportCapacity" value="5"/> <!--5-->
+      <option name="transportCapacity" value="6"/> <!--6-->
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="2"/>
       <option name="airAttack" value="1"/>
@@ -2137,7 +2069,7 @@
     <attachment name="unitAttachment" attachTo="transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
 		<option name="movement" value="2"/>
 		<option name="isSea" value="true"/>
-		<option name="transportCapacity" value="11"/>
+		<option name="transportCapacity" value="10"/>
 		<option name="attack" value="0"/>
 		<option name="defense" value="0"/>
 		<option name="requiresUnits" value="harbour"/>
@@ -2150,7 +2082,7 @@
 		<option name="attack" value="4"/>
 		<option name="defense" value="4"/>
 		<option name="canBombard" value="true"/>
-		<option name="transportCapacity" value="4"/>
+		<option name="transportCapacity" value="3"/>
 		<option name="isCombatTransport" value="true"/>
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="1"/>
@@ -2166,7 +2098,7 @@
       <option name="attack" value="3"/>
       <option name="defense" value="3"/>
       <option name="canBombard" value="true"/>
-      <option name="transportCapacity" value="4"/>
+      <option name="transportCapacity" value="3"/>
       <option name="isCombatTransport" value="true"/>
       <option name="hitPoints" value="1"/>
       <option name="blockade" value="1"/>
@@ -2225,6 +2157,7 @@
       <option name="canProduceXUnits" value="3"/>
       <option name="maxDamage" value="6"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="maxBuiltPerPlayer" value="10"/>
     </attachment>
     
 	<!-- Factory Major -->
@@ -2237,6 +2170,7 @@
       <option name="canProduceXUnits" value="9"/>
       <option name="maxDamage" value="18"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
+	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
     
 	<!-- Factory Upgrade -->
@@ -2276,6 +2210,7 @@
       <option name="isRocket" value="true"/>
       <option name="bombingMaxDieSides" value="6"/>
       <option name="bombingBonus" value="0"/>
+	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
 	
     <!-- Harbour -->
@@ -2300,6 +2235,7 @@
       <option name="givesMovement" value="1:battleship"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
 	
     <!-- AA Gun -->
@@ -4212,36 +4148,42 @@
 	<option name="conditions" value="conditionAttachment_German_Japanese_Neutrality"/>
 	<option name="relationshipChange" value="Germans:Japanese:War"/>
 	<option name="text" value="German_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_American_War" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_American_Neutrality"/>
 	<option name="relationshipChange" value="Germans:Americans:War"/>
 	<option name="text" value="German_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Chinese_War" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Germans:Chinese:War"/>
 	<option name="text" value="German_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_British_War" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_British_Neutrality"/>
 	<option name="relationshipChange" value="Germans:British:War"/>
 	<option name="text" value="German_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Italian_War" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Germans:Italians:War"/>
 	<option name="text" value="German_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_French_War" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_French_Neutrality"/>
 	<option name="relationshipChange" value="Germans:French:War"/>
 	<option name="text" value="German_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutrality Switches-->
@@ -4250,7 +4192,7 @@
 	<option name="relationshipChange" value="Germans:Russians:Neutrality"/>
 	<option name="text" value="German_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -4258,6 +4200,7 @@
 	<option name="conditions" value="conditionAttachment_German_Russian_Alliance"/>
 	<option name="relationshipChange" value="Germans:Russians:Neutrality"/>
 	<option name="text" value="German_Russian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Japanese_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4265,13 +4208,15 @@
 	<option name="relationshipChange" value="Germans:Japanese:Neutrality"/>
 	<option name="text" value="German_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
-<attachment name="politicalActionAttachment_German_Japanese_Break Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+<attachment name="politicalActionAttachment_German_Japanese_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Japanese_Alliance"/>
 	<option name="relationshipChange" value="Germans:Japanese:Neutrality"/>
 	<option name="text" value="German_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_American_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4279,13 +4224,15 @@
 	<option name="relationshipChange" value="Germans:Americans:Neutrality"/>
 	<option name="text" value="German_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_American_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_American_Alliance"/>
 	<option name="relationshipChange" value="Germans:Americans:Neutrality"/>
 	<option name="text" value="German_American_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Chinese_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4293,13 +4240,15 @@
 	<option name="relationshipChange" value="Germans:Chinese:Neutrality"/>
 	<option name="text" value="German_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Chinese_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Germans:Chinese:Neutrality"/>
 	<option name="text" value="German_Chinese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_British_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4307,13 +4256,15 @@
 	<option name="relationshipChange" value="Germans:British:Neutrality"/>
 	<option name="text" value="German_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_British_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_British_Alliance"/>
 	<option name="relationshipChange" value="Germans:British:Neutrality"/>
 	<option name="text" value="German_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Italian_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4321,13 +4272,15 @@
 	<option name="relationshipChange" value="Germans:Italians:Neutrality"/>
 	<option name="text" value="German_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Italian_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Italian_Alliance"/>
 	<option name="relationshipChange" value="Germans:Italians:Neutrality"/>
 	<option name="text" value="German_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_French_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4335,13 +4288,15 @@
 	<option name="relationshipChange" value="Germans:French:Neutrality"/>
 	<option name="text" value="German_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_French_BreakAlliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_French_Alliance"/>
 	<option name="relationshipChange" value="Germans:French:Neutrality"/>
 	<option name="text" value="German_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -4350,7 +4305,7 @@
 	<option name="relationshipChange" value="Germans:Russians:Allied"/>
 	<option name="text" value="German_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -4359,7 +4314,8 @@
 	<option name="relationshipChange" value="Germans:Japanese:Allied"/>
 	<option name="text" value="German_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_American_Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4367,7 +4323,8 @@
 	<option name="relationshipChange" value="Germans:Americans:Allied"/>
 	<option name="text" value="German_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Chinese_Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4375,7 +4332,8 @@
 	<option name="relationshipChange" value="Germans:Chinese:Allied"/>
 	<option name="text" value="German_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_British_Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4383,7 +4341,8 @@
 	<option name="relationshipChange" value="Germans:British:Allied"/>
 	<option name="text" value="German_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_Italian_Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4391,7 +4350,8 @@
 	<option name="relationshipChange" value="Germans:Italians:Allied"/>
 	<option name="text" value="German_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_German_French_Alliance" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4399,7 +4359,8 @@
 	<option name="relationshipChange" value="Germans:French:Allied"/>
 	<option name="text" value="German_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Russian Politics-->
@@ -4408,42 +4369,49 @@
 	<option name="conditions" value="conditionAttachment_German_Russian_Neutrality"/>
 	<option name="relationshipChange" value="Russians:Germans:War"/>
 	<option name="text" value="Russian_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Japanese_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Japanese_Neutrality"/>
 	<option name="relationshipChange" value="Russians:Japanese:War"/>
 	<option name="text" value="Russian_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_American_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_American_Neutrality"/>
 	<option name="relationshipChange" value="Russians:Americans:War"/>
 	<option name="text" value="Russian_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Chinese_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Russians:Chinese:War"/>
 	<option name="text" value="Russian_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_British_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_British_Neutrality"/>
 	<option name="relationshipChange" value="Russians:British:War"/>
 	<option name="text" value="Russian_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Italian_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Russians:Italians:War"/>
 	<option name="text" value="Russian_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_French_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_French_Neutrality"/>
 	<option name="relationshipChange" value="Russians:French:War"/>
 	<option name="text" value="Russian_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -4452,7 +4420,8 @@
 	<option name="relationshipChange" value="Russians:Germans:Neutrality"/>
 	<option name="text" value="Russian_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Japanese_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4460,7 +4429,8 @@
 	<option name="relationshipChange" value="Russians:Japanese:Neutrality"/>
 	<option name="text" value="Russian_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_American_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4468,7 +4438,8 @@
 	<option name="relationshipChange" value="Russians:Americans:Neutrality"/>
 	<option name="text" value="Russian_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Chinese_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4476,7 +4447,8 @@
 	<option name="relationshipChange" value="Russians:Chinese:Neutrality"/>
 	<option name="text" value="Russian_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_British_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4484,7 +4456,8 @@
 	<option name="relationshipChange" value="Russians:British:Neutrality"/>
 	<option name="text" value="Russian_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Italian_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4492,7 +4465,8 @@
 	<option name="relationshipChange" value="Russians:Italians:Neutrality"/>
 	<option name="text" value="Russian_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_French_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4500,7 +4474,8 @@
 	<option name="relationshipChange" value="Russians:French:Neutrality"/>
 	<option name="text" value="Russian_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (BreakAlliance)-->
@@ -4508,42 +4483,49 @@
 	<option name="conditions" value="conditionAttachment_German_Russian_Alliance"/>
 	<option name="relationshipChange" value="Russians:Germans:Neutrality"/>
 	<option name="text" value="Russian_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Japanese_BreakAlliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Japanese_Alliance"/>
 	<option name="relationshipChange" value="Russians:Japanese:Neutrality"/>
 	<option name="text" value="Russian_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_American_BreakAlliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_American_Alliance"/>
 	<option name="relationshipChange" value="Russians:Americans:Neutrality"/>
 	<option name="text" value="Russian_American_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Chinese_BreakAlliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Russians:Chinese:Neutrality"/>
 	<option name="text" value="Russian_Chinese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_British_BreakAlliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_British_Alliance"/>
 	<option name="relationshipChange" value="Russians:British:Neutrality"/>
 	<option name="text" value="Russian_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Italian_BreakAlliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Italian_Alliance"/>
 	<option name="relationshipChange" value="Russians:Italians:Neutrality"/>
 	<option name="text" value="Russian_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_French_BreakAlliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_French_Alliance"/>
 	<option name="relationshipChange" value="Russians:French:Neutrality"/>
 	<option name="text" value="Russian_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -4552,7 +4534,8 @@
 	<option name="relationshipChange" value="Russians:Germans:Allied"/>
 	<option name="text" value="Russian_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Japanese_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4560,7 +4543,8 @@
 	<option name="relationshipChange" value="Russians:Japanese:Allied"/>
 	<option name="text" value="Russian_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_American_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4568,7 +4552,8 @@
 	<option name="relationshipChange" value="Russians:Americans:Allied"/>
 	<option name="text" value="Russian_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Chinese_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4576,7 +4561,8 @@
 	<option name="relationshipChange" value="Russians:Chinese:Allied"/>
 	<option name="text" value="Russian_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_British_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4584,7 +4570,8 @@
 	<option name="relationshipChange" value="Russians:British:Allied"/>
 	<option name="text" value="Russian_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_Italian_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4592,7 +4579,8 @@
 	<option name="relationshipChange" value="Russians:Italians:Allied"/>
 	<option name="text" value="Russian_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Russian_French_Alliance" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4600,7 +4588,8 @@
 	<option name="relationshipChange" value="Russians:French:Allied"/>
 	<option name="text" value="Russian_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Japanese Politics-->
@@ -4609,42 +4598,49 @@
 	<option name="conditions" value="conditionAttachment_German_Japanese_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:Germans:War"/>
 	<option name="text" value="Japanese_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Russian_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Japanese_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:Russians:War"/>
 	<option name="text" value="Japanese_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_American_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_American_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:Americans:War"/>
 	<option name="text" value="Japanese_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Chinese_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:Chinese:War"/>
 	<option name="text" value="Japanese_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_British_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_British_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:British:War"/>
 	<option name="text" value="Japanese_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Italian_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:Italians:War"/>
 	<option name="text" value="Russian_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_French_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_French_Neutrality"/>
 	<option name="relationshipChange" value="Japanese:French:War"/>
 	<option name="text" value="Japanese_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -4653,7 +4649,8 @@
 	<option name="relationshipChange" value="Japanese:Germans:Neutrality"/>
 	<option name="text" value="Japanese_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Russian_Ceasefire" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4661,7 +4658,8 @@
 	<option name="relationshipChange" value="Japanese:Russians:Neutrality"/>
 	<option name="text" value="Japanese_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_American_Ceasefire" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4669,7 +4667,8 @@
 	<option name="relationshipChange" value="Japanese:Americans:Neutrality"/>
 	<option name="text" value="Japanese_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Chinese_Ceasefire" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4677,7 +4676,8 @@
 	<option name="relationshipChange" value="Japanese:Chinese:Neutrality"/>
 	<option name="text" value="Japanese_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_British_Ceasefire" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4685,7 +4685,8 @@
 	<option name="relationshipChange" value="Japanese:British:Neutrality"/>
 	<option name="text" value="Japanese_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Italian_Ceasefire" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4693,7 +4694,8 @@
 	<option name="relationshipChange" value="Japanese:Italians:Neutrality"/>
 	<option name="text" value="Japanese_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_French_Ceasefire" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4701,7 +4703,8 @@
 	<option name="relationshipChange" value="Japanese:French:Neutrality"/>
 	<option name="text" value="Japanese_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (BreakAlliance)-->
@@ -4709,42 +4712,49 @@
 	<option name="conditions" value="conditionAttachment_German_Japanese_Alliance"/>
 	<option name="relationshipChange" value="Japanese:Germans:Neutrality"/>
 	<option name="text" value="Japanese_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Russian_BreakAlliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Japanese_Alliance"/>
 	<option name="relationshipChange" value="Japanese:Russians:Neutrality"/>
 	<option name="text" value="Japanese_Russian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_American_BreakAlliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_American_Alliance"/>
 	<option name="relationshipChange" value="Japanese:Americans:Neutrality"/>
 	<option name="text" value="Japanese_American_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Chinese_BreakAlliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Japanese:Chinese:Neutrality"/>
 	<option name="text" value="Japanese_Chinese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_British_BreakAlliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_British_Alliance"/>
 	<option name="relationshipChange" value="Japanese:British:Neutrality"/>
 	<option name="text" value="Japanese_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Italian_BreakAlliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Italian_Alliance"/>
 	<option name="relationshipChange" value="Japanese:Italians:Neutrality"/>
 	<option name="text" value="Japanese_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_French_BreakAlliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_French_Alliance"/>
 	<option name="relationshipChange" value="Japanese:French:Neutrality"/>
 	<option name="text" value="Japanese_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -4753,7 +4763,8 @@
 	<option name="relationshipChange" value="Japanese:Germans:Allied"/>
 	<option name="text" value="Japanese_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Russian_Alliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4761,7 +4772,8 @@
 	<option name="relationshipChange" value="Japanese:Russians:Allied"/>
 	<option name="text" value="Japanese_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_American_Alliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4769,7 +4781,8 @@
 	<option name="relationshipChange" value="Japanese:Americans:Allied"/>
 	<option name="text" value="Japanese_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Chinese_Alliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4777,7 +4790,8 @@
 	<option name="relationshipChange" value="Japanese:Chinese:Allied"/>
 	<option name="text" value="Japanese_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_British_Alliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4785,7 +4799,8 @@
 	<option name="relationshipChange" value="Japanese:British:Allied"/>
 	<option name="text" value="Japanese_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_Italian_Alliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4793,7 +4808,8 @@
 	<option name="relationshipChange" value="Japanese:Italians:Allied"/>
 	<option name="text" value="Japanese_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Japanese_French_Alliance" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4801,7 +4817,8 @@
 	<option name="relationshipChange" value="Japanese:French:Allied"/>
 	<option name="text" value="Japanese_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--American Politics-->
@@ -4810,42 +4827,49 @@
 	<option name="conditions" value="conditionAttachment_German_American_Neutrality"/>
 	<option name="relationshipChange" value="Americans:Germans:War"/>
 	<option name="text" value="American_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Russian_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_American_Neutrality"/>
 	<option name="relationshipChange" value="Americans:Russians:War"/>
 	<option name="text" value="American_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Japanese_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_American_Neutrality"/>
 	<option name="relationshipChange" value="Americans:Japanese:War"/>
 	<option name="text" value="American_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Chinese_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Americans:Chinese:War"/>
 	<option name="text" value="American_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_British_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_British_Neutrality"/>
 	<option name="relationshipChange" value="Americans:British:War"/>
 	<option name="text" value="American_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Italian_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Americans:Italians:War"/>
 	<option name="text" value="American_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_French_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_French_Neutrality"/>
 	<option name="relationshipChange" value="Americans:French:War"/>
 	<option name="text" value="American_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -4854,7 +4878,8 @@
 	<option name="relationshipChange" value="Americans:Germans:Neutrality"/>
 	<option name="text" value="American_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Russian_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4862,7 +4887,8 @@
 	<option name="relationshipChange" value="Americans:Russians:Neutrality"/>
 	<option name="text" value="American_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Japanese_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4870,7 +4896,8 @@
 	<option name="relationshipChange" value="Americans:Japanese:Neutrality"/>
 	<option name="text" value="American_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Chinese_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4878,7 +4905,8 @@
 	<option name="relationshipChange" value="Americans:Chinese:Neutrality"/>
 	<option name="text" value="American_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_British_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4886,7 +4914,8 @@
 	<option name="relationshipChange" value="Americans:British:Neutrality"/>
 	<option name="text" value="American_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Italian_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4894,7 +4923,8 @@
 	<option name="relationshipChange" value="Americans:Italians:Neutrality"/>
 	<option name="text" value="American_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_French_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4902,7 +4932,8 @@
 	<option name="relationshipChange" value="Americans:French:Neutrality"/>
 	<option name="text" value="American_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (BreakAlliance)-->
@@ -4910,42 +4941,49 @@
 	<option name="conditions" value="conditionAttachment_German_American_Alliance"/>
 	<option name="relationshipChange" value="Americans:Germans:Neutrality"/>
 	<option name="text" value="American_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Russian_BreakAlliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_American_Alliance"/>
 	<option name="relationshipChange" value="Americans:Russians:Neutrality"/>
 	<option name="text" value="American_Russian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Japanese_BreakAlliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_American_Alliance"/>
 	<option name="relationshipChange" value="Americans:Japanese:Neutrality"/>
 	<option name="text" value="American_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Chinese_BreakAlliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Americans:Chinese:Neutrality"/>
 	<option name="text" value="American_Chinese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_British_BreakAlliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_British_Alliance"/>
 	<option name="relationshipChange" value="Americans:British:Neutrality"/>
 	<option name="text" value="American_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Italian_BreakAlliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Italian_Alliance"/>
 	<option name="relationshipChange" value="Americans:Italians:Neutrality"/>
 	<option name="text" value="American_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_French_BreakAlliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_French_Alliance"/>
 	<option name="relationshipChange" value="Americans:French:Neutrality"/>
 	<option name="text" value="American_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -4954,7 +4992,8 @@
 	<option name="relationshipChange" value="Americans:Germans:Allied"/>
 	<option name="text" value="American_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Russian_Alliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4962,7 +5001,8 @@
 	<option name="relationshipChange" value="Americans:Russians:Allied"/>
 	<option name="text" value="American_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Japanese_Alliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4970,7 +5010,8 @@
 	<option name="relationshipChange" value="Americans:Japanese:Allied"/>
 	<option name="text" value="American_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Chinese_Alliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4978,7 +5019,8 @@
 	<option name="relationshipChange" value="Americans:Chinese:Allied"/>
 	<option name="text" value="American_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_British_Alliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4986,7 +5028,8 @@
 	<option name="relationshipChange" value="Americans:British:Allied"/>
 	<option name="text" value="American_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_Italian_Alliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -4994,7 +5037,8 @@
 	<option name="relationshipChange" value="Americans:Italians:Allied"/>
 	<option name="text" value="American_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_American_French_Alliance" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5002,7 +5046,8 @@
 	<option name="relationshipChange" value="Americans:French:Allied"/>
 	<option name="text" value="American_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Chinese Politics-->
@@ -5011,42 +5056,49 @@
 	<option name="conditions" value="conditionAttachment_German_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:Germans:War"/>
 	<option name="text" value="Chinese_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Russian_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:Russians:War"/>
 	<option name="text" value="Chinese_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Japanese_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:Japanese:War"/>
 	<option name="text" value="Chinese_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_American_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Chinese_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:Americans:War"/>
 	<option name="text" value="Chinese_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_British_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_British_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:British:War"/>
 	<option name="text" value="Chinese_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Italian_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:Italians:War"/>
 	<option name="text" value="Chinese_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_French_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_French_Neutrality"/>
 	<option name="relationshipChange" value="Chinese:French:War"/>
 	<option name="text" value="Chinese_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -5055,7 +5107,8 @@
 	<option name="relationshipChange" value="Chinese:Germans:Neutrality"/>
 	<option name="text" value="Chinese_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Russian_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5063,7 +5116,8 @@
 	<option name="relationshipChange" value="Chinese:Russians:Neutrality"/>
 	<option name="text" value="Chinese_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Japanese_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5071,7 +5125,8 @@
 	<option name="relationshipChange" value="Chinese:Japanese:Neutrality"/>
 	<option name="text" value="Chinese_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_American_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5079,7 +5134,8 @@
 	<option name="relationshipChange" value="Chinese:Americans:Neutrality"/>
 	<option name="text" value="Chinese_Amercian_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_British_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5087,7 +5143,8 @@
 	<option name="relationshipChange" value="Chinese:British:Neutrality"/>
 	<option name="text" value="Chinese_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Italian_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5095,7 +5152,8 @@
 	<option name="relationshipChange" value="Chinese:Italians:Neutrality"/>
 	<option name="text" value="Chinese_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_French_Ceasefire" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5103,7 +5161,8 @@
 	<option name="relationshipChange" value="Chinese:French:Neutrality"/>
 	<option name="text" value="Chinese_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (BreakAlliance)-->
@@ -5111,42 +5170,49 @@
 	<option name="conditions" value="conditionAttachment_German_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Chinese:Germans:Neutrality"/>
 	<option name="text" value="Chinese_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Russian_BreakAlliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Chinese:Russians:Neutrality"/>
 	<option name="text" value="Chinese_Russian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Japanese_BreakAlliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Chinese:Japanese:Neutrality"/>
 	<option name="text" value="Chinese_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_American_BreakAlliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Chinese_Alliance"/>
 	<option name="relationshipChange" value="Chinese:Americans:Neutrality"/>
 	<option name="text" value="Chinese_Amercian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_British_BreakAlliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_British_Alliance"/>
 	<option name="relationshipChange" value="Chinese:British:Neutrality"/>
 	<option name="text" value="Chinese_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Italian_BreakAlliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_Italian_Alliance"/>
 	<option name="relationshipChange" value="Chinese:Italians:Neutrality"/>
 	<option name="text" value="Chinese_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_French_BreakAlliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_French_Alliance"/>
 	<option name="relationshipChange" value="Chinese:French:Neutrality"/>
 	<option name="text" value="Chinese_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -5155,7 +5221,8 @@
 	<option name="relationshipChange" value="Chinese:Germans:Allied"/>
 	<option name="text" value="Chinese_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Russian_Alliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5163,7 +5230,8 @@
 	<option name="relationshipChange" value="Chinese:Russians:Allied"/>
 	<option name="text" value="Chinese_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Japanese_Alliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5171,7 +5239,8 @@
 	<option name="relationshipChange" value="Chinese:Japanese:Allied"/>
 	<option name="text" value="Chinese_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_American_Alliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5179,7 +5248,8 @@
 	<option name="relationshipChange" value="Chinese:Americans:Allied"/>
 	<option name="text" value="Chinese_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_British_Alliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5187,7 +5257,8 @@
 	<option name="relationshipChange" value="Chinese:British:Allied"/>
 	<option name="text" value="Chinese_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_Italian_Alliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5195,7 +5266,8 @@
 	<option name="relationshipChange" value="Chinese:Italians:Allied"/>
 	<option name="text" value="Chinese_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Chinese_French_Alliance" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5203,7 +5275,8 @@
 	<option name="relationshipChange" value="Chinese:French:Allied"/>
 	<option name="text" value="Chinese_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--British Politics-->
@@ -5212,42 +5285,49 @@
 	<option name="conditions" value="conditionAttachment_German_British_Neutrality"/>
 	<option name="relationshipChange" value="British:Germans:War"/>
 	<option name="text" value="British_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Russian_War" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_British_Neutrality"/>
 	<option name="relationshipChange" value="British:Russians:War"/>
 	<option name="text" value="British_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Japanese_War" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_British_Neutrality"/>
 	<option name="relationshipChange" value="British:Japanese:War"/>
 	<option name="text" value="British_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_American_War" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_British_Neutrality"/>
 	<option name="relationshipChange" value="British:Americans:War"/>
 	<option name="text" value="British_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Chinese_War" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_British_Neutrality"/>
 	<option name="relationshipChange" value="British:Chinese:War"/>
 	<option name="text" value="British_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Italian_War" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_Italian_Neutrality"/>
 	<option name="relationshipChange" value="British:Italians:War"/>
 	<option name="text" value="British_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_French_War" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_French_Neutrality"/>
 	<option name="relationshipChange" value="British:French:War"/>
 	<option name="text" value="British_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -5256,7 +5336,8 @@
 	<option name="relationshipChange" value="British:Germans:Neutrality"/>
 	<option name="text" value="British_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Russian_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5264,7 +5345,8 @@
 	<option name="relationshipChange" value="British:Russians:Neutrality"/>
 	<option name="text" value="British_Russians_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Japanese_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5272,7 +5354,8 @@
 	<option name="relationshipChange" value="British:Japanese:Neutrality"/>
 	<option name="text" value="British_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_American_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5280,7 +5363,8 @@
 	<option name="relationshipChange" value="British:Americans:Neutrality"/>
 	<option name="text" value="British_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Chinese_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5288,7 +5372,8 @@
 	<option name="relationshipChange" value="British:Chinese:Neutrality"/>
 	<option name="text" value="British_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Italian_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5296,7 +5381,8 @@
 	<option name="relationshipChange" value="British:Italians:Neutrality"/>
 	<option name="text" value="British_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_French_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5304,7 +5390,8 @@
 	<option name="relationshipChange" value="British:French:Neutrality"/>
 	<option name="text" value="British_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Break Alliance)-->
@@ -5312,42 +5399,49 @@
 	<option name="conditions" value="conditionAttachment_German_British_Alliance"/>
 	<option name="relationshipChange" value="British:Germans:Neutrality"/>
 	<option name="text" value="British_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Russian_BreakAlliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_British_Alliance"/>
 	<option name="relationshipChange" value="British:Russians:Neutrality"/>
 	<option name="text" value="British_Russians_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Japanese_BreakAlliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_British_Alliance"/>
 	<option name="relationshipChange" value="British:Japanese:Neutrality"/>
 	<option name="text" value="British_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_American_BreakAlliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_British_Alliance"/>
 	<option name="relationshipChange" value="British:Americans:Neutrality"/>
 	<option name="text" value="British_American_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Chinese_BreakAlliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_British_Alliance"/>
 	<option name="relationshipChange" value="British:Chinese:Neutrality"/>
 	<option name="text" value="British_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Italian_BreakAlliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_Italian_Alliance"/>
 	<option name="relationshipChange" value="British:Italians:Neutrality"/>
 	<option name="text" value="British_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_French_BreakAlliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_French_Alliance"/>
 	<option name="relationshipChange" value="British:French:Neutrality"/>
 	<option name="text" value="British_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -5356,7 +5450,8 @@
 	<option name="relationshipChange" value="British:Germans:Allied"/>
 	<option name="text" value="British_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Russian_Alliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5364,7 +5459,8 @@
 	<option name="relationshipChange" value="British:Russians:Allied"/>
 	<option name="text" value="British_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Japanese_Alliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5372,7 +5468,8 @@
 	<option name="relationshipChange" value="British:Japanese:Allied"/>
 	<option name="text" value="British_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_American_Alliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5380,7 +5477,8 @@
 	<option name="relationshipChange" value="British:Americans:Allied"/>
 	<option name="text" value="British_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Chinese_Alliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5388,7 +5486,8 @@
 	<option name="relationshipChange" value="British:Chinese:Allied"/>
 	<option name="text" value="British_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_Italian_Alliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5396,7 +5495,8 @@
 	<option name="relationshipChange" value="British:Italians:Allied"/>
 	<option name="text" value="British_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_British_French_Alliance" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5404,7 +5504,8 @@
 	<option name="relationshipChange" value="British:French:Allied"/>
 	<option name="text" value="British_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Italian Politics-->
@@ -5413,42 +5514,49 @@
 	<option name="conditions" value="conditionAttachment_German_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Italians:Germans:War"/>
 	<option name="text" value="Italian_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Russian_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Italians:Russians:War"/>
 	<option name="text" value="Italian_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Japanese_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Italians:Japanese:War"/>
 	<option name="text" value="Italian_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_American_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Italians:Americans:War"/>
 	<option name="text" value="Italian_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Chinese_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Italians:Chinese:War"/>
 	<option name="text" value="Italian_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_British_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_Italian_Neutrality"/>
 	<option name="relationshipChange" value="Italians:British:War"/>
 	<option name="text" value="Italian_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_French_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Italian_French_Neutrality"/>
 	<option name="relationshipChange" value="Italians:French:War"/>
 	<option name="text" value="Italian_French_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -5457,7 +5565,8 @@
 	<option name="relationshipChange" value="Italians:Germans:Neutrality"/>
 	<option name="text" value="Italian_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Russian_Ceasefire" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5465,7 +5574,8 @@
 	<option name="relationshipChange" value="Italians:Russians:Neutrality"/>
 	<option name="text" value="Italian_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Japanese_Ceasefire" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5473,7 +5583,8 @@
 	<option name="relationshipChange" value="Italians:Japanese:Neutrality"/>
 	<option name="text" value="Italian_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_American_Ceasefire" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5481,7 +5592,8 @@
 	<option name="relationshipChange" value="Italians:Americans:Neutrality"/>
 	<option name="text" value="Italian_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Chinese_Ceasefire" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5489,7 +5601,8 @@
 	<option name="relationshipChange" value="Italians:Chinese:Neutrality"/>
 	<option name="text" value="Italian_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_British_Ceasefire" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5497,7 +5610,8 @@
 	<option name="relationshipChange" value="Italians:British:Neutrality"/>
 	<option name="text" value="Italian_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_French_Ceasefire" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5505,7 +5619,8 @@
 	<option name="relationshipChange" value="Italians:French:Neutrality"/>
 	<option name="text" value="Italian_French_Ceasefire"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (BreakAlliance)-->
@@ -5513,42 +5628,49 @@
 	<option name="conditions" value="conditionAttachment_German_Italian_Alliance"/>
 	<option name="relationshipChange" value="Italians:Germans:Neutrality"/>
 	<option name="text" value="Italian_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Russian_BreakAlliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_Italian_Alliance"/>
 	<option name="relationshipChange" value="Italians:Russians:Neutrality"/>
 	<option name="text" value="Italian_Russian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Japanese_BreakAlliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_Italian_Alliance"/>
 	<option name="relationshipChange" value="Italians:Japanese:Neutrality"/>
 	<option name="text" value="Italian_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_American_BreakAlliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_Italian_Alliance"/>
 	<option name="relationshipChange" value="Italians:Americans:Neutrality"/>
 	<option name="text" value="Italian_American_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Chinese_BreakAlliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_Italian_Alliance"/>
 	<option name="relationshipChange" value="Italians:Chinese:Neutrality"/>
 	<option name="text" value="Italian_Chinese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_British_BreakAlliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_Italian_Alliance"/>
 	<option name="relationshipChange" value="Italians:British:Neutrality"/>
 	<option name="text" value="Italian_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_French_BreakAlliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Italian_French_Alliance"/>
 	<option name="relationshipChange" value="Italians:French:Neutrality"/>
 	<option name="text" value="Italian_French_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Ally Switches-->
@@ -5557,7 +5679,8 @@
 	<option name="relationshipChange" value="Italians:Germans:Allied"/>
 	<option name="text" value="Italian_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Russian_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5565,7 +5688,8 @@
 	<option name="relationshipChange" value="Italians:Russians:Allied"/>
 	<option name="text" value="Italian_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Japanese_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5573,7 +5697,8 @@
 	<option name="relationshipChange" value="Italians:Japanese:Allied"/>
 	<option name="text" value="Italian_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_American_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5581,7 +5706,8 @@
 	<option name="relationshipChange" value="Italians:Americans:Allied"/>
 	<option name="text" value="Italian_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_Chinese_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5589,7 +5715,8 @@
 	<option name="relationshipChange" value="Italians:Chinese:Allied"/>
 	<option name="text" value="Italian_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_British_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5597,7 +5724,8 @@
 	<option name="relationshipChange" value="Italians:British:Allied"/>
 	<option name="text" value="Italian_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_Italian_French_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5605,7 +5733,8 @@
 	<option name="relationshipChange" value="Italians:French:Allied"/>
 	<option name="text" value="Italian_French_Alliance"/>
 	<option name="actionAccept" value="French"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--French Politics-->
@@ -5614,42 +5743,49 @@
 	<option name="conditions" value="conditionAttachment_German_French_Neutrality"/>
 	<option name="relationshipChange" value="French:Germans:War"/>
 	<option name="text" value="French_German_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Russian_War" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_French_Neutrality"/>
 	<option name="relationshipChange" value="French:Russians:War"/>
 	<option name="text" value="French_Russian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Japanese_War" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_French_Neutrality"/>
 	<option name="relationshipChange" value="French:Japanese:War"/>
 	<option name="text" value="French_Japanese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_American_War" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_French_Neutrality"/>
 	<option name="relationshipChange" value="French:Americans:War"/>
 	<option name="text" value="French_American_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Chinese_War" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_French_Neutrality"/>
 	<option name="relationshipChange" value="French:Chinese:War"/>
 	<option name="text" value="French_Chinese_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_British_War" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_French_Neutrality"/>
 	<option name="relationshipChange" value="French:British:War"/>
 	<option name="text" value="French_British_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Italian_War" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Italian_French_Neutrality"/>
 	<option name="relationshipChange" value="French:Italians:War"/>
 	<option name="text" value="French_Italian_War"/>
+	<option name="costResources" value="1:Influence"/>
 </attachment>
 
 <!--Neutrality Switches (Ceasefire)-->
@@ -5658,7 +5794,8 @@
 	<option name="relationshipChange" value="French:Germans:Neutrality"/>
 	<option name="text" value="French_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Russian_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5666,7 +5803,8 @@
 	<option name="relationshipChange" value="French:Russians:Neutrality"/>
 	<option name="text" value="French_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Japanese_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5674,7 +5812,8 @@
 	<option name="relationshipChange" value="French:Japanese:Neutrality"/>
 	<option name="text" value="French_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_American_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5682,7 +5821,8 @@
 	<option name="relationshipChange" value="French:Americans:Neutrality"/>
 	<option name="text" value="French_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Chinese_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5690,7 +5830,8 @@
 	<option name="relationshipChange" value="French:Chinese:Neutrality"/>
 	<option name="text" value="French_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_British_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5698,7 +5839,8 @@
 	<option name="relationshipChange" value="French:British:Neutrality"/>
 	<option name="text" value="French_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Italian_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5706,7 +5848,8 @@
 	<option name="relationshipChange" value="French:Italians:Neutrality"/>
 	<option name="text" value="French_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="2:Influence"/>
 </attachment>
 
 <!--Neutral Switches (BreakAlliance)-->
@@ -5714,42 +5857,49 @@
 	<option name="conditions" value="conditionAttachment_German_French_Alliance"/>
 	<option name="relationshipChange" value="French:Germans:Neutrality"/>
 	<option name="text" value="French_German_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Russian_BreakAlliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Russian_French_Alliance"/>
 	<option name="relationshipChange" value="French:Russians:Neutrality"/>
 	<option name="text" value="French_Russian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Japanese_BreakAlliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Japanese_French_Alliance"/>
 	<option name="relationshipChange" value="French:Japanese:Neutrality"/>
 	<option name="text" value="French_Japanese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_American_BreakAlliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_American_French_Alliance"/>
 	<option name="relationshipChange" value="French:Americans:Neutrality"/>
 	<option name="text" value="French_American_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Chinese_BreakAlliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Chinese_French_Alliance"/>
 	<option name="relationshipChange" value="French:Chinese:Neutrality"/>
 	<option name="text" value="French_Chinese_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_British_BreakAlliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_British_French_Alliance"/>
 	<option name="relationshipChange" value="French:British:Neutrality"/>
 	<option name="text" value="French_British_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Italian_BreakAlliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_Italian_French_Alliance"/>
 	<option name="relationshipChange" value="French:Italians:Neutrality"/>
 	<option name="text" value="French_Italian_BreakAlliance"/>
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <!--Alliance Switches-->
@@ -5758,7 +5908,8 @@
 	<option name="relationshipChange" value="French:Germans:Allied"/>
 	<option name="text" value="French_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Russian_Alliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5766,7 +5917,8 @@
 	<option name="relationshipChange" value="French:Russians:Allied"/>
 	<option name="text" value="French_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Japanese_Alliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5774,7 +5926,8 @@
 	<option name="relationshipChange" value="French:Japanese:Allied"/>
 	<option name="text" value="French_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_American_Alliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5782,7 +5935,8 @@
 	<option name="relationshipChange" value="French:Americans:Allied"/>
 	<option name="text" value="French_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Chinese_Alliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5790,7 +5944,8 @@
 	<option name="relationshipChange" value="French:Chinese:Allied"/>
 	<option name="text" value="French_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_British_Alliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5798,7 +5953,8 @@
 	<option name="relationshipChange" value="French:British:Allied"/>
 	<option name="text" value="French_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
 <attachment name="politicalActionAttachment_French_Italian_Alliance" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
@@ -5806,18 +5962,169 @@
 	<option name="relationshipChange" value="French:Italians:Allied"/>
 	<option name="text" value="French_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	<option name="attemptsPerTurn" value="1"/>
+	
+	<option name="costResources" value="3:Influence"/>
 </attachment>
 
-<!--Influence Regeneration-->
-<attachment name="conditionAttachment_GermansLessThanThreeInfluence" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-	<option name="resource" value="Influence" count="0-2"/>
+<!--Influence-->
+<!--Germany-->
+<attachment name="conditionAttachment_GermansExist" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/> <!--Wait until after the first turn-->
 </attachment>
 
-<attachment name="triggerAttachment_InfluenceRegenerate_Germans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-	<option name="conditions" value="conditionAttachment_GermansLessThanThreeInfluence"/>
-	<option name="when" value="after:germansEndTurn"/>
-	<option name="resource" value="Influence" count="3"/> <!--Should Set Influence to 3, but could also ADD 3 Influence-->
+<attachment name="triggerAttachment_InfluenceReset_Germans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_GermansExist"/>
+	<option name="when" value="after:germansPurchase"/> <!--fire after Purchase Phase, which is just in tome for the Politics phase-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="3"/> <!--Give 3 Influence-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_Germans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_GermansExist"/>
+	<option name="when" value="after:germansPlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--Russians-->
+<attachment name="conditionAttachment_RussiansExist" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceReset_Russians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_RussiansExist"/>
+	<option name="when" value="after:russiansPurchase"/> <!--fire after Purchase Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_Russians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_RussiansExist"/>
+	<option name="when" value="after:russiansPlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--Japanese-->
+<attachment name="conditionAttachment_JapaneseExist" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceGenerate_Japanese" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_JapaneseExist"/>
+	<option name="when" value="after:japanesePurchase"/> <!--fire after Politics Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_Japanese" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_JapaneseExist"/>
+	<option name="when" value="after:japanesePlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--Americans-->
+<attachment name="conditionAttachment_AmericansExist" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceGenerate_Americans" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_AmericansExist"/>
+	<option name="when" value="after:americansPurchase"/> <!--fire after Politics Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_Americans" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_AmericansExist"/>
+	<option name="when" value="after:americansPlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--Chinese-->
+<attachment name="conditionAttachment_ChineseExist" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceGenerate_Chinese" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_ChineseExist"/>
+	<option name="when" value="after:chinesePurchase"/> <!--fire after Politics Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_Chinese" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_ChineseExist"/>
+	<option name="when" value="after:chinesePlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--British-->
+<attachment name="conditionAttachment_BritishExist" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceGenerate_British" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_BritishExist"/>
+	<option name="when" value="after:britishPurchase"/> <!--fire after Politics Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_British" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_BritishExist"/>
+	<option name="when" value="after:britishPlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--Italians-->
+<attachment name="conditionAttachment_ItaliansExist" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceGenerate_Italians" attachTo="Italians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_ItaliansExist"/>
+	<option name="when" value="after:italiansPurchase"/> <!--fire after Politics Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_Italians" attachTo="Italians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_ItaliansExist"/>
+	<option name="when" value="after:italiansPlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
+</attachment>
+
+<!--French-->
+<attachment name="conditionAttachment_FrenchExist" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="directOwnershipTerritories" count="0-+"/>
+	<option name="rounds" value="2-+"/>
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceGenerate_French" attachTo="French" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_FrenchExist"/>
+	<option name="when" value="after:frenchPurchase"/> <!--fire after Politics Phase-->
+	<option name="resource" value="Influence"/> <!--What resource to modify?-->
+	<option name="resourceCount" value="3"/> <!--How many given?-->
+</attachment>
+
+<attachment name="triggerAttachment_InfluenceDrain_French" attachTo="French" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_FrenchExist"/>
+	<option name="when" value="after:frenchPlace"/> <!--fire after Place Phase, which is effectively the end of the turn-->
+	<option name="resource" value="Influence"/> <!--Target Influence Resource-->
+	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
 </attachment>
 
 <!--VICTORY SYSTEM-->
@@ -5871,30 +6178,14 @@
                 
 				<unitInitialize>
 					<!--Random Territory Assignment; Units to place for free-->
-					<heldUnits unitType="factory_minor" player="Germans" quantity="1"/>
-					<heldUnits unitType="infantry" player="Germans" quantity="5"/>
-					<heldUnits unitType="armour" player="Germans" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="Russians" quantity="1"/>
-					<heldUnits unitType="infantry" player="Russians" quantity="5"/>
-					<heldUnits unitType="armour" player="Russians" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="Japanese" quantity="1"/>
-					<heldUnits unitType="infantry" player="Japanese" quantity="5"/>
-					<heldUnits unitType="armour" player="Japanese" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="Americans" quantity="1"/>
-					<heldUnits unitType="infantry" player="Americans" quantity="5"/>
-					<heldUnits unitType="armour" player="Americans" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="Chinese" quantity="1"/>
-					<heldUnits unitType="infantry" player="Chinese" quantity="5"/>
-					<heldUnits unitType="armour" player="Chinese" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="British" quantity="1"/>
-					<heldUnits unitType="infantry" player="British" quantity="5"/>
-					<heldUnits unitType="armour" player="British" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="Italians" quantity="1"/>
-					<heldUnits unitType="infantry" player="Italians" quantity="5"/>
-					<heldUnits unitType="armour" player="Italians" quantity="4"/>
-					<heldUnits unitType="factory_minor" player="French" quantity="1"/>
-					<heldUnits unitType="infantry" player="French" quantity="5"/>
-					<heldUnits unitType="armour" player="French" quantity="4"/>
+					<heldUnits unitType="infantry" player="Germans" quantity="10"/>
+					<heldUnits unitType="infantry" player="Russians" quantity="10"/>
+					<heldUnits unitType="infantry" player="Japanese" quantity="10"/>
+					<heldUnits unitType="infantry" player="Americans" quantity="10"/>
+					<heldUnits unitType="infantry" player="Chinese" quantity="10"/>
+					<heldUnits unitType="infantry" player="British" quantity="10"/>
+					<heldUnits unitType="infantry" player="Italians" quantity="10"/>
+					<heldUnits unitType="infantry" player="French" quantity="10"/>
 				</unitInitialize>
 	
  <resourceInitialize>
@@ -5906,14 +6197,14 @@
       <resourceGiven player="Americans" resource="PUs" quantity="30"/>
       <resourceGiven player="Chinese" resource="PUs" quantity="30"/>
       <resourceGiven player="French" resource="PUs" quantity="30"/>
-	  <resourceGiven player="Germans" resource="Influence" quantity="1"/>
-	  <resourceGiven player="Russians" resource="Influence" quantity="1"/>
-	  <resourceGiven player="Japanese" resource="Influence" quantity="1"/>
-	  <resourceGiven player="Americans" resource="Influence" quantity="1"/>
-	  <resourceGiven player="Chinese" resource="Influence" quantity="1"/>
-	  <resourceGiven player="British" resource="Influence" quantity="1"/>
-	  <resourceGiven player="Italians" resource="Influence" quantity="1"/>
-	  <resourceGiven player="French" resource="Influence" quantity="1"/>
+	  <resourceGiven player="Germans" resource="Influence" quantity="0"/>
+	  <resourceGiven player="Russians" resource="Influence" quantity="0"/>
+	  <resourceGiven player="Japanese" resource="Influence" quantity="0"/>
+	  <resourceGiven player="Americans" resource="Influence" quantity="0"/>
+	  <resourceGiven player="Chinese" resource="Influence" quantity="0"/>
+	  <resourceGiven player="British" resource="Influence" quantity="0"/>
+	  <resourceGiven player="Italians" resource="Influence" quantity="0"/>
+	  <resourceGiven player="French" resource="Influence" quantity="0"/>
 </resourceInitialize>
 	
 <relationshipInitialize>
@@ -6049,7 +6340,7 @@
     <property name="Paratroopers Can Move During Non Combat" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Paratroopers Can Attack Deep Into Enemy Territory" value="false" editable="false">
+    <property name="Paratroopers Can Attack Deep Into Enemy Territory" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Always on AA" value="true" editable="false">
@@ -6373,7 +6664,7 @@
 			<b>Playtesters: B4TheReign, Spiralhillfool, GraciousGOD</b>
             <br/>
 			<br/>
-            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.1.0</b></span>
+            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.1.1</b></span>
         </div>
 <br>
 <hr>
@@ -6382,7 +6673,7 @@
 <span style="color:3131c7;">Special thanks to the creators of "Path to Victory" for providing the original foundation of this game and map.<br>
 <br>
 <br>
-THIS IS A WORK IN PROGRESS - MANY THINGS ARE SUBJECT TO CHANGE!!!</span></div>
+THIS IS A BETA. PLAYTESTING AND BALANCING ARE IN PROGRESS. FEEDBACK IS WELCOME.</span></div>
 </b>
 <br>
 <hr>
@@ -6400,7 +6691,7 @@ This cycle of play continues until one person (or one team/alliance) is declared
 However, things get more complicated in this TripleA rendition of RISK. In normal RISK, you simply have "armies" and nothing else to worry about.<br>
 In "Risk of Defeat", you must balance income (known as PU or "Production Units"), infrastructure, and military composition (Land, Air, and Sea).<br>
 In addition, there are certain restrictions (and exceptions to restrictions) to where you can and can't move units, place new units, and so on.<br>
-A link to a PDF file will be included in upcoming version which breaks down how every mechanic works in "RISK of Defeat".<br>
+Learn all about the mechanics at the <a href="https://github.com/SlendyMcTendies/ww2_risk_of_defeat/wiki">RISK of Defeat Wiki</a><br>
 <hr>
 <b>Change Log</b>
 <br>
@@ -6408,7 +6699,35 @@ A link to a PDF file will be included in upcoming version which breaks down how 
 0.1.1
 <br>
 <br>
->Added "Influence" resource to enforce limited "Political Actions" per turn. (TESTING)<br>
+>Added "Influence" resource to limit the number of Political Actions per turn.<br>
+>Added an icon for Influence.<br>
+>Starting on Turn 2, Players are alloted 3 Influence each turn. (Unspent Influence is lost.)<br>
+<br>
+<u>Political Actions cost Influence</u><br>
+>Declaring War costs 1 Influence<br>
+>Offering a Ceasefire costs 2 Influence<br>
+>Offering an Alliance and Breaking an Alliance costs 3 Influence<br>
+<br>
+>Changed starting units to 10 Infantry.<br>
+<br>
+<u>Limited the number of Factories, Harbours, and Airfields each player can built per game</u><br>
+>Minor Factory: 10<br>
+>Major Factory: 5<br>
+<i>Factory Upgrades are not limited</i><br>
+>Harbour: 5<br>
+>Airfield: 5<br>
+<br>
+<u>Implemented Paratroopers</u><br>
+>Infantry (NOT Marines) can be loaded into Bombers to infiltrate deep into enemy Territory, or to join battle from far away.<br>
+>Bombers have a Transport Capactity of 6.<br>
+<br>
+<u>Changed Transport Costs and Capacities</u><br>
+>Infantry Transport Cost reduced from 5 to 3<br>
+>Marine Transport Cost reduced from 4 to 3<br>
+>Mechanized Infantry Transport Cost reduced from 6 to 5<br>
+>Artillery Transport Cost reduced from 6 to 5<br>
+>Transport ship Transporting Capacity reduced from 11 to 10<br>
+>Battleship and Cruiser Transporting Capacity reduced from 4 to 3<br>
 <br>
 <br>
 0.1.0
