@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.1.1"/>
+        <info name="WW2 Risk of Defeat" version="0.1.2"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -1592,11 +1592,11 @@
       <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
-      <cost resource="PUs" quantity="20"/>
+      <cost resource="PUs" quantity="40"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </productionRule>
     <productionRule name="buyHarbour">
-      <cost resource="PUs" quantity="20"/>
+      <cost resource="PUs" quantity="40"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </productionRule>
     <productionRule name="buyAAGun">
@@ -1605,71 +1605,33 @@
     </productionRule>
 	
     <!-- SHIPYARD PRICES -->
-    <productionRule name="buyTransportShipyards">
-      <cost resource="PUs" quantity="6"/>
-      <result resourceOrUnit="transport" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyCarrierShipyards">
-      <cost resource="PUs" quantity="13"/>
-      <result resourceOrUnit="carrier" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyDestroyerShipyards">
-      <cost resource="PUs" quantity="7"/>
-      <result resourceOrUnit="destroyer" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyCruiserShipyards">
-      <cost resource="PUs" quantity="9"/>
-      <result resourceOrUnit="cruiser" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyBattleshipShipyards">
-      <cost resource="PUs" quantity="17"/>
-      <result resourceOrUnit="battleship" quantity="1"/>
-    </productionRule>
-    <productionRule name="buySubmarineShipyards">
-      <cost resource="PUs" quantity="5"/>
-      <result resourceOrUnit="submarine" quantity="1"/>
-    </productionRule>
+    
     <!-- Repair rules -->
     <repairRule name="repairFactory_Minor">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_minor" quantity="1"/>
     </repairRule>
-    <repairRule name="repairFactory_MinorIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="factory_minor" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairFactory_Major">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_major" quantity="1"/>
     </repairRule>
-    <repairRule name="repairFactory_MajorIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="factory_major" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairFactory_Upgrade">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </repairRule>
-    <repairRule name="repairFactory_UpgradeIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="factory_upgrade" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairAirfield">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </repairRule>
-    <repairRule name="repairAirfieldIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="airfield" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairHarbour">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </repairRule>
-    <repairRule name="repairHarbourIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="harbour" quantity="2"/>
-    </repairRule>
+    
     <repairFrontier name="repair">
       <repairRules name="repairFactory_Minor"/>
       <repairRules name="repairFactory_Major"/>
@@ -1677,13 +1639,7 @@
       <repairRules name="repairAirfield"/>
       <repairRules name="repairHarbour"/>
     </repairFrontier>
-    <repairFrontier name="repairIndustrialTechnology">
-      <repairRules name="repairFactory_MinorIndustrialTechnology"/>
-      <repairRules name="repairFactory_MajorIndustrialTechnology"/>
-      <repairRules name="repairFactory_UpgradeIndustrialTechnology"/>
-      <repairRules name="repairAirfieldIndustrialTechnology"/>
-      <repairRules name="repairHarbourIndustrialTechnology"/>
-    </repairFrontier>
+
     <productionFrontier name="production">
       <frontierRules name="buyInfantry"/>
       <frontierRules name="buyMech_Infantry"/>
@@ -1706,14 +1662,6 @@
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbour"/>
     </productionFrontier>
-    <productionFrontier name="productionShipyards">
-		<frontierRules name="buyTransportShipyards"/>
-		<frontierRules name="buySubmarineShipyards"/>
-		<frontierRules name="buyCarrierShipyards"/>
-		<frontierRules name="buyDestroyerShipyards"/>
-		<frontierRules name="buyCruiserShipyards"/>
-		<frontierRules name="buyBattleshipShipyards"/>
-	</productionFrontier>
     
 		<playerProduction player="Americans" frontier="production"/>
 		<playerProduction player="Chinese" frontier="production"/>
@@ -1734,162 +1682,48 @@
 	</production>
  <technology>
     <technologies>
-      <techname name="superSub"/>
-      <techname name="jetPower"/>
-      <techname name="shipyards"/>
-      <techname name="aARadar"/>
-      <techname name="longRangeAir"/>
-      <techname name="heavyBomber"/>
-      <techname name="improvedArtillerySupport"/>
-      <techname name="rocket"/>
       <techname name="Airborne_Forces"/>
-      <techname name="increasedFactoryProduction"/>
-      <techname name="warBonds"/>
-      <techname name="Improved_Mech_Inf"/>
       <!-- Airborne_Forces and Improved_Mech_Inf are custom techs... but all will end up being customized -->
     </technologies>
     <playerTech player="Germans">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
+	
     <playerTech player="Russians">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Japanese">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Americans">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Chinese">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="British">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Italians">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="French">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
   </technology>
@@ -2038,8 +1872,8 @@
       <option name="isStrategicBomber" value="true"/>
       <option name="isAirTransport" value="true"/> <!--true-->
       <option name="transportCapacity" value="6"/> <!--6-->
-      <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="2"/>
+      <option name="bombingMaxDieSides" value="2"/>
+      <option name="bombingBonus" value="1"/>
       <option name="airAttack" value="1"/>
 	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbour"/>
 	  <option name="requiresUnits" value="airfield:factory_minor"/>
@@ -2059,7 +1893,7 @@
       <option name="maxScrambleDistance" value="1"/>
       <option name="airAttack" value="1"/>
       <option name="blockade" value="2"/>
-      <option name="bombingMaxDieSides" value="6"/>
+      <option name="bombingMaxDieSides" value="2"/>
       <option name="bombingBonus" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
       <option name="bombingTargets" value="airfield:harbour"/>
@@ -2152,10 +1986,10 @@
       <option name="isFactory" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="3"/>
-      <option name="maxDamage" value="6"/>
+	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/> <!--Is this line necessary?-->
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="canProduceXUnits" value="7"/>
+      <option name="maxDamage" value="15"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="10"/>
     </attachment>
@@ -2166,9 +2000,9 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="9"/>
-      <option name="maxDamage" value="18"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="canProduceXUnits" value="15"/>
+      <option name="maxDamage" value="30"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
@@ -2179,9 +2013,9 @@
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="9"/>
-      <option name="maxDamage" value="18"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="canProduceXUnits" value="15"/>
+      <option name="maxDamage" value="30"/>
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
@@ -2243,7 +2077,7 @@
       <option name="isAAforCombatOnly" value="false"/>
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
-      <option name="transportCost" value="6"/>
+      <option name="transportCost" value="5"/>
       <option name="maxAAattacks" value="3"/>
     </attachment>
 	
@@ -3414,6 +3248,31 @@
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="113 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="116 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="78 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="123 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
 
 <!--Canals-->
  <attachment name="canalAttachmentSuez" attachTo="100 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
@@ -3436,7 +3295,7 @@
       <option name="landTerritories" value="Denmark:Norway"/>
 	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
     </attachment>
- <attachment name="canalAttachmentGibraltar" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+	<attachment name="canalAttachmentGibraltar" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Strait of Gibraltar"/>
       <option name="landTerritories" value="Gibraltar:Morocco"/>
       <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
@@ -6299,10 +6158,14 @@
     <property name="Allies Honorable Victory VCs" value="14" editable="true">
       <number min="11" max="19"/>
     </property>
-	-->
-	<property name="Victory VCs" value="11" editable="false">
+	
+	<property name="Solo Victory VCs" value="11" editable="true">
       <number min="11" max="21"/>
     </property>
+	<property name="Allied Victory VCs" value="18" editable="true">
+      <number min="11" max="21"/>
+    </property>
+	-->
     <!-- End of Victory Conditions, rest of typical changed properties below -->
     <property name="Low Luck" value="false" editable="true">
       <boolean/>
@@ -6379,7 +6242,7 @@
     <property name="Selectable Tech Roll" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Use Shipyards" value="true" editable="false">
+    <property name="Use Shipyards" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Scramble Rules In Effect" value="true" editable="false">
@@ -6469,7 +6332,7 @@
     <property name="Choose AA Casualties" value="true" editable="true">
       <boolean/>
     </property>
-    <property name="AA Territory Restricted" value="false" editable="false">
+    <property name="AA Territory Restricted" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Force AA Attacks For Last Step Of Fly Over" value="true" editable="false">
@@ -6542,7 +6405,7 @@
     <property name="Subs Can End NonCombat Move With Enemies" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Naval Units May Not NonCombat Move Into Controlled Sea Zones" value="false" editable="false">
+    <property name="Naval Units May Not NonCombat Move Into Controlled Sea Zones" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Previous Units Fight" value="true" editable="false">
@@ -6645,194 +6508,5 @@
 	-->
 
 <property name="mapName" value="ww2_risk_of_defeat" editable="false"/>
-<property name="notes">
-<value>
-                        <![CDATA[<div style="padding:10px;font-size:14px;background-color:white;text-align:justify;">
-
-  <div style="text-align: center;">
-            <b><span style="font-size:300%;color:660000;">WW2 Risk of Defeat</span></b>
-            <br/>
-			<br/>
-            <b>Gameplay by SlendyMcTendies</b>
-            <br/>
-			<br/>
-            <b>Original Map by Adam514 (aka AdamtheEnginerd) & Regularkid (aka Joe)</b>
-			<br/>
-			<b>Edited Map by SlendyMcTendies</b>
-			<br/>
-			<br/>
-			<b>Playtesters: B4TheReign, Spiralhillfool, GraciousGOD</b>
-            <br/>
-			<br/>
-            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.1.1</b></span>
-        </div>
-<br>
-<hr>
-<br>
- <div style="text-align: center;">
-<span style="color:3131c7;">Special thanks to the creators of "Path to Victory" for providing the original foundation of this game and map.<br>
-<br>
-<br>
-THIS IS A BETA. PLAYTESTING AND BALANCING ARE IN PROGRESS. FEEDBACK IS WELCOME.</span></div>
-</b>
-<br>
-<hr>
-<br>
-<div style="text-align: center;"><b>**RISK OF DEFEAT**</b></div>
-<br>
-<hr>
-<br>
-<br>
-<b>How to Play</b><br>
-"RISK of Defeat" plays similarly to the classic strategy board-game RISK. At the beginning of the game, you chose which territories start under your control in a turn-based fashion.<br>
-As the game progresses, you gain more troops to place onto the map in order to conquer more territory. When you conquer more territory, you can place even more troops to conquer even more territory, and so on.<br>
-This cycle of play continues until one person (or one team/alliance) is declared the winner by controlling the eniter board.<br>
-<br>
-However, things get more complicated in this TripleA rendition of RISK. In normal RISK, you simply have "armies" and nothing else to worry about.<br>
-In "Risk of Defeat", you must balance income (known as PU or "Production Units"), infrastructure, and military composition (Land, Air, and Sea).<br>
-In addition, there are certain restrictions (and exceptions to restrictions) to where you can and can't move units, place new units, and so on.<br>
-Learn all about the mechanics at the <a href="https://github.com/SlendyMcTendies/ww2_risk_of_defeat/wiki">RISK of Defeat Wiki</a><br>
-<hr>
-<b>Change Log</b>
-<br>
-<br>
-0.1.1
-<br>
-<br>
->Added "Influence" resource to limit the number of Political Actions per turn.<br>
->Added an icon for Influence.<br>
->Starting on Turn 2, Players are alloted 3 Influence each turn. (Unspent Influence is lost.)<br>
-<br>
-<u>Political Actions cost Influence</u><br>
->Declaring War costs 1 Influence<br>
->Offering a Ceasefire costs 2 Influence<br>
->Offering an Alliance and Breaking an Alliance costs 3 Influence<br>
-<br>
->Changed starting units to 10 Infantry.<br>
-<br>
-<u>Limited the number of Factories, Harbours, and Airfields each player can built per game</u><br>
->Minor Factory: 10<br>
->Major Factory: 5<br>
-<i>Factory Upgrades are not limited</i><br>
->Harbour: 5<br>
->Airfield: 5<br>
-<br>
-<u>Implemented Paratroopers</u><br>
->Infantry (NOT Marines) can be loaded into Bombers to infiltrate deep into enemy Territory, or to join battle from far away.<br>
->Bombers have a Transport Capactity of 6.<br>
-<br>
-<u>Changed Transport Costs and Capacities</u><br>
->Infantry Transport Cost reduced from 5 to 3<br>
->Marine Transport Cost reduced from 4 to 3<br>
->Mechanized Infantry Transport Cost reduced from 6 to 5<br>
->Artillery Transport Cost reduced from 6 to 5<br>
->Transport ship Transporting Capacity reduced from 11 to 10<br>
->Battleship and Cruiser Transporting Capacity reduced from 4 to 3<br>
-<br>
-<br>
-0.1.0
-<br>
-<br>
->Fixed Political message and button errors.<br>
->Fixed Carriers, Battleships, and Bombers not being buildable with Factory Upgrade buildings.<br>
->Fixed Chinese to American War Declaration.<br>
->East, Central, and Western United States territories generate 6 PU each instead of 20, 12, and 10.<br>
->Airfield maxmimum Scrable increased to 5.<br>
->Carriers can now support 3 Air Units instead of 2.<br>
->Carrier Maximum Scramble increased to 2.<br>
->Tactical Bombers can no longer Scramble.<br>
->Airfield and Harbor maximum unit production increased to 5.<br>
->Maximum number of Factories, Airfields, and Harbors per territory increased to 2.<br>
->Removed useless Map Options.<br>
->AA Guns are not longer AA guns for Combat Only.<br>
->Fixed missing Continent color on Szechwan.<br>
-<br>
-<br>
-0.0.5
-<br>
-<br>
-<u>Rebalanced Territory PU gain</u><br>
->Tsinghai is no longer a capital; Kiangsu is now the Chinese Capital.<br>
->Tsinghai generates 1 PU instead of 5.<br>
->Manilla generates 3 PU instead of 2.<br>
->Davao generates 2PU instead of 1.<br>
->Western Australia generates 2 PU instead of 1.<br>
->Peru generates 2 PU instead of 1.<br>
->Italian Somaliland and British Somaliland generate 2 PU instead of 1.<br>
->Sierra Leone generates 2 PU instead of 1.<br>
->Morocco generates 2 PU instead of 1.<br>
-<br>
-<u>Implemented "Continent Bonuses"</u><br>
->[GREY]   Pacific Islands give 3 Bonus PU when all territories are controlled.<br>
->[RED]    South America gives 3 Bonus PU when all territories are controlled.<br>
->[PURPLE] Australia gives 4 Bonus PU when all territories are controlled.<br>
->[BROWN]  Africa gives 6 Bonus PU when all territories are controlled.<br>
->[YELLOW] North America gives 6 Bonus PU when all territories are controlled.<br>
->[BLUE]   Europe gives 14 Bonus PU when all territories are controlled.<br>
->[GREEN]  Asia gives 20 Bonus PU when all territories are controlled.<br>
-<br>
->Territory PU Numbers colorized to reflect their Continent.<br>
-<br>
->Territory Selection adjusted to give 5 Infantry, 4 Tanks, 1 Minor Factory for a (maximum) total of 10 Territories gained at the start of a game<br>
-<br>
-<u>Automated Victory System</u><br>
->Two victory conditions exist which will trigger Victory for a player and their allies.<br>
->If a single player controls at least 11 out of the 21 Victory Cities/Victory Territories, victory is claimed for that player and all of their allies.<br>
->If a group of allied players control at least 18 out of the 21 Victory Cities/Victory Territories, Victory is claimed for that Alliance.<br>
-<br>
-<u>Politics System</u><br>
->All players begin in a Neutral stance with every other player.<br>
->Players may [Request Alliance], [Break Alliance], [Request Ceasefire], or [Declare War] with other players during the Politics phase depending on their current political standing.<br>
->Ceasefires and Alliances require the other party to agree.<br>
->Players must be Neutral (either by [Request Ceasefire] or by [Break Alliance]) to request an Alliance or to Declare War on another player.<br>
->Players cannot Declare War on an Allied player, they must first become Neutral via [Break Alliance].<br>
->Players cannot Request Alliance to a player they are at War with, they must first become Neutral via [Request Ceasefire].<br>
-<br>
-<br>
-0.0.4
-<br>
-<br>
->Canal Zones now require controlling both connecting territories to block enemy ships (if only 1 territory surrounds the canal, only that territory is required)<br>
->Submarines and Aircraft are not affected by Canal Zones<br>
->Removed useless code lines:<br>
->>"Change Owner British" and "Unit Production"<br>
->Destroyers, Cruisers, Submarines, and Transport Ships require a Harbor to be built instead of a Factory<br>
->Fighters and Tactical Bombers require an Airfield to be built instead of a Factory<br>
->Bombers require an Airfield <b><u>and</u></b> Factory to be Built<br>
->Factory Upgrades work on territories with 2 production<br>
->You cannot build Major Factories right away on territories with less than 3 production (you must first build a minor factory, then upgrade to a major factory)<br>
->Major Factory cost increased to 60PU, Factory Upgrade cost increased to 40PU<br>
->Capitals are no longer required - Capital assignments have been removed<br>
->Major Factories now produce a maximum of 9 Units<br>
->Airfields and Harbors can produce up to 3 air or sea units respectively<br>
->Airfield and Harbor costs increased to 20<br>
->Manual or Random Territory Selection at the beginning of the game has been implemented:<br>
->>All pre-designated territories and units have been removed<br>
->Faction Count can be edited in pre-game<br>
->Added "None" player to take control of the capitals that no longer matter<br>
->Removed "Tech Tokens" and "Suicide Tokens"<br>
->Limited the number of Factories per Territory to 1<br>
-<br>
-<br>
-0.0.3
-<br>
-<br>
->China no longer controls the Himalayas<br>
->The Capital of China is now Tsinghai instead of the Himalayas (will likely change)<br>
->Tsinghai is a Victory City<br>
->Tsinghai starts with a Major Factory and has 5PU<br>
->ANZAC Removed<br>
->Dutch Removed<br>
->Neutral Allies, Neutral Axis, and Strict Neutral Removed<br>
->UK Pacific Removed<br>
->Mongolia Removed<br>
->Factory removed from Western Germany<br>
->Harbor and Airfield moved from Western Germany to Germany<br>
->All 0PU territories have been given 1PU, except Himalayas and Pripet Marshes<br>
->Minor Factories and Factory Upgrades cost 20PU, Major Factories Cost 40PU<br>
-
-]]>
-                        </value>
-                </property>
-        </propertyList>
+    </propertyList>
 </game>
