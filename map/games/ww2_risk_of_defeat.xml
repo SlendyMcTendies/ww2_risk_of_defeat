@@ -1592,11 +1592,11 @@
       <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
-      <cost resource="PUs" quantity="20"/>
+      <cost resource="PUs" quantity="40"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </productionRule>
     <productionRule name="buyHarbour">
-      <cost resource="PUs" quantity="20"/>
+      <cost resource="PUs" quantity="40"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </productionRule>
     <productionRule name="buyAAGun">
@@ -2038,8 +2038,8 @@
       <option name="isStrategicBomber" value="true"/>
       <option name="isAirTransport" value="true"/> <!--true-->
       <option name="transportCapacity" value="6"/> <!--6-->
-      <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="2"/>
+      <option name="bombingMaxDieSides" value="2"/>
+      <option name="bombingBonus" value="1"/>
       <option name="airAttack" value="1"/>
 	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbour"/>
 	  <option name="requiresUnits" value="airfield:factory_minor"/>
@@ -2059,7 +2059,7 @@
       <option name="maxScrambleDistance" value="1"/>
       <option name="airAttack" value="1"/>
       <option name="blockade" value="2"/>
-      <option name="bombingMaxDieSides" value="6"/>
+      <option name="bombingMaxDieSides" value="2"/>
       <option name="bombingBonus" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
       <option name="bombingTargets" value="airfield:harbour"/>
@@ -2153,9 +2153,9 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/> <!--Is this line necessary?-->
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="3"/>
-      <option name="maxDamage" value="6"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="canProduceXUnits" value="7"/>
+      <option name="maxDamage" value="15"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="10"/>
     </attachment>
@@ -2166,9 +2166,9 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="9"/>
-      <option name="maxDamage" value="18"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="canProduceXUnits" value="15"/>
+      <option name="maxDamage" value="30"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
@@ -2179,9 +2179,9 @@
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="9"/>
-      <option name="maxDamage" value="18"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="canProduceXUnits" value="15"/>
+      <option name="maxDamage" value="30"/>
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
@@ -2243,7 +2243,7 @@
       <option name="isAAforCombatOnly" value="false"/>
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
-      <option name="transportCost" value="6"/>
+      <option name="transportCost" value="5"/>
       <option name="maxAAattacks" value="3"/>
     </attachment>
 	
@@ -3416,6 +3416,26 @@
     </attachment>
 	
 	<attachment name="territoryAttachment" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="113 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="116 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="78 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="123 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
@@ -6156,7 +6176,7 @@
 <!-- Trigger Victory for a Player or Alliance -->
 <!--Solo Victory Trigger-->
     <attachment foreach="$AllPlayers$" name="conditionAttachmentVictorySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="directOwnershipTerritories" value="$Victory$" count="11"/>
+		<option name="directOwnershipTerritories" value="$Victory$" count="Solo Victory VCs"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentVictorySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 		<option name="trigger" value="conditionAttachmentVictorySolo@AllPlayers@"/>
@@ -6166,7 +6186,7 @@
 	
 <!--Allied Victory Trigger-->
 	<attachment foreach="$AllPlayers$" name="conditionAttachmentVictoryAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="alliedOwnershipTerritories" value="$Victory$" count="18"/>
+		<option name="alliedOwnershipTerritories" value="$Victory$" count="Allied Victory VCs"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentVictoryAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 		<option name="trigger" value="conditionAttachmentVictoryAllied@AllPlayers@"/>
@@ -6305,8 +6325,11 @@
       <number min="11" max="19"/>
     </property>
 	-->
-	<property name="Victory VCs" value="11" editable="false">
+	<property name="Solo Victory VCs" value="11" editable="true">
       <number min="11" max="21"/>
+    </property>
+	<property name="Allied Victory VCs" value="18" editable="true">
+      <number min="Solo Victory VCs" max="21"/>
     </property>
     <!-- End of Victory Conditions, rest of typical changed properties below -->
     <property name="Low Luck" value="false" editable="true">
@@ -6474,7 +6497,7 @@
     <property name="Choose AA Casualties" value="true" editable="true">
       <boolean/>
     </property>
-    <property name="AA Territory Restricted" value="false" editable="false">
+    <property name="AA Territory Restricted" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Force AA Attacks For Last Step Of Fly Over" value="true" editable="false">
@@ -6547,7 +6570,7 @@
     <property name="Subs Can End NonCombat Move With Enemies" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Naval Units May Not NonCombat Move Into Controlled Sea Zones" value="false" editable="false">
+    <property name="Naval Units May Not NonCombat Move Into Controlled Sea Zones" value="true" editable="false">
       <boolean/>
     </property>
     <property name="Previous Units Fight" value="true" editable="false">
@@ -6704,7 +6727,16 @@ Learn all about the mechanics at the <a href="https://github.com/SlendyMcTendies
 0.1.2
 <br>
 <br>
->Made Sea Zone 93 a Blockade Zone (testing if map icons are dynamic)
+>Added the following Sea Zones as Blockade Zones:
+>Sea Zone 78
+>Sea Zone 93
+>Sea Zone 113
+>Sea Zone 116
+>Sea Zone 123
+<br>
+>"Naval Units May Not NonCombat Move Into Controlled Sea Zones" set to True in order to bring Naval unit movement in line with Ground Unit Movement
+<br>
+>"AA Territory Restricted" set to True to incentivise strategic AA placement and movement rather than concentrating AA on Infrastructure
 <br>
 <br>
 0.1.1
