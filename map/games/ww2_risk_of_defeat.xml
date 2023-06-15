@@ -3414,6 +3414,11 @@
       <option name="production" value="0"/>
       <option name="blockadeZone" value="true"/>
     </attachment>
+	
+	<attachment name="territoryAttachment" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+      <option name="production" value="0"/>
+      <option name="blockadeZone" value="true"/>
+    </attachment>
 
 <!--Canals-->
  <attachment name="canalAttachmentSuez" attachTo="100 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
@@ -3436,11 +3441,10 @@
       <option name="landTerritories" value="Denmark:Norway"/>
 	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
     </attachment>
- <attachment name="canalAttachmentGibraltar" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+	<attachment name="canalAttachmentGibraltar" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Strait of Gibraltar"/>
       <option name="landTerritories" value="Gibraltar:Morocco"/>
       <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
-	  <option name="blockadeZone" value="true"/>
     </attachment>
     <attachment name="canalAttachmentGibraltar" attachTo="94 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Strait of Gibraltar"/>
