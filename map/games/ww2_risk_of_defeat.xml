@@ -1631,7 +1631,7 @@
     </productionRule>
     <!-- Repair rules -->
     <repairRule name="repairFactory_Minor">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_minor" quantity="1"/>
     </repairRule>
     <repairRule name="repairFactory_MinorIndustrialTechnology">
@@ -1639,7 +1639,7 @@
       <result resourceOrUnit="factory_minor" quantity="2"/>
     </repairRule>
     <repairRule name="repairFactory_Major">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_major" quantity="1"/>
     </repairRule>
     <repairRule name="repairFactory_MajorIndustrialTechnology">
@@ -1647,7 +1647,7 @@
       <result resourceOrUnit="factory_major" quantity="2"/>
     </repairRule>
     <repairRule name="repairFactory_Upgrade">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </repairRule>
     <repairRule name="repairFactory_UpgradeIndustrialTechnology">
@@ -1655,7 +1655,7 @@
       <result resourceOrUnit="factory_upgrade" quantity="2"/>
     </repairRule>
     <repairRule name="repairAirfield">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </repairRule>
     <repairRule name="repairAirfieldIndustrialTechnology">
@@ -1663,7 +1663,7 @@
       <result resourceOrUnit="airfield" quantity="2"/>
     </repairRule>
     <repairRule name="repairHarbour">
-      <cost resource="PUs" quantity="1"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </repairRule>
     <repairRule name="repairHarbourIndustrialTechnology">
