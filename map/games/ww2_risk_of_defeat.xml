@@ -1986,10 +1986,11 @@
       <option name="isFactory" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/> <!--Is this line necessary?-->
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
+	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="7"/>
       <option name="maxDamage" value="15"/>
+	  <option name="maxOperationalDamage" value="7"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="10"/>
     </attachment>
@@ -2000,9 +2001,10 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="15"/>
       <option name="maxDamage" value="30"/>
+	  <option name="maxOperationalDamage" value="15"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
@@ -2013,9 +2015,10 @@
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
+      <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="15"/>
       <option name="maxDamage" value="30"/>
+	  <option name="maxOperationalDamage" value="15"/>
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
@@ -2025,10 +2028,10 @@
     <attachment name="unitAttachment" attachTo="airfield" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
 	  <option name="isFactory" value="true"/>
-	  <option name="canProduceXUnits" value="5"/>
+	  <option name="canProduceXUnits" value="10"/>
       <option name="canBeDamaged" value="true"/>
-      <option name="maxDamage" value="6"/>
-      <option name="maxOperationalDamage" value="2"/>
+      <option name="maxDamage" value="20"/>
+      <option name="maxOperationalDamage" value="10"/>
       <option name="isAirBase" value="true"/>
       <option name="maxScrambleCount" value="5"/>
       <option name="isConstruction" value="true"/>
@@ -2041,9 +2044,7 @@
       <option name="givesMovement" value="1:bomber"/>
       <option name="givesMovement" value="1:tactical_bomber"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="isRocket" value="true"/>
-      <option name="bombingMaxDieSides" value="6"/>
-      <option name="bombingBonus" value="0"/>
+      <option name="isRocket" value="false"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
 	
@@ -2051,10 +2052,10 @@
     <attachment name="unitAttachment" attachTo="harbour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
 	  <option name="isFactory" value="true"/>
-	  <option name="canProduceXUnits" value="5"/>
+	  <option name="canProduceXUnits" value="10"/>
       <option name="canBeDamaged" value="true"/>
-      <option name="maxDamage" value="6"/>
-      <option name="maxOperationalDamage" value="2"/>
+      <option name="maxDamage" value="20"/>
+      <option name="maxOperationalDamage" value="10"/>
       <option name="repairsUnits" value="battleship:carrier"/>
       <option name="isConstruction" value="true"/>
       <option name="constructionType" value="harbour_structure"/>
