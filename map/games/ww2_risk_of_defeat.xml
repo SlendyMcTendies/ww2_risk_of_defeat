@@ -1605,71 +1605,33 @@
     </productionRule>
 	
     <!-- SHIPYARD PRICES -->
-    <productionRule name="buyTransportShipyards">
-      <cost resource="PUs" quantity="6"/>
-      <result resourceOrUnit="transport" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyCarrierShipyards">
-      <cost resource="PUs" quantity="13"/>
-      <result resourceOrUnit="carrier" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyDestroyerShipyards">
-      <cost resource="PUs" quantity="7"/>
-      <result resourceOrUnit="destroyer" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyCruiserShipyards">
-      <cost resource="PUs" quantity="9"/>
-      <result resourceOrUnit="cruiser" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyBattleshipShipyards">
-      <cost resource="PUs" quantity="17"/>
-      <result resourceOrUnit="battleship" quantity="1"/>
-    </productionRule>
-    <productionRule name="buySubmarineShipyards">
-      <cost resource="PUs" quantity="5"/>
-      <result resourceOrUnit="submarine" quantity="1"/>
-    </productionRule>
+    
     <!-- Repair rules -->
     <repairRule name="repairFactory_Minor">
       <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_minor" quantity="1"/>
     </repairRule>
-    <repairRule name="repairFactory_MinorIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="factory_minor" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairFactory_Major">
       <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_major" quantity="1"/>
     </repairRule>
-    <repairRule name="repairFactory_MajorIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="factory_major" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairFactory_Upgrade">
       <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </repairRule>
-    <repairRule name="repairFactory_UpgradeIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="factory_upgrade" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairAirfield">
       <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </repairRule>
-    <repairRule name="repairAirfieldIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="airfield" quantity="2"/>
-    </repairRule>
+    
     <repairRule name="repairHarbour">
       <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="harbour" quantity="1"/>
     </repairRule>
-    <repairRule name="repairHarbourIndustrialTechnology">
-      <cost resource="PUs" quantity="1"/>
-      <result resourceOrUnit="harbour" quantity="2"/>
-    </repairRule>
+    
     <repairFrontier name="repair">
       <repairRules name="repairFactory_Minor"/>
       <repairRules name="repairFactory_Major"/>
@@ -1677,13 +1639,7 @@
       <repairRules name="repairAirfield"/>
       <repairRules name="repairHarbour"/>
     </repairFrontier>
-    <repairFrontier name="repairIndustrialTechnology">
-      <repairRules name="repairFactory_MinorIndustrialTechnology"/>
-      <repairRules name="repairFactory_MajorIndustrialTechnology"/>
-      <repairRules name="repairFactory_UpgradeIndustrialTechnology"/>
-      <repairRules name="repairAirfieldIndustrialTechnology"/>
-      <repairRules name="repairHarbourIndustrialTechnology"/>
-    </repairFrontier>
+
     <productionFrontier name="production">
       <frontierRules name="buyInfantry"/>
       <frontierRules name="buyMech_Infantry"/>
@@ -1706,14 +1662,6 @@
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbour"/>
     </productionFrontier>
-    <productionFrontier name="productionShipyards">
-		<frontierRules name="buyTransportShipyards"/>
-		<frontierRules name="buySubmarineShipyards"/>
-		<frontierRules name="buyCarrierShipyards"/>
-		<frontierRules name="buyDestroyerShipyards"/>
-		<frontierRules name="buyCruiserShipyards"/>
-		<frontierRules name="buyBattleshipShipyards"/>
-	</productionFrontier>
     
 		<playerProduction player="Americans" frontier="production"/>
 		<playerProduction player="Chinese" frontier="production"/>
@@ -1734,162 +1682,48 @@
 	</production>
  <technology>
     <technologies>
-      <techname name="superSub"/>
-      <techname name="jetPower"/>
-      <techname name="shipyards"/>
-      <techname name="aARadar"/>
-      <techname name="longRangeAir"/>
-      <techname name="heavyBomber"/>
-      <techname name="improvedArtillerySupport"/>
-      <techname name="rocket"/>
       <techname name="Airborne_Forces"/>
-      <techname name="increasedFactoryProduction"/>
-      <techname name="warBonds"/>
-      <techname name="Improved_Mech_Inf"/>
       <!-- Airborne_Forces and Improved_Mech_Inf are custom techs... but all will end up being customized -->
     </technologies>
     <playerTech player="Germans">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
+	
     <playerTech player="Russians">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Japanese">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Americans">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Chinese">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="British">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="Italians">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
     <playerTech player="French">
-      <category name="Air and Naval Advances">
-        <tech name="superSub"/>
-        <tech name="jetPower"/>
-        <tech name="shipyards"/>
-        <tech name="aARadar"/>
-        <tech name="longRangeAir"/>
-        <tech name="heavyBomber"/>
-      </category>
       <category name="Land and Production Advances">
-        <tech name="improvedArtillerySupport"/>
-        <tech name="rocket"/>
         <tech name="Airborne_Forces"/>
-        <tech name="increasedFactoryProduction"/>
-        <tech name="warBonds"/>
-        <tech name="Improved_Mech_Inf"/>
       </category>
     </playerTech>
   </technology>
@@ -6408,7 +6242,7 @@
     <property name="Selectable Tech Roll" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="Use Shipyards" value="true" editable="false">
+    <property name="Use Shipyards" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Scramble Rules In Effect" value="true" editable="false">
