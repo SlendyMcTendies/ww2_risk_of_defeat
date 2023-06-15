@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.1.1"/>
+        <info name="WW2 Risk of Defeat" version="0.1.2"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -2152,7 +2152,7 @@
       <option name="isFactory" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
+	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/> <!--Is this line necessary?-->
       <option name="isAAforBombingThisUnitOnly" value="true"/>
       <option name="canProduceXUnits" value="3"/>
       <option name="maxDamage" value="6"/>
@@ -3440,6 +3440,7 @@
       <option name="canalName" value="Strait of Gibraltar"/>
       <option name="landTerritories" value="Gibraltar:Morocco"/>
       <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="blockadeZone" value="true"/>
     </attachment>
     <attachment name="canalAttachmentGibraltar" attachTo="94 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Strait of Gibraltar"/>
@@ -6664,7 +6665,7 @@
 			<b>Playtesters: B4TheReign, Spiralhillfool, GraciousGOD</b>
             <br/>
 			<br/>
-            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.1.1</b></span>
+            <span style="font-size:125%;000000"colspan="2"><b>Version: 0.1.2</b></span>
         </div>
 <br>
 <hr>
@@ -6694,6 +6695,12 @@ In addition, there are certain restrictions (and exceptions to restrictions) to 
 Learn all about the mechanics at the <a href="https://github.com/SlendyMcTendies/ww2_risk_of_defeat/wiki">RISK of Defeat Wiki</a><br>
 <hr>
 <b>Change Log</b>
+<br>
+<br>
+0.1.2
+<br>
+<br>
+>Made Sea Zone 93 a Blockade Zone (testing if map icons are dynamic)
 <br>
 <br>
 0.1.1
