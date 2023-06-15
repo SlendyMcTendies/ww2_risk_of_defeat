@@ -6329,7 +6329,7 @@
       <number min="11" max="21"/>
     </property>
 	<property name="Allied Victory VCs" value="18" editable="true">
-      <number min="Solo Victory VCs" max="21"/>
+      <number min="11" max="21"/>
     </property>
     <!-- End of Victory Conditions, rest of typical changed properties below -->
     <property name="Low Luck" value="false" editable="true">
