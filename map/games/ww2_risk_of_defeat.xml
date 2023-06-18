@@ -1882,7 +1882,7 @@
       <option name="bombingBonus" value="1"/>
 	  <option name="airDefense" value="1"/>
       <option name="airAttack" value="0"/>
-	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbour"/>
+	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbour:aaGun"/>
 	  <option name="requiresUnits" value="airfield:factory_minor"/>
 	  <option name="requiresUnits" value="airfield:factory_upgrade"/>
 	  <option name="requiresUnits" value="airfield:factory_major"/>
