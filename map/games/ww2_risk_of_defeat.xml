@@ -2077,7 +2077,8 @@
 	
     <!-- AA Gun -->
     <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isAAforCombatOnly" value="false"/>
+      <option name="isAA" value="true"/>
+	  <!--<option name="isAAforCombatOnly" value="false"/>-->
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
       <option name="transportCost" value="5"/>
