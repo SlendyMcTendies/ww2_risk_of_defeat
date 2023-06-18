@@ -3354,7 +3354,7 @@
   <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
       <option name="unitType" value="infantry:mech_infantry"/>
       <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
+      <option name="side" value="offence:defence"/>
       <option name="dice" value="strength"/>
       <option name="bonus" value="1"/>
       <option name="number" value="1"/>
@@ -3376,7 +3376,7 @@
     <attachment name="supportAttachmentTacticalBomber2" attachTo="tactical_bomber" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
       <option name="unitType" value="artillery"/>
       <option name="faction" value="allied"/>
-      <option name="side" value="offence"/>
+      <option name="side" value="offence:defence"/>
       <option name="dice" value="strength"/>
       <option name="bonus" value="1"/>
       <option name="number" value="1"/>
@@ -6349,7 +6349,7 @@
     <property name="AA Territory Restricted" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Force AA Attacks For Last Step Of Fly Over" value="true" editable="false">
+    <property name="Force AA Attacks For Last Step Of Fly Over" value="false" editable="false">
       <boolean/>
     </property>
     <property name="Multiple AA Per Territory" value="true" editable="false">
