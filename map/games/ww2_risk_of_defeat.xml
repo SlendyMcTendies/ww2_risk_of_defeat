@@ -1850,8 +1850,8 @@
       <option name="movement" value="3"/>
       <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
-      <option name="attack" value="3"/>
-      <option name="defense" value="3"/>
+      <option name="attack" value="1"/>
+      <option name="defense" value="1"/>
       <option name="canScramble" value="true"/>
       <option name="maxScrambleDistance" value="1"/>
       <option name="canIntercept" value="true"/>
@@ -1859,7 +1859,7 @@
       <option name="airDefense" value="2"/>
       <option name="airAttack" value="2"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
-      <option name="blockade" value="2"/>
+      <option name="blockade" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
     </attachment>
 	
@@ -1868,7 +1868,7 @@
       <option name="movement" value="5"/>
       <option name="isAir" value="true"/>
       <option name="attack" value="3"/>
-      <option name="defense" value="1"/>
+      <option name="defense" value="0"/>
       <option name="isStrategicBomber" value="true"/>
       <option name="isAirTransport" value="true"/> <!--true-->
       <option name="transportCapacity" value="6"/> <!--6-->
@@ -1887,14 +1887,14 @@
       <option name="movement" value="3"/>
       <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
-      <option name="attack" value="3"/>
+      <option name="attack" value="2"/>
       <option name="defense" value="2"/>
       <option name="isStrategicBomber" value="true"/>
       <option name="canScramble" value="false"/> <!--default: true-->
       <option name="maxScrambleDistance" value="1"/>
 	  <option name="airDefense" value="1"/>
-      <option name="airAttack" value="1"/>
-      <option name="blockade" value="2"/>
+      <option name="airAttack" value="0"/>
+      <option name="blockade" value="1"/>
       <option name="bombingMaxDieSides" value="2"/>
       <option name="bombingBonus" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
@@ -1921,7 +1921,7 @@
 		<option name="transportCapacity" value="3"/>
 		<option name="isCombatTransport" value="true"/>
 		<option name="hitPoints" value="2"/>
-		<option name="blockade" value="1"/>
+		<option name="blockade" value="2"/>
 		<option name="requiresUnits" value="harbour:factory_major"/>
 		<option name="requiresUnits" value="harbour:factory_upgrade"/>
 		<option name="requiresUnits" value="harbour:factory_minor"/>
@@ -6413,7 +6413,7 @@
     <property name="Submersible Subs" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Sub Control Sea Zone Restricted" value="false" editable="false">
+    <property name="Sub Control Sea Zone Restricted" value="true" editable="true">
       <boolean/>
     </property>
     <property name="Subs Can End NonCombat Move With Enemies" value="true" editable="false">
@@ -6428,7 +6428,7 @@
     <property name="Two hit battleship" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Convoy Blockades Roll Dice For Cost" value="true" editable="true">
+    <property name="Convoy Blockades Roll Dice For Cost" value="false" editable="true">
       <boolean/>
     </property>
     <!-- production related -->
