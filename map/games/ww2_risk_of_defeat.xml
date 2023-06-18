@@ -1363,7 +1363,7 @@
 		<unit name="infantry"/>
 		<unit name="artillery"/>
 		<unit name="mech_infantry"/>
-		<unit name="armour"/>
+		<unit name="armor"/>
 		<unit name="marine"/>
 		<unit name="fighter"/>
 		<unit name="tactical_bomber"/>
@@ -1375,9 +1375,8 @@
 		<unit name="carrier"/>
 		<unit name="battleship"/>
 		<unit name="aaGun"/>
-		<unit name="aaGun_disabled"/>
 		<unit name="airfield"/>
-		<unit name="harbour"/>
+		<unit name="harbor"/>
 		<unit name="factory_minor"/>
 		<unit name="factory_upgrade"/>
 		<unit name="factory_major"/>
@@ -1536,9 +1535,9 @@
       <cost resource="PUs" quantity="4"/>
       <result resourceOrUnit="artillery" quantity="1"/>
     </productionRule>
-    <productionRule name="buyArmour">
+    <productionRule name="buyArmor">
       <cost resource="PUs" quantity="6"/>
-      <result resourceOrUnit="armour" quantity="1"/>
+      <result resourceOrUnit="armor" quantity="1"/>
     </productionRule>
     <productionRule name="buyMarine">
       <cost resource="PUs" quantity="5"/>
@@ -1596,9 +1595,9 @@
       <cost resource="PUs" quantity="40"/>
       <result resourceOrUnit="airfield" quantity="1"/>
     </productionRule>
-    <productionRule name="buyHarbour">
+    <productionRule name="buyHarbor">
       <cost resource="PUs" quantity="40"/>
-      <result resourceOrUnit="harbour" quantity="1"/>
+      <result resourceOrUnit="harbor" quantity="1"/>
     </productionRule>
     <productionRule name="buyAAGun">
       <cost resource="PUs" quantity="5"/>
@@ -1628,14 +1627,9 @@
       <result resourceOrUnit="airfield" quantity="1"/>
     </repairRule>
     
-    <repairRule name="repairHarbour">
+    <repairRule name="repairHarbor">
       <cost resource="PUs" quantity="2"/>
-      <result resourceOrUnit="harbour" quantity="1"/>
-    </repairRule>
-	
-	<repairRule name="repairAAgun">
-      <cost resource="PUs" quantity="2"/>
-      <result resourceOrUnit="aaGun" quantity="1"/>
+      <result resourceOrUnit="harbor" quantity="1"/>
     </repairRule>
     
     <repairFrontier name="repair">
@@ -1643,8 +1637,7 @@
       <repairRules name="repairFactory_Major"/>
       <repairRules name="repairFactory_Upgrade"/>
       <repairRules name="repairAirfield"/>
-      <repairRules name="repairHarbour"/>
-	  <repairRules name="repairAAgun"/>
+      <repairRules name="repairHarbor"/>
     </repairFrontier>
 
     <productionFrontier name="production">
@@ -1667,7 +1660,7 @@
       <frontierRules name="buyFactory_Upgrade"/>
       <frontierRules name="buyFactory_Major"/>
       <frontierRules name="buyAirfield"/>
-      <frontierRules name="buyHarbour"/>
+      <frontierRules name="buyHarbor"/>
     </productionFrontier>
     
 		<playerProduction player="Americans" frontier="production"/>
@@ -1807,7 +1800,7 @@
 	  <option name="requiresUnits" value="factory_minor"/>
 	  <option name="requiresUnits" value="factory_upgrade"/>
 	  <option name="requiresUnits" value="factory_major"/>
-      <option name="receivesAbilityWhenWith" value="canBlitz:armour"/>
+      <option name="receivesAbilityWhenWith" value="canBlitz:armor"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
     
@@ -1823,8 +1816,8 @@
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
     
-	<!-- Armour -->
-    <attachment name="unitAttachment" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+	<!-- Armor -->
+    <attachment name="unitAttachment" attachTo="armor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="transportCost" value="6"/>
       <option name="canBlitz" value="true"/>
@@ -1883,7 +1876,7 @@
       <option name="bombingBonus" value="1"/>
 	  <option name="airDefense" value="1"/>
       <option name="airAttack" value="0"/>
-	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbour:aaGun:aaGun_disabled"/>
+	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbor"/>
 	  <option name="requiresUnits" value="airfield:factory_minor"/>
 	  <option name="requiresUnits" value="airfield:factory_upgrade"/>
 	  <option name="requiresUnits" value="airfield:factory_major"/>
@@ -1905,7 +1898,7 @@
       <option name="bombingMaxDieSides" value="2"/>
       <option name="bombingBonus" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
-      <option name="bombingTargets" value="airfield:harbour:aaGun:aaGun_disabled"/>
+      <option name="bombingTargets" value="airfield:harbor"/>
     </attachment>
 	
     <!-- Transport -->
@@ -1915,7 +1908,7 @@
 		<option name="transportCapacity" value="10"/>
 		<option name="attack" value="0"/>
 		<option name="defense" value="0"/>
-		<option name="requiresUnits" value="harbour"/>
+		<option name="requiresUnits" value="harbor"/>
     </attachment>
 	
     <!-- Battle Ship -->
@@ -1929,9 +1922,9 @@
 		<option name="isCombatTransport" value="true"/>
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="2"/>
-		<option name="requiresUnits" value="harbour:factory_major"/>
-		<option name="requiresUnits" value="harbour:factory_upgrade"/>
-		<option name="requiresUnits" value="harbour:factory_minor"/>
+		<option name="requiresUnits" value="harbor:factory_major"/>
+		<option name="requiresUnits" value="harbor:factory_upgrade"/>
+		<option name="requiresUnits" value="harbor:factory_minor"/>
 	</attachment>
 	
     <!-- Cruiser -->
@@ -1945,7 +1938,7 @@
       <option name="isCombatTransport" value="true"/>
       <option name="hitPoints" value="1"/>
       <option name="blockade" value="1"/>
-	  <option name="requiresUnits" value="harbour"/>
+	  <option name="requiresUnits" value="harbor"/>
     </attachment>
 	
     <!-- Destroyer -->
@@ -1956,7 +1949,7 @@
       <option name="defense" value="2"/>
       <option name="isDestroyer" value="true"/>
       <option name="blockade" value="1"/>
-	  <option name="requiresUnits" value="harbour"/>
+	  <option name="requiresUnits" value="harbor"/>
     </attachment>
 
      <!-- Carrier -->
@@ -1970,9 +1963,9 @@
 		<option name="maxScrambleCount" value="2"/>
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="0"/>
-		<option name="requiresUnits" value="harbour:factory_major"/>
-		<option name="requiresUnits" value="harbour:factory_upgrade"/>
-		<option name="requiresUnits" value="harbour:factory_minor"/>
+		<option name="requiresUnits" value="harbor:factory_major"/>
+		<option name="requiresUnits" value="harbor:factory_upgrade"/>
+		<option name="requiresUnits" value="harbor:factory_minor"/>
 		<!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
 		<option name="whenCombatDamaged" value="unitsMayNotLandOnCarrier" count="1:2"/>
 		<option name="whenCombatDamaged" value="unitsMayNotLeaveAlliedCarrier" count="1:2"/>
@@ -1983,12 +1976,17 @@
     <attachment name="unitAttachment" attachTo="submarine" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
-      <option name="isSub" value="true"/>
+<!--      <option name="isSub" value="true"/>-->
       <option name="attack" value="2"/>
       <option name="defense" value="1"/>
       <option name="blockade" value="2"/>
-	  <option name="requiresUnits" value="harbour"/>
+	  <option name="requiresUnits" value="harbor"/>
+	  <option name="canMoveThroughEnemies" value="true"/>
 	  <option name="canBeMovedThroughByEnemies" value="false"/>
+	  <option name="canEvade" value="true"/>
+	  <option name="isFirstStrike" value="true"/>
+	  <option name="canNotTarget" value="fighter:bomber:tactical_bomber"/>
+	  <option name="canNotBeTargetedBy" value="fighter:bomber:tactical_bomber"/>
     </attachment>
 	
     <!-- Factory Minor -->
@@ -2067,8 +2065,8 @@
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
 	
-    <!-- Harbour -->
-    <attachment name="unitAttachment" attachTo="harbour" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+    <!-- Harbor -->
+    <attachment name="unitAttachment" attachTo="harbor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
 	  <option name="isFactory" value="true"/>
 	  <option name="canProduceXUnits" value="10"/>
@@ -2077,7 +2075,7 @@
       <option name="maxOperationalDamage" value="10"/>
       <option name="repairsUnits" value="battleship:carrier"/>
       <option name="isConstruction" value="true"/>
-      <option name="constructionType" value="harbour_structure"/>
+      <option name="constructionType" value="harbor_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
       <option name="movement" value="0"/>
@@ -2097,31 +2095,15 @@
     <!-- AA Gun -->
     <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isAA" value="true"/>
+	  <option name="isInfrastructure" value="false"/>
 	  <!--<option name="isAAforCombatOnly" value="false"/>-->
 	  <option name="mayOverStackAA" value="true"/>
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
       <option name="transportCost" value="5"/>
       <option name="maxAAattacks" value="1"/>
-	  <option name="canBeDamaged" value="true"/>
-	  <option name="maxDamage" value="3"/>
-<!--	  <option name="maxOperationalDamage" value="0"/>-->
-	  <option name="canDieFromReachingMaxDamage" value="true"/>
-	  <option name="whenCapturedSustainsDamage" value="1"/>
-	  <option name="whenHitPointsDamagedChangesInto" value="aaGun_disabled" count="1:2"/>
-    </attachment>
-	
-	<attachment name="unitAttachment" attachTo="aaGun_disabled" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isAA" value="false"/>
-      <option name="canNotMoveDuringCombatMove" value="true"/>
-      <option name="movement" value="1"/>
-      <option name="transportCost" value="5"/>
-	  <option name="canBeDamaged" value="true"/>
-	  <option name="maxDamage" value="3"/>
-<!--	  <option name="maxOperationalDamage" value="0"/>-->
-	  <option name="canDieFromReachingMaxDamage" value="true"/>
-	  <option name="whenCapturedSustainsDamage" value="1"/>
-	  <option name="whenHitPointsRepairedChangesInto" value="aaGun" count="0"/>
+	  <option name="defense" value="3"/>
+	  <option name="canNotTarget" value="armor:submarine:destroyer:battleship:cruiser:carrier:transport"/>
     </attachment>
 	
 	<!--Territory Values-->
@@ -3413,7 +3395,7 @@
       <option name="impArtTech" value="false"/>
       <option name="players" value="Germans:Russians:Americans:British:French:Italians:Japanese:Chinese"/>
     </attachment>
-    <attachment name="supportAttachmentMechanizedTechnology" attachTo="armour" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+    <attachment name="supportAttachmentMechanizedTechnology" attachTo="armor" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
       <option name="unitType" value="mech_infantry"/>
       <option name="faction" value="allied"/>
       <option name="side" value="offence:defence"/>
