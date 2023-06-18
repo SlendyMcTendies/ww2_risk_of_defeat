@@ -1357,7 +1357,7 @@
 		<player name="British" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="Italians" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="French" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
-		<player name="none" optional="false" canBeDisabled="false" defaultType="DoesNothing" isHidden="true"/>
+		<!--<player name="none" optional="false" canBeDisabled="false" defaultType="DoesNothing" isHidden="true"/>-->
 	</playerList>
 	<unitList>
 		<unit name="infantry"/>
