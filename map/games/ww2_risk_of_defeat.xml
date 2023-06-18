@@ -2108,7 +2108,7 @@
 <!--	  <option name="maxOperationalDamage" value="0"/>-->
 	  <option name="canDieFromReachingMaxDamage" value="true"/>
 	  <option name="whenCapturedSustainsDamage" value="1"/>
-	  <option name="whenHitPointsDamagedChangesInto" value="aaGun_disabled" count="1:2"/>
+	  <option name="whenHitPointsDamagedChangesInto" value="aaGun_disabled"/>
     </attachment>
 	
 	<attachment name="unitAttachment" attachTo="aaGun_disabled" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -2121,7 +2121,7 @@
 <!--	  <option name="maxOperationalDamage" value="0"/>-->
 	  <option name="canDieFromReachingMaxDamage" value="true"/>
 	  <option name="whenCapturedSustainsDamage" value="1"/>
-	  <option name="whenHitPointsRepairedChangesInto" value="aaGun" count="0"/>
+	  <option name="whenHitPointsRepairedChangesInto" value="aaGun"/>
     </attachment>
 	
 	<!--Territory Values-->
