@@ -1357,7 +1357,7 @@
 		<player name="British" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="Italians" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
 		<player name="French" optional="true" canBeDisabled="true" defaultType="AI" isHidden="false"/>
-		<player name="none" optional="false" canBeDisabled="false" defaultType="DoesNothing" isHidden="true"/>
+		<!--<player name="none" optional="false" canBeDisabled="false" defaultType="DoesNothing" isHidden="true"/>-->
 	</playerList>
 	<unitList>
 		<unit name="infantry"/>
@@ -1588,7 +1588,7 @@
       <result resourceOrUnit="factory_major" quantity="1"/>
     </productionRule>
     <productionRule name="buyFactory_Upgrade">
-      <cost resource="PUs" quantity="40"/>
+      <cost resource="PUs" quantity="20"/>
       <result resourceOrUnit="factory_upgrade" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
@@ -2016,9 +2016,9 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
       <option name="isAAforBombingThisUnitOnly" value="true"/>
-      <option name="canProduceXUnits" value="15"/>
-      <option name="maxDamage" value="30"/>
-	  <option name="maxOperationalDamage" value="15"/>
+      <option name="canProduceXUnits" value="10"/>
+      <option name="maxDamage" value="20"/>
+	  <option name="maxOperationalDamage" value="10"/>
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
       <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
