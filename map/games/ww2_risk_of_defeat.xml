@@ -1989,7 +1989,9 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+	  <option name="isAA" value="false"/>
+	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="7"/>
       <option name="maxDamage" value="15"/>
 	  <option name="maxOperationalDamage" value="7"/>
@@ -2003,7 +2005,9 @@
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+	  <option name="isAA" value="false"/>
+	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="15"/>
       <option name="maxDamage" value="30"/>
 	  <option name="maxOperationalDamage" value="15"/>
@@ -2017,7 +2021,9 @@
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+	  <option name="isAA" value="false"/>
+	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="10"/>
       <option name="maxDamage" value="20"/>
 	  <option name="maxOperationalDamage" value="10"/>
@@ -2045,7 +2051,9 @@
       <option name="givesMovement" value="1:fighter"/>
       <option name="givesMovement" value="1:bomber"/>
       <option name="givesMovement" value="1:tactical_bomber"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+	  <option name="isAA" value="false"/>
+	  <option name="maxAAattacks" value="0"/>
       <option name="isRocket" value="false"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
@@ -2070,7 +2078,9 @@
       <option name="givesMovement" value="1:cruiser"/>
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
-      <option name="isAAforBombingThisUnitOnly" value="true"/>
+      <option name="isAAforBombingThisUnitOnly" value="false"/>
+	  <option name="isAA" value="false"/>
+	  <option name="maxAAattacks" value="0"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
     </attachment>
@@ -2082,7 +2092,7 @@
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
       <option name="transportCost" value="5"/>
-      <option name="maxAAattacks" value="3"/>
+      <option name="maxAAattacks" value="1"/>
     </attachment>
 	
 	<!--Territory Values-->
