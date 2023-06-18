@@ -2107,6 +2107,7 @@
 	  <option name="maxOperationalDamage" value="0"/>
 	  <option name="canDieFromReachingMaxDamage" value="true"/>
 	  <option name="whenCapturedSustainsDamage" value="1"/>
+	  <option name="whenCombatDamaged" value="maxAAattacks:0" count="1:2"/>
     </attachment>
 	
 	<!--Territory Values-->
