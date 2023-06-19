@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.1.3"/>
+        <info name="WW2 Risk of Defeat" version="0.1.4"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -1521,7 +1521,7 @@
       <step name="endRoundStep" delegate="endRound"/>
     </sequence>
   </gamePlay>
-	<production>
+<production>
     <!-- Unit Production Cost -->
     <productionRule name="buyInfantry">
       <cost resource="PUs" quantity="3"/>
@@ -1727,7 +1727,7 @@
     </playerTech>
   </technology>
   
-        <attachmentList>
+<attachmentList>
 <!--Remove Capital Requirement-->
 	<attachment foreach="$AllPlayers$" name="playerAttachment" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 		<option name="retainCapitalNumber" value="0"/>
@@ -6053,87 +6053,87 @@
 
 </attachmentList>
 
-        <initialize>
-                <ownerInitialize>
-					<!--Exclude starting territories?-->
-                </ownerInitialize>
-                
-				<unitInitialize>
-					<!--Random Territory Assignment; Units to place for free-->
-					<heldUnits unitType="infantry" player="Germans" quantity="10"/>
-					<heldUnits unitType="infantry" player="Russians" quantity="10"/>
-					<heldUnits unitType="infantry" player="Japanese" quantity="10"/>
-					<heldUnits unitType="infantry" player="Americans" quantity="10"/>
-					<heldUnits unitType="infantry" player="Chinese" quantity="10"/>
-					<heldUnits unitType="infantry" player="British" quantity="10"/>
-					<heldUnits unitType="infantry" player="Italians" quantity="10"/>
-					<heldUnits unitType="infantry" player="French" quantity="10"/>
-				</unitInitialize>
+<initialize>
+	<ownerInitialize>
+		<!--Exclude starting territories?-->
+	</ownerInitialize>
 	
- <resourceInitialize>
-	  <resourceGiven player="Germans" resource="PUs" quantity="30"/>
-      <resourceGiven player="Russians" resource="PUs" quantity="30"/>
-      <resourceGiven player="Japanese" resource="PUs" quantity="30"/>
-      <resourceGiven player="British" resource="PUs" quantity="30"/>
-      <resourceGiven player="Italians" resource="PUs" quantity="30"/>
-      <resourceGiven player="Americans" resource="PUs" quantity="30"/>
-      <resourceGiven player="Chinese" resource="PUs" quantity="30"/>
-      <resourceGiven player="French" resource="PUs" quantity="30"/>
-	  <resourceGiven player="Germans" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Russians" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Japanese" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Americans" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Chinese" resource="Influence" quantity="0"/>
-	  <resourceGiven player="British" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Italians" resource="Influence" quantity="0"/>
-	  <resourceGiven player="French" resource="Influence" quantity="0"/>
-</resourceInitialize>
-	
-<relationshipInitialize>
-	
-	<!--Germany-->
-	<relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Japanese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="French" type="Neutrality" roundValue="1"/>
-	
-	<!--Russia-->
-	<relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
+	<unitInitialize>
+		<!--Random Territory Assignment; Units to place for free-->
+		<heldUnits unitType="infantry" player="Germans" quantity="10"/>
+		<heldUnits unitType="infantry" player="Russians" quantity="10"/>
+		<heldUnits unitType="infantry" player="Japanese" quantity="10"/>
+		<heldUnits unitType="infantry" player="Americans" quantity="10"/>
+		<heldUnits unitType="infantry" player="Chinese" quantity="10"/>
+		<heldUnits unitType="infantry" player="British" quantity="10"/>
+		<heldUnits unitType="infantry" player="Italians" quantity="10"/>
+		<heldUnits unitType="infantry" player="French" quantity="10"/>
+	</unitInitialize>
 
-	<!--Japan-->
-	<relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
+	<resourceInitialize>
+		  <resourceGiven player="Germans" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Russians" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Japanese" resource="PUs" quantity="30"/>
+		  <resourceGiven player="British" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Italians" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Americans" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Chinese" resource="PUs" quantity="30"/>
+		  <resourceGiven player="French" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Germans" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Russians" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Japanese" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Americans" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Chinese" resource="Influence" quantity="0"/>
+		  <resourceGiven player="British" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Italians" resource="Influence" quantity="0"/>
+		  <resourceGiven player="French" resource="Influence" quantity="0"/>
+	</resourceInitialize>
 
-	<!--America-->
-	<relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
+	<relationshipInitialize>
+		
+		<!--Germany-->
+		<relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Japanese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="French" type="Neutrality" roundValue="1"/>
+		
+		<!--Russia-->
+		<relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
 
-	<!--China-->
-	<relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
+		<!--Japan-->
+		<relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
 
-	<!--Britain-->
-	<relationship player1="British" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="British" player2="French" type="Neutrality" roundValue="1"/>
+		<!--America-->
+		<relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
 
-	<!--Italy-->
-	<relationship player1="Italians" player2="French" type="Neutrality" roundValue="1"/>
-</relationshipInitialize>
-        </initialize>
+		<!--China-->
+		<relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
+
+		<!--Britain-->
+		<relationship player1="British" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="British" player2="French" type="Neutrality" roundValue="1"/>
+
+		<!--Italy-->
+		<relationship player1="Italians" player2="French" type="Neutrality" roundValue="1"/>
+	</relationshipInitialize>
+</initialize>
         <propertyList>
     <!-- PLEASE KEEP YOUR PROPERTIES IN THIS ORDER!!! -->
     <!-- TYPICAL OPTIONAL PROPERTIES -->
