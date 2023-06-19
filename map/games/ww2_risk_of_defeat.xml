@@ -683,8 +683,12 @@
                 <connection t1="Belgian Congo" t2="Angola"/>
                 <connection t1="Belgian Congo" t2="Tanganyika Territory"/>
                 <connection t1="Belgian Congo" t2="Rhodesia"/>
+				<connection t1="Tobruk" t2="French Equatorial Africa"/>
+				<connection t1="Tobruk" t2="French Central Africa"/>
+				<connection t1="Tobruk" t2="Anglo-Egyptian Sudan"/>
                 <connection t1="Alexandria" t2="Tobruk"/>
                 <connection t1="Alexandria" t2="Egypt"/>
+				<connection t1="Alexandria" t2="Anglo-Egyptian Sudan"/>
                 <connection t1="Alberta Saskatchewan Manitoba" t2="Yukon Territory"/>
                 <connection t1="Alberta Saskatchewan Manitoba" t2="124 Sea Zone"/>
                 <connection t1="Alberta Saskatchewan Manitoba" t2="Central United States"/>
@@ -744,6 +748,7 @@
                 <connection t1="Libya" t2="Tobruk"/>
                 <connection t1="Libya" t2="98 Sea Zone"/>
                 <connection t1="Libya" t2="Tunisia"/>
+				<connection t1="Libya" t2="French Central Africa"/>
                 <connection t1="Sicily" t2="Southern Italy"/>
                 <connection t1="Albania" t2="99 Sea Zone"/>
                 <connection t1="Albania" t2="Yugoslavia"/>
@@ -785,6 +790,9 @@
                 <connection t1="Tunisia" t2="96 Sea Zone"/>
                 <connection t1="Algeria" t2="Morocco"/>
                 <connection t1="Algeria" t2="96 Sea Zone"/>
+				<connection t1="Algeria" t2="Libya"/>
+				<connection t1="Algeria" t2="French West Africa"/>
+				<connection t1="Algeria" t2="French Central Africa"/>
                 <connection t1="Morocco" t2="Rio de Oro"/>
                 <connection t1="French West Africa" t2="84 Sea Zone"/>
                 <connection t1="French West Africa" t2="85 Sea Zone"/>
@@ -1296,6 +1304,7 @@
                 <connection t1="96 Sea Zone" t2="Malta"/>
                 <connection t1="90 Sea Zone" t2="Suriname"/>
                 <connection t1="Rio de Oro" t2="Algeria"/>
+				<connection t1="Rio de Oro" t2="French West Africa"/>
                 <connection t1="6 Sea Zone" t2="Japan"/>
                 <connection t1="6 Sea Zone" t2="20 Sea Zone"/>
                 <connection t1="59 Sea Zone" t2="58 Sea Zone"/>
