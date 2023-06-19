@@ -1524,11 +1524,11 @@
 <production>
     <!-- Unit Production Cost -->
     <productionRule name="buyInfantry">
-      <cost resource="PUs" quantity="3"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="infantry" quantity="1"/>
     </productionRule>
     <productionRule name="buyMech_Infantry">
-      <cost resource="PUs" quantity="5"/>
+      <cost resource="PUs" quantity="3"/>
       <result resourceOrUnit="mech_infantry" quantity="1"/>
     </productionRule>
     <productionRule name="buyArtillery">
@@ -1540,7 +1540,7 @@
       <result resourceOrUnit="armor" quantity="1"/>
     </productionRule>
     <productionRule name="buyMarine">
-      <cost resource="PUs" quantity="5"/>
+      <cost resource="PUs" quantity="3"/>
       <result resourceOrUnit="marine" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
