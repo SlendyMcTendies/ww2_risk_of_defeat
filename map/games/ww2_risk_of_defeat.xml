@@ -1576,7 +1576,7 @@
       <result resourceOrUnit="battleship" quantity="1"/>
     </productionRule>
     <productionRule name="buySubmarine">
-      <cost resource="PUs" quantity="6"/>
+      <cost resource="PUs" quantity="8"/>
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyFactory_Minor">
@@ -1644,7 +1644,7 @@
       <frontierRules name="buyInfantry"/>
       <frontierRules name="buyMech_Infantry"/>
       <frontierRules name="buyArtillery"/>
-      <frontierRules name="buyArmour"/>
+      <frontierRules name="buyArmor"/>
       <frontierRules name="buyMarine"/>
       <frontierRules name="buyFighter"/>
       <frontierRules name="buyTactical_Bomber"/>
@@ -1690,7 +1690,6 @@
         <tech name="Airborne_Forces"/>
       </category>
     </playerTech>
-	
     <playerTech player="Russians">
       <category name="Land and Production Advances">
         <tech name="Airborne_Forces"/>
@@ -1992,50 +1991,48 @@
     <!-- Factory Minor -->
     <attachment name="unitAttachment" attachTo="factory_minor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
+	  <option name="isInfrastructure" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="7"/>
       <option name="maxDamage" value="15"/>
 	  <option name="maxOperationalDamage" value="7"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="10"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
     
 	<!-- Factory Major -->
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
+	  <option name="isInfrastructure" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="15"/>
       <option name="maxDamage" value="30"/>
 	  <option name="maxOperationalDamage" value="15"/>
-      <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
     
 	<!-- Factory Upgrade -->
     <attachment name="unitAttachment" attachTo="factory_upgrade" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
+	  <option name="isInfrastructure" value="true"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="10"/>
       <option name="maxDamage" value="20"/>
 	  <option name="maxOperationalDamage" value="10"/>
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
-      <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
 	
     <!-- Airfield -->
@@ -2058,11 +2055,10 @@
       <option name="givesMovement" value="1:fighter"/>
       <option name="givesMovement" value="1:bomber"/>
       <option name="givesMovement" value="1:tactical_bomber"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="isRocket" value="false"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
 	
     <!-- Harbor -->
@@ -2085,18 +2081,15 @@
       <option name="givesMovement" value="1:cruiser"/>
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
 	
     <!-- AA Gun -->
     <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isAA" value="true"/>
-	  <option name="isInfrastructure" value="false"/>
-	  <!--<option name="isAAforCombatOnly" value="false"/>-->
 	  <option name="mayOverStackAA" value="true"/>
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
@@ -2104,6 +2097,11 @@
       <option name="maxAAattacks" value="1"/>
 	  <option name="defense" value="3"/>
 	  <option name="canNotTarget" value="armor:submarine:destroyer:battleship:cruiser:carrier:transport"/>
+	  <option name="requiresUnits" value="harbor"/>
+	  <option name="requiresUnits" value="airfield"/>
+	  <option name="requiresUnits" value="factory_major"/>
+	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
     </attachment>
 	
 	<!--Territory Values-->
