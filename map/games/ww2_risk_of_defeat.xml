@@ -1350,7 +1350,30 @@
                 <connection t1="20 Sea Zone" t2="Okinawa"/>
                 <connection t1="20 Sea Zone" t2="19 Sea Zone"/>
                 <connection t1="55 Sea Zone" t2="54 Sea Zone"/>
+				
+				<!-- "Impassable" Connections" -->
+				<connection t1="Pripet Marshes" t2="Southern Belarus"/>
+				<connection t1="Pripet Marshes" t2="Bryansk"/>
+				<connection t1="Pripet Marshes" t2="Kursk"/>
+				<connection t1="Pripet Marshes" t2="Ukraine"/>
+				<connection t1="Pripet Marshes" t2="Western Ukraine"/>
+				<connection t1="Pripet Marshes" t2="Eastern Poland"/>
+				<connection t1="Himalayas" t2="Tibet"/>
+				<connection t1="Himalayas" t2="Yunnan"/>
+				<connection t1="Himalayas" t2="Burma"/>
+				<connection t1="Himalayas" t2="Eastern India"/>
+				<connection t1="Himalayas" t2="Central India"/>
+				<connection t1="Himalayas" t2="Afghanistan"/>
+				<connection t1="Himalayas" t2="Uzbekistan"/>
+				<connection t1="Himalayas" t2="Kazakhstan"/>
+				<connection t1="Himalayas" t2="Western Sinkiang"/>
+				<connection t1="Himalayas" t2="Eastern Sinkiang"/>
         </map>
+	
+	<territoryEffectList>
+		<TerritoryEffect name="roughTerrain"/>
+	</territoryEffectList>
+	
 	<resourceList>
 		<resource name="PUs"/>
 		<resource name="Influence"/>
@@ -2114,6 +2137,11 @@
     </attachment>
 	
 	<!--Territory Values-->
+	<!-- Effects -->
+	<attachment name="territoryEffectAttachment" attachTo="roughTerrain" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
+		<option name="unitsNotAllowed" value="mech_infantry:artillery:armor:aaGun"/>
+	</attachment>
+	
 	<!--Land Zones-->
 		<attachment name="territoryAttachment" attachTo="Western Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="5"/>
@@ -2559,7 +2587,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Himalayas" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-		<option name="isImpassable" value="true"/>
+		<option name="territoryEffect" value="roughTerrain"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Szechwan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3056,7 +3084,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Pripet Marshes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-		<option name="isImpassable" value="true"/>
+		<option name="territoryEffect" value="roughTerrain"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Suriname" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
