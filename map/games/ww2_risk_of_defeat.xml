@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.1.3"/>
+        <info name="WW2 Risk of Defeat" version="0.1.4"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -683,8 +683,12 @@
                 <connection t1="Belgian Congo" t2="Angola"/>
                 <connection t1="Belgian Congo" t2="Tanganyika Territory"/>
                 <connection t1="Belgian Congo" t2="Rhodesia"/>
+				<connection t1="Tobruk" t2="French Equatorial Africa"/>
+				<connection t1="Tobruk" t2="French Central Africa"/>
+				<connection t1="Tobruk" t2="Anglo-Egyptian Sudan"/>
                 <connection t1="Alexandria" t2="Tobruk"/>
                 <connection t1="Alexandria" t2="Egypt"/>
+				<connection t1="Alexandria" t2="Anglo-Egyptian Sudan"/>
                 <connection t1="Alberta Saskatchewan Manitoba" t2="Yukon Territory"/>
                 <connection t1="Alberta Saskatchewan Manitoba" t2="124 Sea Zone"/>
                 <connection t1="Alberta Saskatchewan Manitoba" t2="Central United States"/>
@@ -744,6 +748,7 @@
                 <connection t1="Libya" t2="Tobruk"/>
                 <connection t1="Libya" t2="98 Sea Zone"/>
                 <connection t1="Libya" t2="Tunisia"/>
+				<connection t1="Libya" t2="French Central Africa"/>
                 <connection t1="Sicily" t2="Southern Italy"/>
                 <connection t1="Albania" t2="99 Sea Zone"/>
                 <connection t1="Albania" t2="Yugoslavia"/>
@@ -785,6 +790,9 @@
                 <connection t1="Tunisia" t2="96 Sea Zone"/>
                 <connection t1="Algeria" t2="Morocco"/>
                 <connection t1="Algeria" t2="96 Sea Zone"/>
+				<connection t1="Algeria" t2="Libya"/>
+				<connection t1="Algeria" t2="French West Africa"/>
+				<connection t1="Algeria" t2="French Central Africa"/>
                 <connection t1="Morocco" t2="Rio de Oro"/>
                 <connection t1="French West Africa" t2="84 Sea Zone"/>
                 <connection t1="French West Africa" t2="85 Sea Zone"/>
@@ -1296,6 +1304,7 @@
                 <connection t1="96 Sea Zone" t2="Malta"/>
                 <connection t1="90 Sea Zone" t2="Suriname"/>
                 <connection t1="Rio de Oro" t2="Algeria"/>
+				<connection t1="Rio de Oro" t2="French West Africa"/>
                 <connection t1="6 Sea Zone" t2="Japan"/>
                 <connection t1="6 Sea Zone" t2="20 Sea Zone"/>
                 <connection t1="59 Sea Zone" t2="58 Sea Zone"/>
@@ -1341,7 +1350,30 @@
                 <connection t1="20 Sea Zone" t2="Okinawa"/>
                 <connection t1="20 Sea Zone" t2="19 Sea Zone"/>
                 <connection t1="55 Sea Zone" t2="54 Sea Zone"/>
+				
+				<!-- "Impassable" Connections" -->
+				<connection t1="Pripet Marshes" t2="Southern Belarus"/>
+				<connection t1="Pripet Marshes" t2="Bryansk"/>
+				<connection t1="Pripet Marshes" t2="Kursk"/>
+				<connection t1="Pripet Marshes" t2="Ukraine"/>
+				<connection t1="Pripet Marshes" t2="Western Ukraine"/>
+				<connection t1="Pripet Marshes" t2="Eastern Poland"/>
+				<connection t1="Himalayas" t2="Tibet"/>
+				<connection t1="Himalayas" t2="Yunnan"/>
+				<connection t1="Himalayas" t2="Burma"/>
+				<connection t1="Himalayas" t2="Eastern India"/>
+				<connection t1="Himalayas" t2="Central India"/>
+				<connection t1="Himalayas" t2="Afghanistan"/>
+				<connection t1="Himalayas" t2="Uzbekistan"/>
+				<connection t1="Himalayas" t2="Kazakhstan"/>
+				<connection t1="Himalayas" t2="Western Sinkiang"/>
+				<connection t1="Himalayas" t2="Eastern Sinkiang"/>
         </map>
+	
+	<territoryEffectList>
+		<TerritoryEffect name="roughTerrain"/>
+	</territoryEffectList>
+	
 	<resourceList>
 		<resource name="PUs"/>
 		<resource name="Influence"/>
@@ -1521,14 +1553,14 @@
       <step name="endRoundStep" delegate="endRound"/>
     </sequence>
   </gamePlay>
-	<production>
+<production>
     <!-- Unit Production Cost -->
     <productionRule name="buyInfantry">
-      <cost resource="PUs" quantity="3"/>
+      <cost resource="PUs" quantity="2"/>
       <result resourceOrUnit="infantry" quantity="1"/>
     </productionRule>
     <productionRule name="buyMech_Infantry">
-      <cost resource="PUs" quantity="5"/>
+      <cost resource="PUs" quantity="3"/>
       <result resourceOrUnit="mech_infantry" quantity="1"/>
     </productionRule>
     <productionRule name="buyArtillery">
@@ -1540,7 +1572,7 @@
       <result resourceOrUnit="armor" quantity="1"/>
     </productionRule>
     <productionRule name="buyMarine">
-      <cost resource="PUs" quantity="5"/>
+      <cost resource="PUs" quantity="3"/>
       <result resourceOrUnit="marine" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
@@ -1576,7 +1608,7 @@
       <result resourceOrUnit="battleship" quantity="1"/>
     </productionRule>
     <productionRule name="buySubmarine">
-      <cost resource="PUs" quantity="6"/>
+      <cost resource="PUs" quantity="8"/>
       <result resourceOrUnit="submarine" quantity="1"/>
     </productionRule>
     <productionRule name="buyFactory_Minor">
@@ -1644,7 +1676,7 @@
       <frontierRules name="buyInfantry"/>
       <frontierRules name="buyMech_Infantry"/>
       <frontierRules name="buyArtillery"/>
-      <frontierRules name="buyArmour"/>
+      <frontierRules name="buyArmor"/>
       <frontierRules name="buyMarine"/>
       <frontierRules name="buyFighter"/>
       <frontierRules name="buyTactical_Bomber"/>
@@ -1690,7 +1722,6 @@
         <tech name="Airborne_Forces"/>
       </category>
     </playerTech>
-	
     <playerTech player="Russians">
       <category name="Land and Production Advances">
         <tech name="Airborne_Forces"/>
@@ -1728,7 +1759,7 @@
     </playerTech>
   </technology>
   
-        <attachmentList>
+<attachmentList>
 <!--Remove Capital Requirement-->
 	<attachment foreach="$AllPlayers$" name="playerAttachment" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 		<option name="retainCapitalNumber" value="0"/>
@@ -1992,50 +2023,48 @@
     <!-- Factory Minor -->
     <attachment name="unitAttachment" attachTo="factory_minor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
+	  <option name="isInfrastructure" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="7"/>
       <option name="maxDamage" value="15"/>
 	  <option name="maxOperationalDamage" value="7"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="10"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
     
 	<!-- Factory Major -->
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
+	  <option name="isInfrastructure" value="true"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="15"/>
       <option name="maxDamage" value="30"/>
 	  <option name="maxOperationalDamage" value="15"/>
-      <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
     
 	<!-- Factory Upgrade -->
     <attachment name="unitAttachment" attachTo="factory_upgrade" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
+	  <option name="isInfrastructure" value="true"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="2"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canProduceXUnits" value="10"/>
       <option name="maxDamage" value="20"/>
 	  <option name="maxOperationalDamage" value="10"/>
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
-      <option name="whenCapturedChangesInto" value="any:any:true:factory_minor:1"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
 	
     <!-- Airfield -->
@@ -2058,11 +2087,10 @@
       <option name="givesMovement" value="1:fighter"/>
       <option name="givesMovement" value="1:bomber"/>
       <option name="givesMovement" value="1:tactical_bomber"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="isRocket" value="false"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
 	
     <!-- Harbor -->
@@ -2085,18 +2113,15 @@
       <option name="givesMovement" value="1:cruiser"/>
       <option name="givesMovement" value="1:carrier"/>
       <option name="givesMovement" value="1:battleship"/>
-      <option name="isAAforBombingThisUnitOnly" value="false"/>
-	  <option name="isAA" value="false"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
+	  <option name="whenCapturedSustainsDamage" value="5"/>
     </attachment>
 	
     <!-- AA Gun -->
     <attachment name="unitAttachment" attachTo="aaGun" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isAA" value="true"/>
-	  <option name="isInfrastructure" value="false"/>
-	  <!--<option name="isAAforCombatOnly" value="false"/>-->
 	  <option name="mayOverStackAA" value="true"/>
       <option name="canNotMoveDuringCombatMove" value="true"/>
       <option name="movement" value="1"/>
@@ -2104,9 +2129,19 @@
       <option name="maxAAattacks" value="1"/>
 	  <option name="defense" value="3"/>
 	  <option name="canNotTarget" value="armor:submarine:destroyer:battleship:cruiser:carrier:transport"/>
+	  <option name="requiresUnits" value="harbor"/>
+	  <option name="requiresUnits" value="airfield"/>
+	  <option name="requiresUnits" value="factory_major"/>
+	  <option name="requiresUnits" value="factory_minor"/>
+	  <option name="requiresUnits" value="factory_upgrade"/>
     </attachment>
 	
 	<!--Territory Values-->
+	<!-- Effects -->
+	<attachment name="territoryEffectAttachment" attachTo="roughTerrain" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
+		<option name="unitsNotAllowed" value="mech_infantry:artillery:armor:aaGun"/>
+	</attachment>
+	
 	<!--Land Zones-->
 		<attachment name="territoryAttachment" attachTo="Western Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="5"/>
@@ -2552,7 +2587,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Himalayas" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-		<option name="isImpassable" value="true"/>
+		<option name="territoryEffect" value="roughTerrain"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Szechwan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3049,7 +3084,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Pripet Marshes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="0"/>
-		<option name="isImpassable" value="true"/>
+		<option name="territoryEffect" value="roughTerrain"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Suriname" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -6055,87 +6090,87 @@
 
 </attachmentList>
 
-        <initialize>
-                <ownerInitialize>
-					<!--Exclude starting territories?-->
-                </ownerInitialize>
-                
-				<unitInitialize>
-					<!--Random Territory Assignment; Units to place for free-->
-					<heldUnits unitType="infantry" player="Germans" quantity="10"/>
-					<heldUnits unitType="infantry" player="Russians" quantity="10"/>
-					<heldUnits unitType="infantry" player="Japanese" quantity="10"/>
-					<heldUnits unitType="infantry" player="Americans" quantity="10"/>
-					<heldUnits unitType="infantry" player="Chinese" quantity="10"/>
-					<heldUnits unitType="infantry" player="British" quantity="10"/>
-					<heldUnits unitType="infantry" player="Italians" quantity="10"/>
-					<heldUnits unitType="infantry" player="French" quantity="10"/>
-				</unitInitialize>
+<initialize>
+	<ownerInitialize>
+		<!--Exclude starting territories?-->
+	</ownerInitialize>
 	
- <resourceInitialize>
-	  <resourceGiven player="Germans" resource="PUs" quantity="30"/>
-      <resourceGiven player="Russians" resource="PUs" quantity="30"/>
-      <resourceGiven player="Japanese" resource="PUs" quantity="30"/>
-      <resourceGiven player="British" resource="PUs" quantity="30"/>
-      <resourceGiven player="Italians" resource="PUs" quantity="30"/>
-      <resourceGiven player="Americans" resource="PUs" quantity="30"/>
-      <resourceGiven player="Chinese" resource="PUs" quantity="30"/>
-      <resourceGiven player="French" resource="PUs" quantity="30"/>
-	  <resourceGiven player="Germans" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Russians" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Japanese" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Americans" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Chinese" resource="Influence" quantity="0"/>
-	  <resourceGiven player="British" resource="Influence" quantity="0"/>
-	  <resourceGiven player="Italians" resource="Influence" quantity="0"/>
-	  <resourceGiven player="French" resource="Influence" quantity="0"/>
-</resourceInitialize>
-	
-<relationshipInitialize>
-	
-	<!--Germany-->
-	<relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Japanese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Germans" player2="French" type="Neutrality" roundValue="1"/>
-	
-	<!--Russia-->
-	<relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
+	<unitInitialize>
+		<!--Random Territory Assignment; Units to place for free-->
+		<heldUnits unitType="infantry" player="Germans" quantity="10"/>
+		<heldUnits unitType="infantry" player="Russians" quantity="10"/>
+		<heldUnits unitType="infantry" player="Japanese" quantity="10"/>
+		<heldUnits unitType="infantry" player="Americans" quantity="10"/>
+		<heldUnits unitType="infantry" player="Chinese" quantity="10"/>
+		<heldUnits unitType="infantry" player="British" quantity="10"/>
+		<heldUnits unitType="infantry" player="Italians" quantity="10"/>
+		<heldUnits unitType="infantry" player="French" quantity="10"/>
+	</unitInitialize>
 
-	<!--Japan-->
-	<relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
+	<resourceInitialize>
+		  <resourceGiven player="Germans" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Russians" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Japanese" resource="PUs" quantity="30"/>
+		  <resourceGiven player="British" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Italians" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Americans" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Chinese" resource="PUs" quantity="30"/>
+		  <resourceGiven player="French" resource="PUs" quantity="30"/>
+		  <resourceGiven player="Germans" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Russians" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Japanese" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Americans" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Chinese" resource="Influence" quantity="0"/>
+		  <resourceGiven player="British" resource="Influence" quantity="0"/>
+		  <resourceGiven player="Italians" resource="Influence" quantity="0"/>
+		  <resourceGiven player="French" resource="Influence" quantity="0"/>
+	</resourceInitialize>
 
-	<!--America-->
-	<relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
+	<relationshipInitialize>
+		
+		<!--Germany-->
+		<relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Japanese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Germans" player2="French" type="Neutrality" roundValue="1"/>
+		
+		<!--Russia-->
+		<relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
 
-	<!--China-->
-	<relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
-	<relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
+		<!--Japan-->
+		<relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
 
-	<!--Britain-->
-	<relationship player1="British" player2="Italians" type="Neutrality" roundValue="1"/>
-	<relationship player1="British" player2="French" type="Neutrality" roundValue="1"/>
+		<!--America-->
+		<relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
+		<relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
 
-	<!--Italy-->
-	<relationship player1="Italians" player2="French" type="Neutrality" roundValue="1"/>
-</relationshipInitialize>
-        </initialize>
+		<!--China-->
+		<relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
+		<relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
+
+		<!--Britain-->
+		<relationship player1="British" player2="Italians" type="Neutrality" roundValue="1"/>
+		<relationship player1="British" player2="French" type="Neutrality" roundValue="1"/>
+
+		<!--Italy-->
+		<relationship player1="Italians" player2="French" type="Neutrality" roundValue="1"/>
+	</relationshipInitialize>
+</initialize>
         <propertyList>
     <!-- PLEASE KEEP YOUR PROPERTIES IN THIS ORDER!!! -->
     <!-- TYPICAL OPTIONAL PROPERTIES -->
