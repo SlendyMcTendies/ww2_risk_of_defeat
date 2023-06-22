@@ -44,8 +44,9 @@
 	</variableList>
 	
         <map>
-                <!-- Territory Definitions -->
-				<!-- Land Territories (231 total) -->
+                <!-- Territory Definitions (361 Total) -->
+				
+				<!-- Land Territories (229 total) -->
                 <territory name="Western Germany"/>
                 <territory name="Holland Belgium"/>
                 <territory name="Poland"/>
@@ -238,9 +239,9 @@
                 <territory name="Java"/>
                 <territory name="Northern Spain"/>
                 <territory name="Yugoslavia"/>
-                <territory name="Portuguese"/>
+                <territory name="Portuguese Guinea"/>
                 <territory name="Brazil"/>
-                <territory name="Colombia"/>
+                <territory name="Columbia"/>
                 <territory name="Ecuador"/>
                 <territory name="Tsagaan Olom"/>
                 <territory name="Afghanistan"/>
@@ -607,7 +608,7 @@
                 <connection t1="Western United States" t2="Central United States"/>
                 <connection t1="Western United States" t2="11 Sea Zone"/>
                 <connection t1="Western United States" t2="British Columbia"/>
-                <connection t1="Central America" t2="Colombia"/>
+                <connection t1="Central America" t2="Columbia"/>
                 <connection t1="Central America" t2="66 Sea Zone"/>
                 <connection t1="Central America" t2="91 Sea Zone"/>
                 <connection t1="Davao" t2="Manilla"/>
@@ -803,7 +804,7 @@
                 <connection t1="French West Africa" t2="Nigeria"/>
                 <connection t1="French West Africa" t2="Gold Coast"/>
                 <connection t1="French West Africa" t2="Sierra Leone"/>
-                <connection t1="French West Africa" t2="Portuguese"/>
+                <connection t1="French West Africa" t2="Portuguese Guinea"/>
                 <connection t1="French West Africa" t2="89 Sea Zone"/>
                 <connection t1="French Equatorial Africa" t2="Belgian Congo"/>
                 <connection t1="French Equatorial Africa" t2="84 Sea Zone"/>
@@ -1063,14 +1064,14 @@
                 <connection t1="72 Sea Zone" t2="71 Sea Zone"/>
                 <connection t1="Yugoslavia" t2="Romania"/>
                 <connection t1="Yugoslavia" t2="Austria"/>
-                <connection t1="Portuguese" t2="89 Sea Zone"/>
+                <connection t1="Portuguese Guinea" t2="89 Sea Zone"/>
                 <connection t1="103 Sea Zone" t2="Ukraine"/>
                 <connection t1="103 Sea Zone" t2="Eastern Turkey"/>
                 <connection t1="103 Sea Zone" t2="102 Sea Zone"/>
                 <connection t1="103 Sea Zone" t2="Northern Caucasus"/>
                 <connection t1="103 Sea Zone" t2="Rostov"/>
                 <connection t1="63 Sea Zone" t2="58 Sea Zone"/>
-                <connection t1="Brazil" t2="Colombia"/>
+                <connection t1="Brazil" t2="Columbia"/>
                 <connection t1="Brazil" t2="88 Sea Zone"/>
                 <connection t1="Brazil" t2="Uruguay"/>
                 <connection t1="Brazil" t2="British Guiana"/>
@@ -1082,8 +1083,8 @@
                 <connection t1="112 Sea Zone" t2="121 Sea Zone"/>
                 <connection t1="112 Sea Zone" t2="Eire"/>
                 <connection t1="112 Sea Zone" t2="111 Sea Zone"/>
-                <connection t1="Colombia" t2="Ecuador"/>
-                <connection t1="Colombia" t2="66 Sea Zone"/>
+                <connection t1="Columbia" t2="Ecuador"/>
+                <connection t1="Columbia" t2="66 Sea Zone"/>
                 <connection t1="Ecuador" t2="66 Sea Zone"/>
                 <connection t1="5 Sea Zone" t2="Soviet Far East"/>
                 <connection t1="5 Sea Zone" t2="8 Sea Zone"/>
@@ -1243,7 +1244,7 @@
                 <connection t1="Peru" t2="Bolivia"/>
                 <connection t1="Peru" t2="Brazil"/>
                 <connection t1="Peru" t2="Ecuador"/>
-                <connection t1="Peru" t2="Colombia"/>
+                <connection t1="Peru" t2="Columbia"/>
                 <connection t1="67 Sea Zone" t2="52 Sea Zone"/>
                 <connection t1="67 Sea Zone" t2="68 Sea Zone"/>
                 <connection t1="Crete" t2="101 Sea Zone"/>
@@ -1283,7 +1284,7 @@
                 <connection t1="62 Sea Zone" t2="61 Sea Zone"/>
                 <connection t1="Venezuela" t2="Brazil"/>
                 <connection t1="Venezuela" t2="British Guiana"/>
-                <connection t1="Venezuela" t2="Colombia"/>
+                <connection t1="Venezuela" t2="Columbia"/>
                 <connection t1="Venezuela" t2="91 Sea Zone"/>
                 <connection t1="Liberia" t2="Sierra Leone"/>
                 <connection t1="Liberia" t2="85 Sea Zone"/>
@@ -2139,12 +2140,16 @@
 	  <option name="requiresUnits" value="factory_upgrade"/>
     </attachment>
 	
-	<!--Territory Values-->
-	<!-- Effects -->
+	<!--Territory Effects-->
 	<attachment name="territoryEffectAttachment" attachTo="roughTerrain" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
-		<option name="unitsNotAllowed" value="mech_infantry:artillery:armor:aaGun"/>
+		<option name="unitsNotAllowed" value="mech_infantry:artillery:armor:aaGun:airfield:factory_minor:factory_upgrade:factory_major:harbor"/>
 	</attachment>
 	
+	<attachment name="territoryEffectAttachment" attachTo="landLocked" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
+		<option name="unitsNotAllowed" value="harbor"/>
+	</attachment>
+	
+	<!--Territory Values-->
 	<!--Land Zones-->
 		<attachment name="territoryAttachment" attachTo="Western Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="5"/>
@@ -2165,6 +2170,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Slovakia Hungary" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="3"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2175,6 +2181,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Austria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="4"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Norway" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2187,10 +2194,12 @@
 		
 		<attachment name="territoryAttachment" attachTo="Komi" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Western Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Kazakhstan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2215,22 +2224,27 @@
 		
 		<attachment name="territoryAttachment" attachTo="Bryansk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Smolensk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Yakut S.S.R." javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-		<option name="production" value="1"/>		
+		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>		
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Tambov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Eastern Poland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Soviet Far East" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2241,6 +2255,7 @@
 		<option name="production" value="3"/>
 		<!--<option name="capital" value="none"/>-->
 		<option name="victoryCity" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Karelia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2249,6 +2264,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Kursk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Uzbekistan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2261,6 +2277,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Yaroslavl" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Bessarabia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2269,10 +2286,12 @@
 
 		<attachment name="territoryAttachment" attachTo="Samara" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Buryatia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-		<option name="production" value="1"/>		
+		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Ukraine" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2281,6 +2300,7 @@
 		
 		<attachment name="territoryAttachment" attachTo="Urals" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="2"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Vyborg" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2293,6 +2313,7 @@
 		
 		<attachment name="territoryAttachment" attachTo="Gorky" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Baltic States" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2301,22 +2322,27 @@
 		
 		<attachment name="territoryAttachment" attachTo="Vologda" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Penza" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Saratov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Yenisey" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Northern Belarus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Leningrad" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2326,10 +2352,12 @@
 
 		<attachment name="territoryAttachment" attachTo="Sakha" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Kirov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Northern Caucasus" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2338,6 +2366,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Timguska" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Rostov" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2346,19 +2375,23 @@
 
 		<attachment name="territoryAttachment" attachTo="Novgorod" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Evenkiyskiy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Stalingrad" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="2"/>
 		<option name="victoryCity" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Tula" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Amur" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2405,6 +2438,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Northern Manchuria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Korea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2529,50 +2563,62 @@
 
 		<attachment name="territoryAttachment" attachTo="Anhwe" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Kansu" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Western Sinkiang" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Kweichow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Tsinghai" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Chahar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Hopei" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Shansi" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Honan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 		
 		<attachment name="territoryAttachment" attachTo="Kiangsi" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Hunan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Eastern Sinkiang" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Kwangtung" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2582,10 +2628,12 @@
 
 		<attachment name="territoryAttachment" attachTo="Inner Mongolia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Yunnan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Himalayas" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2595,14 +2643,17 @@
 
 		<attachment name="territoryAttachment" attachTo="Szechwan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Northern Sinkiang" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Yukon Territory" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="British Columbia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2685,6 +2736,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Rhodesia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Ontario" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2733,6 +2785,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Central India" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Borneo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2883,10 +2936,12 @@
 		<option name="production" value="4"/>
 		<!--<option name="capital" value="none"/>-->
 		<option name="victoryCity" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="French Central Africa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Western Turkey" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2895,6 +2950,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Paraguay" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Argentina" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2903,10 +2959,12 @@
 
 		<attachment name="territoryAttachment" attachTo="Buyant-Uhaa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Olgiy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2945,7 +3003,7 @@
 		<option name="production" value="2"/>
 		</attachment>
 
-		<attachment name="territoryAttachment" attachTo="Portuguese" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+		<attachment name="territoryAttachment" attachTo="Portuguese Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
 		</attachment>
 
@@ -2953,7 +3011,7 @@
 		<option name="production" value="2"/>
 		</attachment>
 
-		<attachment name="territoryAttachment" attachTo="Colombia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+		<attachment name="territoryAttachment" attachTo="Columbia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
 		</attachment>
 
@@ -2963,10 +3021,12 @@
 
 		<attachment name="territoryAttachment" attachTo="Tsagaan Olom" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Afghanistan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="French Guiana" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -2979,6 +3039,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Tibet" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Portugal" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3007,6 +3068,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Central Mongolia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Dutch New Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3019,6 +3081,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Switzerland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Venezuela" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3035,6 +3098,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Ulaanbaatar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Celebes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3055,6 +3119,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Dzavhan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Northeast Persia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3067,6 +3132,7 @@
 
 		<attachment name="territoryAttachment" attachTo="Bolivia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
 		<option name="production" value="1"/>
+		<option name="territoryEffect" value="landLocked"/>
 		</attachment>
 
 		<attachment name="territoryAttachment" attachTo="Saudi Arabia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -3450,7 +3516,7 @@
 	<!--German Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3466,7 +3532,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3480,7 +3546,7 @@
 	<!--Russian Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3496,7 +3562,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3510,7 +3576,7 @@
 	<!--Japanese Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3526,7 +3592,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3540,7 +3606,7 @@
 	<!--American Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3556,7 +3622,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3570,7 +3636,7 @@
 	<!--Chinese Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3586,7 +3652,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3600,7 +3666,7 @@
 	<!--British Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3616,7 +3682,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3630,7 +3696,7 @@
 	<!--Italian Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3646,7 +3712,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
@@ -3660,7 +3726,7 @@
 	<!--French Objectives-->
 	<attachment name="objectiveAttachment_ControlSouthAmerica" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="3"/>
-		<option name="directOwnershipTerritories" value="Venezuela:Colombia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
+		<option name="directOwnershipTerritories" value="Venezuela:Columbia:Ecuador:Peru:Bolivia:Chile:Argentina:Uruguay:Paraguay:Brazil:French Guiana:British Guiana:Suriname" count="13"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlNorthAmerica" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
@@ -3676,7 +3742,7 @@
 	</attachment>
 	<attachment name="objectiveAttachment_ControlAfrica" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="6"/>
-		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
+		<option name="directOwnershipTerritories" value="Morocco:Rio de Oro:French West Africa:Portuguese Guinea:Sierra Leone:Liberia:Gold Coast:French Central Africa:Nigeria:French Equatorial Africa:Belgian Congo:Angola:South West Africa:Union of South Africa:French Madagascar:Mozambique:Rhodesia:Tanganyika Territory:Kenya:Italian Somaliland:British Somaliland:Ethiopia:Anglo-Egyptian Sudan:Egypt:Alexandria:Tobruk:Libya:Malta:Tunisia:Algeria" count="30"/>
 	</attachment>
 	<attachment name="objectiveAttachment_ControlEurope" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 		<option name="objectiveValue" value="14"/>
