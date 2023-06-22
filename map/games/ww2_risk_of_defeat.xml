@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.1.4"/>
+        <info name="WW2 Risk of Defeat" version="0.1.5"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -45,6 +45,7 @@
 	
         <map>
                 <!-- Territory Definitions -->
+				<!-- Land Territories (231 total) -->
                 <territory name="Western Germany"/>
                 <territory name="Holland Belgium"/>
                 <territory name="Poland"/>
@@ -223,81 +224,113 @@
                 <territory name="New Hebrides"/>
                 <territory name="France"/>
                 <territory name="French Central Africa"/>
-                <territory name="38 Sea Zone" water="true"/>
-                <territory name="99 Sea Zone" water="true"/>
                 <territory name="Western Turkey"/>
-                <territory name="84 Sea Zone" water="true"/>
                 <territory name="Paraguay"/>
+                <territory name="Argentina"/>
+                <territory name="Buyant-Uhaa"/>
+                <territory name="Olgiy"/>
+                <territory name="Finland"/>
+                <territory name="Sumatra"/>
+                <territory name="Northwest Persia"/>
+                <territory name="Sweden"/>
+                <territory name="Bulgaria"/>
+                <territory name="Southern Persia"/>
+                <territory name="Java"/>
+                <territory name="Northern Spain"/>
+                <territory name="Yugoslavia"/>
+                <territory name="Portuguese"/>
+                <territory name="Brazil"/>
+                <territory name="Colombia"/>
+                <territory name="Ecuador"/>
+                <territory name="Tsagaan Olom"/>
+                <territory name="Afghanistan"/>
+                <territory name="French Guiana"/>
+                <territory name="Angola"/>
+                <territory name="Tibet"/>
+                <territory name="Portugal"/>
+                <territory name="Greece"/>
+                <territory name="Iraq"/>
+                <territory name="Chile"/>
+                <territory name="Peru"/>
+                <territory name="Crete"/>
+                <territory name="Central Mongolia"/>
+                <territory name="Dutch New Guinea"/>
+                <territory name="Uruguay"/>
+                <territory name="Switzerland"/>
+                <territory name="Venezuela"/>
+                <territory name="Liberia"/>
+                <territory name="British Guiana"/>
+                <territory name="Ulaanbaatar"/>
+                <territory name="Celebes"/>
+                <territory name="Rio de Oro"/>
+                <territory name="Mozambique"/>
+                <territory name="Eastern Turkey"/>
+                <territory name="Dzavhan"/>
+                <territory name="Northeast Persia"/>
+                <territory name="Sierra Leone"/>
+                <territory name="Bolivia"/>
+                <territory name="Saudi Arabia"/>
+                <territory name="Eire"/>
+                <territory name="Baluchistan"/>
+                <territory name="Southern Spain"/>
+                <territory name="Pripet Marshes"/>
+                <territory name="Suriname"/>
+				
+				<!-- Sea Zones (132 Total)-->
+				
+				<territory name="1 Sea Zone" water="true"/>
+				<territory name="2 Sea Zone" water="true"/>
+				<territory name="3 Sea Zone" water="true"/>
+				<territory name="4 Sea Zone" water="true"/>
+				<territory name="5 Sea Zone" water="true"/>				
+                <territory name="84 Sea Zone" water="true"/>
                 <territory name="56 Sea Zone" water="true"/>
                 <territory name="100 Sea Zone" water="true"/>
                 <territory name="9 Sea Zone" water="true"/>
                 <territory name="13 Sea Zone" water="true"/>
                 <territory name="115 Sea Zone" water="true"/>
-                <territory name="Argentina"/>
                 <territory name="28 Sea Zone" water="true"/>
-                <territory name="Buyant-Uhaa"/>
                 <territory name="94 Sea Zone" water="true"/>
-                <territory name="Olgiy"/>
                 <territory name="46 Sea Zone" water="true"/>
                 <territory name="125 Sea Zone" water="true"/>
-                <territory name="Finland"/>
-                <territory name="Sumatra"/>
                 <territory name="23 Sea Zone" water="true"/>
-                <territory name="Northwest Persia"/>
                 <territory name="41 Sea Zone" water="true"/>
                 <territory name="64 Sea Zone" water="true"/>
                 <territory name="76 Sea Zone" water="true"/>
-                <territory name="110 Sea Zone" water="true"/>
-                <territory name="4 Sea Zone" water="true"/>
+                <territory name="110 Sea Zone" water="true"/>                
                 <territory name="15 Sea Zone" water="true"/>
                 <territory name="21 Sea Zone" water="true"/>
-                <territory name="Sweden"/>
                 <territory name="97 Sea Zone" water="true"/>
                 <territory name="92 Sea Zone" water="true"/>
                 <territory name="18 Sea Zone" water="true"/>
-                <territory name="Bulgaria"/>
                 <territory name="117 Sea Zone" water="true"/>
-                <territory name="Southern Persia"/>
-                <territory name="Java"/>
                 <territory name="51 Sea Zone" water="true"/>
                 <territory name="54 Sea Zone" water="true"/>
                 <territory name="48 Sea Zone" water="true"/>
                 <territory name="89 Sea Zone" water="true"/>
                 <territory name="123 Sea Zone" water="true"/>
-                <territory name="Northern Spain"/>
                 <territory name="43 Sea Zone" water="true"/>
                 <territory name="128 Sea Zone" water="true"/>
                 <territory name="26 Sea Zone" water="true"/>
-                <territory name="7 Sea Zone" water="true"/>
-                <territory name="2 Sea Zone" water="true"/>
+                <territory name="7 Sea Zone" water="true"/>                
                 <territory name="35 Sea Zone" water="true"/>
                 <territory name="44 Sea Zone" water="true"/>
                 <territory name="81 Sea Zone" water="true"/>
                 <territory name="53 Sea Zone" water="true"/>
                 <territory name="72 Sea Zone" water="true"/>
-                <territory name="Yugoslavia"/>
-                <territory name="Portuguese"/>
                 <territory name="103 Sea Zone" water="true"/>
                 <territory name="63 Sea Zone" water="true"/>
-                <territory name="Brazil"/>
-                <territory name="112 Sea Zone" water="true"/>
-                <territory name="Colombia"/>
-                <territory name="Ecuador"/>
-                <territory name="5 Sea Zone" water="true"/>
+                <territory name="112 Sea Zone" water="true"/>                
                 <territory name="16 Sea Zone" water="true"/>
                 <territory name="126 Sea Zone" water="true"/>
                 <territory name="69 Sea Zone" water="true"/>
                 <territory name="34 Sea Zone" water="true"/>
                 <territory name="82 Sea Zone" water="true"/>
                 <territory name="131 Sea Zone" water="true"/>
-                <territory name="Tsagaan Olom"/>
                 <territory name="119 Sea Zone" water="true"/>
-                <territory name="Afghanistan"/>
-                <territory name="French Guiana"/>
                 <territory name="107 Sea Zone" water="true"/>
                 <territory name="12 Sea Zone" water="true"/>
                 <territory name="113 Sea Zone" water="true"/>
-                <territory name="1 Sea Zone" water="true"/>
                 <territory name="88 Sea Zone" water="true"/>
                 <territory name="79 Sea Zone" water="true"/>
                 <territory name="129 Sea Zone" water="true"/>
@@ -311,19 +344,12 @@
                 <territory name="50 Sea Zone" water="true"/>
                 <territory name="91 Sea Zone" water="true"/>
                 <territory name="116 Sea Zone" water="true"/>
-                <territory name="Angola"/>
                 <territory name="124 Sea Zone" water="true"/>
                 <territory name="93 Sea Zone" water="true"/>
                 <territory name="29 Sea Zone" water="true"/>
-                <territory name="Tibet"/>
-                <territory name="Portugal"/>
                 <territory name="47 Sea Zone" water="true"/>
-                <territory name="Greece"/>
-                <territory name="3 Sea Zone" water="true"/>
                 <territory name="65 Sea Zone" water="true"/>
                 <territory name="60 Sea Zone" water="true"/>
-                <territory name="Iraq"/>
-                <territory name="Chile"/>
                 <territory name="106 Sea Zone" water="true"/>
                 <territory name="57 Sea Zone" water="true"/>
                 <territory name="83 Sea Zone" water="true"/>
@@ -331,79 +357,57 @@
                 <territory name="22 Sea Zone" water="true"/>
                 <territory name="98 Sea Zone" water="true"/>
                 <territory name="75 Sea Zone" water="true"/>
-                <territory name="Peru"/>
                 <territory name="67 Sea Zone" water="true"/>
-                <territory name="Crete"/>
-                <territory name="Central Mongolia"/>
                 <territory name="101 Sea Zone" water="true"/>
                 <territory name="70 Sea Zone" water="true"/>
                 <territory name="104 Sea Zone" water="true"/>
                 <territory name="40 Sea Zone" water="true"/>
                 <territory name="24 Sea Zone" water="true"/>
                 <territory name="39 Sea Zone" water="true"/>
-                <territory name="Dutch New Guinea"/>
                 <territory name="95 Sea Zone" water="true"/>
                 <territory name="45 Sea Zone" water="true"/>
-                <territory name="Uruguay"/>
-                <territory name="Switzerland"/>
                 <territory name="62 Sea Zone" water="true"/>
-                <territory name="Venezuela"/>
-                <territory name="Liberia"/>
                 <territory name="37 Sea Zone" water="true"/>
                 <territory name="78 Sea Zone" water="true"/>
-                <territory name="British Guiana"/>
                 <territory name="73 Sea Zone" water="true"/>
                 <territory name="32 Sea Zone" water="true"/>
-                <territory name="Ulaanbaatar"/>
                 <territory name="96 Sea Zone" water="true"/>
                 <territory name="130 Sea Zone" water="true"/>
-                <territory name="Celebes"/>
                 <territory name="127 Sea Zone" water="true"/>
                 <territory name="90 Sea Zone" water="true"/>
-                <territory name="Rio de Oro"/>
                 <territory name="6 Sea Zone" water="true"/>
                 <territory name="59 Sea Zone" water="true"/>
-                <territory name="Mozambique"/>
                 <territory name="118 Sea Zone" water="true"/>
                 <territory name="109 Sea Zone" water="true"/>
                 <territory name="10 Sea Zone" water="true"/>
                 <territory name="68 Sea Zone" water="true"/>
-                <territory name="Eastern Turkey"/>
                 <territory name="77 Sea Zone" water="true"/>
                 <territory name="121 Sea Zone" water="true"/>
                 <territory name="86 Sea Zone" water="true"/>
                 <territory name="120 Sea Zone" water="true"/>
                 <territory name="71 Sea Zone" water="true"/>
                 <territory name="30 Sea Zone" water="true"/>
-                <territory name="Dzavhan"/>
                 <territory name="108 Sea Zone" water="true"/>
                 <territory name="11 Sea Zone" water="true"/>
                 <territory name="17 Sea Zone" water="true"/>
                 <territory name="58 Sea Zone" water="true"/>
                 <territory name="87 Sea Zone" water="true"/>
                 <territory name="102 Sea Zone" water="true"/>
-                <territory name="Northeast Persia"/>
                 <territory name="61 Sea Zone" water="true"/>
                 <territory name="52 Sea Zone" water="true"/>
-                <territory name="Sierra Leone"/>
-                <territory name="Bolivia"/>
-                <territory name="Saudi Arabia"/>
-                <territory name="27 Sea Zone" water="true"/>
+				<territory name="27 Sea Zone" water="true"/>
                 <territory name="33 Sea Zone" water="true"/>
-                <territory name="Eire"/>
-                <territory name="Baluchistan"/>
-                <territory name="42 Sea Zone" water="true"/>
+				<territory name="42 Sea Zone" water="true"/>
                 <territory name="36 Sea Zone" water="true"/>
                 <territory name="80 Sea Zone" water="true"/>
                 <territory name="111 Sea Zone" water="true"/>
                 <territory name="74 Sea Zone" water="true"/>
                 <territory name="105 Sea Zone" water="true"/>
-                <territory name="Southern Spain"/>
-                <territory name="Pripet Marshes"/>
-                <territory name="14 Sea Zone" water="true"/>
+				<territory name="14 Sea Zone" water="true"/>
                 <territory name="20 Sea Zone" water="true"/>
                 <territory name="55 Sea Zone" water="true"/>
-                <territory name="Suriname"/>
+				<territory name="38 Sea Zone" water="true"/>
+                <territory name="99 Sea Zone" water="true"/>
                 <territory name="49 Sea Zone" water="true"/>
 				<territory name="132 Sea Zone" water="true"/>
 
@@ -1944,13 +1948,12 @@
 	
     <!-- Battle Ship -->
 	<attachment name="unitAttachment" attachTo="battleship" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-		<option name="movement" value="2"/>
+		<option name="movement" value="1"/>
 		<option name="isSea" value="true"/>
 		<option name="attack" value="4"/>
 		<option name="defense" value="4"/>
 		<option name="canBombard" value="true"/>
-		<option name="transportCapacity" value="3"/>
-		<option name="isCombatTransport" value="true"/>
+		<option name="isCombatTransport" value="false"/>
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="2"/>
 		<option name="requiresUnits" value="harbor:factory_major"/>
