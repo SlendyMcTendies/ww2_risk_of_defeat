@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.2.1"/>
+        <info name="WW2 Risk of Defeat" version="0.3.0"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -18,7 +18,262 @@
 		<element name="French"/>
     </variable>
 	
-	<variable name="Victory">			<!-- 227 territories -->
+	<variable name="AllUnits">
+		<element name="infantry"/>
+		<element name="artillery"/>
+		<element name="mech_infantry"/>
+		<element name="armor"/>
+		<element name="marine"/>
+		<element name="fighter"/>
+		<element name="tactical_bomber"/>
+		<element name="strategic_bomber"/>
+		<element name="transport"/>
+		<element name="submarine"/>
+		<element name="destroyer"/>
+		<element name="cruiser"/>
+		<element name="carrier"/>
+		<element name="battleship"/>
+		<element name="aaGun"/>
+		<element name="airfield"/>
+		<element name="harbor"/>
+		<element name="factory_minor"/>
+		<element name="factory_medium"/>
+		<element name="factory_major"/>
+	</variable>
+	
+	<variable name="Territory">			<!-- 229 territories -->
+		<element name="Western Germany"/>
+		<element name="Holland Belgium"/>
+		<element name="Poland"/>
+		<element name="Romania"/>
+		<element name="Slovakia Hungary"/>
+		<element name="Germany"/>
+		<element name="Austria"/>
+		<element name="Norway"/>
+		<element name="Denmark"/>
+		<element name="Komi"/>
+		<element name="Western Ukraine"/>
+		<element name="Kazakhstan"/>
+		<element name="Southern Caucasus"/>
+		<element name="Southern Belarus"/>
+		<element name="Nenetsia"/>
+		<element name="Siberia"/>
+		<element name="Bryansk"/>
+		<element name="Smolensk"/>
+		<element name="Yakut S.S.R."/>
+		<element name="Tambov"/>
+		<element name="Eastern Poland"/>
+		<element name="Soviet Far East"/>
+		<element name="Russia"/>
+		<element name="Karelia"/>
+		<element name="Kursk"/>
+		<element name="Uzbekistan"/>
+		<element name="Archangel"/>
+		<element name="Yaroslavl"/>
+		<element name="Bessarabia"/>
+		<element name="Samara"/>
+		<element name="Buryatia"/>
+		<element name="Ukraine"/>
+		<element name="Urals"/>
+		<element name="Vyborg"/>
+		<element name="Turkmenistan"/>
+		<element name="Gorky"/>
+		<element name="Baltic States"/>
+		<element name="Vologda"/>
+		<element name="Penza"/>
+		<element name="Saratov"/>
+		<element name="Yenisey"/>
+		<element name="Northern Belarus"/>
+		<element name="Leningrad"/>
+		<element name="Sakha"/>
+		<element name="Kirov"/>
+		<element name="Northern Caucasus"/>
+		<element name="Timguska"/>
+		<element name="Rostov"/>
+		<element name="Novgorod"/>
+		<element name="Evenkiyskiy"/>
+		<element name="Stalingrad"/>
+		<element name="Tula"/>
+		<element name="Amur"/>
+		<element name="Marshall Islands"/>
+		<element name="Hokkaido"/>
+		<element name="Kyushu"/>
+		<element name="Paulau"/>
+		<element name="Southern Manchuria"/>
+		<element name="Iwo Jima"/>
+		<element name="Okinawa"/>
+		<element name="Hainan"/>
+		<element name="Kiangsu"/>
+		<element name="Northern Manchuria"/>
+		<element name="Korea"/>
+		<element name="Marianas"/>
+		<element name="Siam"/>
+		<element name="Shantung"/>
+		<element name="Caroline Islands"/>
+		<element name="Jehol"/>
+		<element name="Formosa"/>
+		<element name="Japan"/>
+		<element name="Kwangsi"/>
+		<element name="Fukien"/>
+		<element name="Johnston Island"/>
+		<element name="Western United States"/>
+		<element name="Central America"/>
+		<element name="Davao"/>
+		<element name="Midway"/>
+		<element name="Eastern United States"/>
+		<element name="Alaska"/>
+		<element name="Manilla"/>
+		<element name="West Indies"/>
+		<element name="Central United States"/>
+		<element name="Aleutian Islands"/>
+		<element name="Line Islands"/>
+		<element name="Southeast Mexico"/>
+		<element name="Guam"/>
+		<element name="Wake Island"/>
+		<element name="Hawaiian Islands"/>
+		<element name="Mexico"/>
+		<element name="Greenland"/>
+		<element name="Anhwe"/>
+		<element name="Kansu"/>
+		<element name="Western Sinkiang"/>
+		<element name="Kweichow"/>
+		<element name="Tsinghai"/>
+		<element name="Chahar"/>
+		<element name="Hopei"/>
+		<element name="Shansi"/>
+		<element name="Honan"/>
+		<element name="Kiangsi"/>
+		<element name="Hunan"/>
+		<element name="Eastern Sinkiang"/>
+		<element name="Kwangtung"/>
+		<element name="Inner Mongolia"/>
+		<element name="Yunnan"/>
+		<element name="Szechwan"/>
+		<element name="Northern Sinkiang"/>
+		<element name="Yukon Territory"/>
+		<element name="British Columbia"/>
+		<element name="Kenya"/>
+		<element name="Gibraltar"/>
+		<element name="Cyprus"/>
+		<element name="Iceland"/>
+		<element name="Belgian Congo"/>
+		<element name="Alexandria"/>
+		<element name="Alberta Saskatchewan Manitoba"/>
+		<element name="Scotland"/>
+		<element name="Quebec"/>
+		<element name="Tanganyika Territory"/>
+		<element name="Trans-Jordan"/>
+		<element name="Anglo-Egyptian Sudan"/>
+		<element name="Union of South Africa"/>
+		<element name="Nigeria"/>
+		<element name="United Kingdom"/>
+		<element name="New Brunswick Nova Scotia"/>
+		<element name="South West Africa"/>
+		<element name="Gold Coast"/>
+		<element name="Rhodesia"/>
+		<element name="Ontario"/>
+		<element name="British Somaliland"/>
+		<element name="Egypt"/>
+		<element name="Malta"/>
+		<element name="Newfoundland Labrador"/>
+		<element name="Shan State"/>
+		<element name="Western India"/>
+		<element name="Malaya"/>
+		<element name="Eastern India"/>
+		<element name="Gilbert Islands"/>
+		<element name="Central India"/>
+		<element name="Borneo"/>
+		<element name="Fiji"/>
+		<element name="Samoa"/>
+		<element name="Ceylon"/>
+		<element name="Burma"/>
+		<element name="Northern Italy"/>
+		<element name="Libya"/>
+		<element name="Sicily"/>
+		<element name="Sardinia"/>
+		<element name="Southern Italy"/>
+		<element name="Tobruk"/>
+		<element name="Albania"/>
+		<element name="Ethiopia"/>
+		<element name="Italian Somaliland"/>
+		<element name="Solomon Islands"/>
+		<element name="Western Australia"/>
+		<element name="South Australia"/>
+		<element name="New Guinea"/>
+		<element name="New South Wales"/>
+		<element name="Victoria"/>
+		<element name="New Britain"/>
+		<element name="Northern Australia"/>
+		<element name="Queensland"/>
+		<element name="New Zealand"/>
+		<element name="Syria"/>
+		<element name="Southern France"/>
+		<element name="Tunisia"/>
+		<element name="Algeria"/>
+		<element name="French Madagascar"/>
+		<element name="Morocco"/>
+		<element name="French West Africa"/>
+		<element name="French Equatorial Africa"/>
+		<element name="Normandy Bordeaux"/>
+		<element name="French Indo China"/>
+		<element name="New Hebrides"/>
+		<element name="France"/>
+		<element name="French Central Africa"/>
+		<element name="Western Turkey"/>
+		<element name="Paraguay"/>
+		<element name="Argentina"/>
+		<element name="Buyant-Uhaa"/>
+		<element name="Olgiy"/>
+		<element name="Finland"/>
+		<element name="Sumatra"/>
+		<element name="Northwest Persia"/>
+		<element name="Sweden"/>
+		<element name="Bulgaria"/>
+		<element name="Southern Persia"/>
+		<element name="Java"/>
+		<element name="Northern Spain"/>
+		<element name="Yugoslavia"/>
+		<element name="Portuguese Guinea"/>
+		<element name="Brazil"/>
+		<element name="Columbia"/>
+		<element name="Ecuador"/>
+		<element name="Tsagaan Olom"/>
+		<element name="Afghanistan"/>
+		<element name="French Guiana"/>
+		<element name="Angola"/>
+		<element name="Tibet"/>
+		<element name="Portugal"/>
+		<element name="Greece"/>
+		<element name="Iraq"/>
+		<element name="Chile"/>
+		<element name="Peru"/>
+		<element name="Crete"/>
+		<element name="Central Mongolia"/>
+		<element name="Dutch New Guinea"/>
+		<element name="Uruguay"/>
+		<element name="Switzerland"/>
+		<element name="Venezuela"/>
+		<element name="Liberia"/>
+		<element name="British Guiana"/>
+		<element name="Ulaanbaatar"/>
+		<element name="Celebes"/>
+		<element name="Rio de Oro"/>
+		<element name="Mozambique"/>
+		<element name="Eastern Turkey"/>
+		<element name="Dzavhan"/>
+		<element name="Northeast Persia"/>
+		<element name="Sierra Leone"/>
+		<element name="Bolivia"/>
+		<element name="Saudi Arabia"/>
+		<element name="Eire"/>
+		<element name="Baluchistan"/>
+		<element name="Southern Spain"/>
+		<element name="Suriname"/>
+		<element name="Pripet Marshes"/>
+		<element name="Himalayas"/>
+	</variable>
+	
+	<variable name="VictoryTerritory">			<!-- 227 territories -->
 		<element name="Western Germany"/>
 		<element name="Holland Belgium"/>
 		<element name="Poland"/>
@@ -247,6 +502,142 @@
 		<element name="Southern Spain"/>
 		<element name="Suriname"/>
 	</variable>
+	
+	<variable name="SeaZones">
+		<element name="1 Sea Zone"/>
+		<element name="2 Sea Zone"/>
+		<element name="3 Sea Zone"/>
+		<element name="4 Sea Zone"/>
+		<element name="5 Sea Zone"/>				
+		<element name="84 Sea Zone"/>
+		<element name="56 Sea Zone"/>
+		<element name="100 Sea Zone"/>
+		<element name="9 Sea Zone"/>
+		<element name="13 Sea Zone"/>
+		<element name="115 Sea Zone"/>
+		<element name="28 Sea Zone"/>
+		<element name="94 Sea Zone"/>
+		<element name="46 Sea Zone"/>
+		<element name="125 Sea Zone"/>
+		<element name="23 Sea Zone"/>
+		<element name="41 Sea Zone"/>
+		<element name="64 Sea Zone"/>
+		<element name="76 Sea Zone"/>
+		<element name="110 Sea Zone"/>                
+		<element name="15 Sea Zone"/>
+		<element name="21 Sea Zone"/>
+		<element name="97 Sea Zone"/>
+		<element name="92 Sea Zone"/>
+		<element name="18 Sea Zone"/>
+		<element name="117 Sea Zone"/>
+		<element name="51 Sea Zone"/>
+		<element name="54 Sea Zone"/>
+		<element name="48 Sea Zone"/>
+		<element name="89 Sea Zone"/>
+		<element name="123 Sea Zone"/>
+		<element name="43 Sea Zone"/>
+		<element name="128 Sea Zone"/>
+		<element name="26 Sea Zone"/>
+		<element name="7 Sea Zone"/>                
+		<element name="35 Sea Zone"/>
+		<element name="44 Sea Zone"/>
+		<element name="81 Sea Zone"/>
+		<element name="53 Sea Zone"/>
+		<element name="72 Sea Zone"/>
+		<element name="103 Sea Zone"/>
+		<element name="63 Sea Zone"/>
+		<element name="112 Sea Zone"/>                
+		<element name="16 Sea Zone"/>
+		<element name="126 Sea Zone"/>
+		<element name="69 Sea Zone"/>
+		<element name="34 Sea Zone"/>
+		<element name="82 Sea Zone"/>
+		<element name="131 Sea Zone"/>
+		<element name="119 Sea Zone"/>
+		<element name="107 Sea Zone"/>
+		<element name="12 Sea Zone"/>
+		<element name="113 Sea Zone"/>
+		<element name="88 Sea Zone"/>
+		<element name="79 Sea Zone"/>
+		<element name="129 Sea Zone"/>
+		<element name="31 Sea Zone"/>
+		<element name="8 Sea Zone"/>
+		<element name="19 Sea Zone"/>
+		<element name="25 Sea Zone"/>
+		<element name="66 Sea Zone"/>
+		<element name="122 Sea Zone"/>
+		<element name="85 Sea Zone"/>
+		<element name="50 Sea Zone"/>
+		<element name="91 Sea Zone"/>
+		<element name="116 Sea Zone"/>
+		<element name="124 Sea Zone"/>
+		<element name="93 Sea Zone"/>
+		<element name="29 Sea Zone"/>
+		<element name="47 Sea Zone"/>
+		<element name="65 Sea Zone"/>
+		<element name="60 Sea Zone"/>
+		<element name="106 Sea Zone"/>
+		<element name="57 Sea Zone"/>
+		<element name="83 Sea Zone"/>
+		<element name="114 Sea Zone"/>
+		<element name="22 Sea Zone"/>
+		<element name="98 Sea Zone"/>
+		<element name="75 Sea Zone"/>
+		<element name="67 Sea Zone"/>
+		<element name="101 Sea Zone"/>
+		<element name="70 Sea Zone"/>
+		<element name="104 Sea Zone"/>
+		<element name="40 Sea Zone"/>
+		<element name="24 Sea Zone"/>
+		<element name="39 Sea Zone"/>
+		<element name="95 Sea Zone"/>
+		<element name="45 Sea Zone"/>
+		<element name="62 Sea Zone"/>
+		<element name="37 Sea Zone"/>
+		<element name="78 Sea Zone"/>
+		<element name="73 Sea Zone"/>
+		<element name="32 Sea Zone"/>
+		<element name="96 Sea Zone"/>
+		<element name="130 Sea Zone"/>
+		<element name="127 Sea Zone"/>
+		<element name="90 Sea Zone"/>
+		<element name="6 Sea Zone"/>
+		<element name="59 Sea Zone"/>
+		<element name="118 Sea Zone"/>
+		<element name="109 Sea Zone"/>
+		<element name="10 Sea Zone"/>
+		<element name="68 Sea Zone"/>
+		<element name="77 Sea Zone"/>
+		<element name="121 Sea Zone"/>
+		<element name="86 Sea Zone"/>
+		<element name="120 Sea Zone"/>
+		<element name="71 Sea Zone"/>
+		<element name="30 Sea Zone"/>
+		<element name="108 Sea Zone"/>
+		<element name="11 Sea Zone"/>
+		<element name="17 Sea Zone"/>
+		<element name="58 Sea Zone"/>
+		<element name="87 Sea Zone"/>
+		<element name="102 Sea Zone"/>
+		<element name="61 Sea Zone"/>
+		<element name="52 Sea Zone"/>
+		<element name="27 Sea Zone"/>
+		<element name="33 Sea Zone"/>
+		<element name="42 Sea Zone"/>
+		<element name="36 Sea Zone"/>
+		<element name="80 Sea Zone"/>
+		<element name="111 Sea Zone"/>
+		<element name="74 Sea Zone"/>
+		<element name="105 Sea Zone"/>
+		<element name="14 Sea Zone"/>
+		<element name="20 Sea Zone"/>
+		<element name="55 Sea Zone"/>
+		<element name="38 Sea Zone"/>
+		<element name="99 Sea Zone"/>
+		<element name="49 Sea Zone"/>
+		<element name="132 Sea Zone"/>
+	</variable>
+	
 	</variableList>
 	
         <map>
@@ -1623,7 +2014,7 @@
 		<unit name="marine"/>
 		<unit name="fighter"/>
 		<unit name="tactical_bomber"/>
-		<unit name="bomber"/>
+		<unit name="strategic_bomber"/>
 		<unit name="transport"/>
 		<unit name="submarine"/>
 		<unit name="destroyer"/>
@@ -1634,13 +2025,25 @@
 		<unit name="airfield"/>
 		<unit name="harbor"/>
 		<unit name="factory_minor"/>
-		<unit name="factory_upgrade"/>
+		<unit name="factory_medium"/>
 		<unit name="factory_major"/>
 	</unitList>
  <relationshipTypes>
+	<!-- Mutual Relationships -->
     <relationshipType name="Allied"/>
     <relationshipType name="War"/>
     <relationshipType name="Neutrality"/>
+	<relationshipType name="X"/> <!-- Defeat -->
+	
+	<!-- Specific Realtionships -->
+	<relationshipType name="German Surrender"/>
+	<relationshipType name="Russian Surrender"/>
+	<relationshipType name="Japanese Surrender"/>
+	<relationshipType name="American Surrender"/>
+	<relationshipType name="Chinese Surrender"/>
+	<relationshipType name="British Surrender"/>
+	<relationshipType name="Italian Surrender"/>
+	<relationshipType name="French Surrender"/>
   </relationshipTypes>
 
 <gamePlay>
@@ -1653,7 +2056,6 @@
     <delegate name="battle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Combat"/>
     <delegate name="move" javaClass="games.strategy.triplea.delegate.MoveDelegate" display="Combat Move"/>
     <delegate name="place" javaClass="games.strategy.triplea.delegate.PlaceDelegate" display="Place Units"/>
-    <!--<delegate name="placeNoAirCheck" javaClass="games.strategy.triplea.delegate.NoAirCheckPlaceDelegate" display="Place Units"/>-->
     <delegate name="purchase" javaClass="games.strategy.triplea.delegate.PurchaseDelegate" display="Purchase Units"/>
     <delegate name="endTurn" javaClass="games.strategy.triplea.delegate.EndTurnDelegate" display="Turn Complete"/>
     <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
@@ -1807,9 +2209,9 @@
       <cost resource="PUs" quantity="10"/>
       <result resourceOrUnit="tactical_bomber" quantity="1"/>
     </productionRule>
-    <productionRule name="buyBomber">
+    <productionRule name="buyStrategicBomber">
       <cost resource="PUs" quantity="12"/>
-      <result resourceOrUnit="bomber" quantity="1"/>
+      <result resourceOrUnit="strategic_bomber" quantity="1"/>
     </productionRule>
     <productionRule name="buyTransport">
       <cost resource="PUs" quantity="6"/>
@@ -1843,9 +2245,9 @@
       <cost resource="PUs" quantity="60"/>
       <result resourceOrUnit="factory_major" quantity="1"/>
     </productionRule>
-    <productionRule name="buyFactory_Upgrade">
+    <productionRule name="buyFactory_Medium">
       <cost resource="PUs" quantity="20"/>
-      <result resourceOrUnit="factory_upgrade" quantity="1"/>
+      <result resourceOrUnit="factory_medium" quantity="1"/>
     </productionRule>
     <productionRule name="buyAirfield">
       <cost resource="PUs" quantity="40"/>
@@ -1873,9 +2275,9 @@
       <result resourceOrUnit="factory_major" quantity="1"/>
     </repairRule>
     
-    <repairRule name="repairFactory_Upgrade">
+    <repairRule name="repairFactory_Medium">
       <cost resource="PUs" quantity="2"/>
-      <result resourceOrUnit="factory_upgrade" quantity="1"/>
+      <result resourceOrUnit="factory_medium" quantity="1"/>
     </repairRule>
     
     <repairRule name="repairAirfield">
@@ -1891,7 +2293,7 @@
     <repairFrontier name="repair">
       <repairRules name="repairFactory_Minor"/>
       <repairRules name="repairFactory_Major"/>
-      <repairRules name="repairFactory_Upgrade"/>
+      <repairRules name="repairFactory_Medium"/>
       <repairRules name="repairAirfield"/>
       <repairRules name="repairHarbor"/>
     </repairFrontier>
@@ -1904,7 +2306,7 @@
       <frontierRules name="buyMarine"/>
       <frontierRules name="buyFighter"/>
       <frontierRules name="buyTactical_Bomber"/>
-      <frontierRules name="buyBomber"/>
+      <frontierRules name="buyStrategicBomber"/>
       <frontierRules name="buyTransport"/>
       <frontierRules name="buySubmarine"/>
       <frontierRules name="buyCarrier"/>
@@ -1913,7 +2315,7 @@
       <frontierRules name="buyBattleship"/>
       <frontierRules name="buyAAGun"/>
       <frontierRules name="buyFactory_Minor"/>
-      <frontierRules name="buyFactory_Upgrade"/>
+      <frontierRules name="buyFactory_Medium"/>
       <frontierRules name="buyFactory_Major"/>
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbor"/>
@@ -1988,7 +2390,9 @@
 	<attachment foreach="$AllPlayers$" name="playerAttachment" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
 		<option name="retainCapitalNumber" value="0"/>
 		<option name="retainCapitalProduceNumber" value="0"/>
+		<option name="giveUnitControlInAllTerritories" value="false"/>
 	</attachment>
+
  <!--  relationshipType Attachments -->
     <attachment name="relationshipTypeAttachment" attachTo="War" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="war"/>
@@ -1998,12 +2402,43 @@
     </attachment>
     <attachment name="relationshipTypeAttachment" attachTo="Neutrality" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
       <option name="archeType" value="neutral"/>
-      <option name="rocketsCanFlyOver" value="false"/>
 	  <option name="canMoveLandUnitsOverOwnedLand" value="true"/>
       <option name="canMoveAirUnitsOverOwnedLand" value="true"/>
       <option name="canLandAirUnitsOnOwnedLand" value="true"/>
 	  <option name="canMoveIntoDuringCombatMove" value="false"/>
     </attachment>
+	
+	<!-- Defeat -->
+	<attachment name="relationshipTypeAttachment" attachTo="X" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	
+	<!-- Surrenders -->
+	<attachment name="relationshipTypeAttachment" attachTo="German Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="Russian Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="Japanese Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="American Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="Chinese Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="British Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="Italian Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	<attachment name="relationshipTypeAttachment" attachTo="French Surrender" javaClass="games.strategy.triplea.attachments.RelationshipTypeAttachment" type="relationship">
+      <option name="archeType" value="neutral"/>
+    </attachment>
+	
     <!-- Players Tech -->
     <attachment name="techAttachment" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
 	  <option name="paratroopers" value="true"/>
@@ -2041,9 +2476,9 @@
       <option name="defense" value="2"/>
       <option name="isAirTransportable" value="true"/>
 	  <option name="requiresUnits" value="factory_minor"/>
-	  <option name="requiresUnits" value="factory_upgrade"/>
+	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
-      <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+      <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Mech Infantry -->
@@ -2053,10 +2488,10 @@
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
 	  <option name="requiresUnits" value="factory_minor"/>
-	  <option name="requiresUnits" value="factory_upgrade"/>
+	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="receivesAbilityWhenWith" value="canBlitz:armor"/>
-      <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+      <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
     
 	<!-- Artillery -->
@@ -2066,9 +2501,9 @@
       <option name="attack" value="2"/>
       <option name="defense" value="2"/>
 	  <option name="requiresUnits" value="factory_minor"/>
-	  <option name="requiresUnits" value="factory_upgrade"/>
+	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
-      <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+      <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
     
 	<!-- Armor -->
@@ -2080,9 +2515,9 @@
       <option name="defense" value="3"/>
       <option name="isLandTransport" value="true"/>
 	  <option name="requiresUnits" value="factory_minor"/>
-	  <option name="requiresUnits" value="factory_upgrade"/>
+	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
-      <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+      <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Marine -->
@@ -2095,8 +2530,9 @@
       <option name="isAirTransportable" value="false"/> <!--true-->
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="requiresUnits" value="factory_minor"/>
-	  <option name="requiresUnits" value="factory_upgrade"/>
+	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Unit Attachments -->
@@ -2116,10 +2552,11 @@
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
       <option name="blockade" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Bomber -->
-    <attachment name="unitAttachment" attachTo="bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+    <attachment name="unitAttachment" attachTo="strategic_bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="5"/>
       <option name="isAir" value="true"/>
       <option name="attack" value="3"/>
@@ -2131,10 +2568,10 @@
       <option name="bombingBonus" value="1"/>
 	  <option name="airDefense" value="1"/>
       <option name="airAttack" value="0"/>
-	  <option name="bombingTargets" value="factory_minor:factory_upgrade:factory_major:airfield:harbor"/>
-	  <option name="requiresUnits" value="airfield:factory_minor"/>
-	  <option name="requiresUnits" value="airfield:factory_upgrade"/>
+	  <option name="bombingTargets" value="factory_minor:factory_medium:factory_major:airfield:harbor"/>
+	  <option name="requiresUnits" value="airfield:factory_medium"/>
 	  <option name="requiresUnits" value="airfield:factory_major"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Tactical Bomber -->
@@ -2154,6 +2591,7 @@
       <option name="bombingBonus" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
       <option name="bombingTargets" value="airfield:harbor"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Transport -->
@@ -2164,6 +2602,7 @@
 		<option name="attack" value="0"/>
 		<option name="defense" value="0"/>
 		<option name="requiresUnits" value="harbor"/>
+		<option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Battle Ship -->
@@ -2177,8 +2616,8 @@
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="2"/>
 		<option name="requiresUnits" value="harbor:factory_major"/>
-		<option name="requiresUnits" value="harbor:factory_upgrade"/>
-		<option name="requiresUnits" value="harbor:factory_minor"/>
+		<option name="requiresUnits" value="harbor:factory_medium"/>
+		<option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	</attachment>
 	
     <!-- Cruiser -->
@@ -2193,6 +2632,7 @@
       <option name="hitPoints" value="1"/>
       <option name="blockade" value="1"/>
 	  <option name="requiresUnits" value="harbor"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Destroyer -->
@@ -2204,6 +2644,7 @@
       <option name="isDestroyer" value="true"/>
       <option name="blockade" value="1"/>
 	  <option name="requiresUnits" value="harbor"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 
      <!-- Carrier -->
@@ -2217,12 +2658,12 @@
 		<option name="maxScrambleCount" value="2"/>
 		<option name="hitPoints" value="2"/>
 		<option name="blockade" value="0"/>
-		<option name="requiresUnits" value="harbor:factory_major"/>
-		<option name="requiresUnits" value="harbor:factory_upgrade"/>
-		<option name="requiresUnits" value="harbor:factory_minor"/>
+		<option name="requiresUnits" value="harbor:airfield:factory_major"/>
+		<option name="requiresUnits" value="harbor:airfield:factory_medium"/>
 		<!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
 		<option name="whenCombatDamaged" value="unitsMayNotLandOnCarrier" count="1:2"/>
 		<option name="whenCombatDamaged" value="unitsMayNotLeaveAlliedCarrier" count="1:2"/>
+		<option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 
 
@@ -2239,8 +2680,9 @@
 	  <option name="canBeMovedThroughByEnemies" value="false"/>
 	  <option name="canEvade" value="true"/>
 	  <option name="isFirstStrike" value="true"/>
-	  <option name="canNotTarget" value="fighter:bomber:tactical_bomber"/>
-	  <option name="canNotBeTargetedBy" value="fighter:bomber:tactical_bomber"/>
+	  <option name="canNotTarget" value="fighter:strategic_bomber:tactical_bomber"/>
+	  <option name="canNotBeTargetedBy" value="fighter:strategic_bomber:tactical_bomber"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Factory Minor -->
@@ -2257,6 +2699,7 @@
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="10"/>
 	  <option name="whenCapturedSustainsDamage" value="5"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
     
 	<!-- Factory Major -->
@@ -2270,12 +2713,15 @@
       <option name="canProduceXUnits" value="15"/>
       <option name="maxDamage" value="30"/>
 	  <option name="maxOperationalDamage" value="15"/>
+	  <option name="requiresUnits" value="factory_medium"/>
+      <option name="consumesUnits" value="1:factory_medium"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
 	  <option name="whenCapturedSustainsDamage" value="5"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
     
-	<!-- Factory Upgrade -->
-    <attachment name="unitAttachment" attachTo="factory_upgrade" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+	<!-- Factory Medium -->
+    <attachment name="unitAttachment" attachTo="factory_medium" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isFactory" value="true"/>
 	  <option name="isInfrastructure" value="true"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
@@ -2288,6 +2734,7 @@
 	  <option name="requiresUnits" value="factory_minor"/>
       <option name="consumesUnits" value="1:factory_minor"/>
 	  <option name="whenCapturedSustainsDamage" value="5"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Airfield -->
@@ -2308,12 +2755,13 @@
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
       <option name="movement" value="0"/>
       <option name="givesMovement" value="1:fighter"/>
-      <option name="givesMovement" value="1:bomber"/>
+      <option name="givesMovement" value="1:strategic_bomber"/>
       <option name="givesMovement" value="1:tactical_bomber"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="isRocket" value="false"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
 	  <option name="whenCapturedSustainsDamage" value="5"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- Harbor -->
@@ -2340,6 +2788,7 @@
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
 	  <option name="maxBuiltPerPlayer" value="5"/>
 	  <option name="whenCapturedSustainsDamage" value="5"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
     <!-- AA Gun -->
@@ -2356,12 +2805,13 @@
 	  <option name="requiresUnits" value="airfield"/>
 	  <option name="requiresUnits" value="factory_major"/>
 	  <option name="requiresUnits" value="factory_minor"/>
-	  <option name="requiresUnits" value="factory_upgrade"/>
+	  <option name="requiresUnits" value="factory_medium"/>
+	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
     </attachment>
 	
 	<!--Territory Effects-->
 	<attachment name="territoryEffectAttachment" attachTo="roughTerrain" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
-		<option name="unitsNotAllowed" value="mech_infantry:artillery:armor:aaGun:airfield:factory_minor:factory_upgrade:factory_major:harbor"/>
+		<option name="unitsNotAllowed" value="mech_infantry:artillery:armor:aaGun:airfield:factory_minor:factory_medium:factory_major:harbor"/>
 	</attachment>
 	
 	<attachment name="territoryEffectAttachment" attachTo="landLocked" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
@@ -2369,7 +2819,7 @@
 	</attachment>
 	
 	<attachment name="territoryEffectAttachment" attachTo="notAllowedToUse" javaClass="games.strategy.triplea.attachments.TerritoryEffectAttachment" type="territoryEffect">
-		<option name="unitsNotAllowed" value="infantry:mech_infantry:artillery:armor:marine:fighter:tactical_bomber:bomber:transport:submarine:carrier:destroyer:cruiser:battleship:aaGun:factory_minor:factory_upgrade:factory_major:airfield:harbor"/>
+		<option name="unitsNotAllowed" value="infantry:mech_infantry:artillery:armor:marine:fighter:tactical_bomber:strategic_bomber:transport:submarine:carrier:destroyer:cruiser:battleship:aaGun:factory_minor:factory_medium:factory_major:airfield:harbor"/>
 	</attachment>
 	
 	<!--Territory Values-->
@@ -3835,62 +4285,62 @@
  <attachment name="canalAttachmentSuez" attachTo="100 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Suez Canal"/>
       <option name="landTerritories" value="Egypt:Trans-Jordan"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
     <attachment name="canalAttachmentSuez" attachTo="83 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Suez Canal"/>
       <option name="landTerritories" value="Egypt:Trans-Jordan"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
   <attachment name="canalAttachmentDanish" attachTo="115 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Danish Straits"/>
       <option name="landTerritories" value="Denmark:Norway"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
     <attachment name="canalAttachmentDanish" attachTo="116 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Danish Straits"/>
       <option name="landTerritories" value="Denmark:Norway"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentGibraltar" attachTo="93 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Strait of Gibraltar"/>
       <option name="landTerritories" value="Gibraltar:Morocco"/>
-      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
     <attachment name="canalAttachmentGibraltar" attachTo="94 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Strait of Gibraltar"/>
       <option name="landTerritories" value="Gibraltar:Morocco"/>
-      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
  <attachment name="canalAttachmentPanama" attachTo="91 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Panama Canal"/>
       <option name="landTerritories" value="Central America"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
     <attachment name="canalAttachmentPanama" attachTo="66 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Panama Canal"/>
       <option name="landTerritories" value="Central America"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 <attachment name="canalAttachmentTurkish" attachTo="101 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Turkish Straits"/>
       <option name="landTerritories" value="Western Turkey"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
     <attachment name="canalAttachmentTurkish" attachTo="102 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Turkish Straits"/>
       <option name="landTerritories" value="Western Turkey"/>
-	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+	  <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 <attachment name="canalAttachmentTsugaru" attachTo="7 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Tsugaru Strait"/>
       <option name="landTerritories" value="Japan:Hokkaido"/>
-      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
     <attachment name="canalAttachmentTsugaru" attachTo="6 Sea Zone" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="Tsugaru Strait"/>
       <option name="landTerritories" value="Japan:Hokkaido"/>
-      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="submarine:fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	
@@ -3900,108 +4350,108 @@
 	<attachment name="canalAttachmentAlexandriaAES" attachTo="Alexandria" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_1"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentAlexandriaAES" attachTo="Anglo-Egyptian Sudan" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_1"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Tobruk to AES -->
 	<attachment name="canalAttachmentTobrukAES" attachTo="Tobruk" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_2"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentTobrukAES" attachTo="Anglo-Egyptian Sudan" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_2"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Tobruk to FEA -->
 	<attachment name="canalAttachmentTobrukFEA" attachTo="Tobruk" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_3"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentTobrukFEA" attachTo="French Equatorial Africa" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_3"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Tobruk to FCA -->
 	<attachment name="canalAttachmentTobrukFCA" attachTo="Tobruk" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_4"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentTobrukFCA" attachTo="French Central Africa" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_4"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Libya to FCA -->
 	<attachment name="canalAttachmentLibyaFCA" attachTo="Libya" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_5"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentLibyaFCA" attachTo="French Central Africa" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_5"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Libya to Algeria -->
 	<attachment name="canalAttachmentLibyaAlgeria" attachTo="Libya" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_6"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentLibyaAlgeria" attachTo="Algeria" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_6"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Algeria to FCA -->
 	<attachment name="canalAttachmentAlgeriaFCA" attachTo="Algeria" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_7"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentAlgeriaFCA" attachTo="French Central Africa" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_7"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Algeria to FWA -->
 	<attachment name="canalAttachmentAlgeriaFWA" attachTo="Algeria" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_8"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentAlgeriaFWA" attachTo="French West Africa" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_8"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	
 	<!-- Rio de Oro to FWA -->
 	<attachment name="canalAttachmentRioDeOroFWA" attachTo="Rio de Oro" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_9"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 	<attachment name="canalAttachmentRioDeOroFWA" attachTo="French West Africa" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
       <option name="canalName" value="AirCanal_9"/>
       <option name="landTerritories" value="AirPath"/>
-      <option name="excludedUnits" value="fighter:tactical_bomber:bomber"/>
+      <option name="excludedUnits" value="fighter:tactical_bomber:strategic_bomber"/>
     </attachment>
 
 <!--Support Attachments-->
@@ -4384,6 +4834,29 @@
 	<option name="relationship" value="Germans:French:Allied"/>
 </attachment>
 
+<!-- German Surrender Conditions -->
+<attachment name="conditionAttachment_Germans_SurrenderTo_Russians" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:Russians:German Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Germans_SurrenderTo_Japanese" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:Japanese:German Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Germans_SurrenderTo_Americans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:Americans:German Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Germans_SurrenderTo_Chinese" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:Chinese:German Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Germans_SurrenderTo_British" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:British:German Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Germans_SurrenderTo_Italians" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:Italians:German Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Germans_SurrenderTo_French" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Germans:French:German Surrender"/>
+</attachment>
+
 <!--Russian Conditions-->
 <!--War-->
 <attachment name="conditionAttachment_Russian_Japanese_War" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4460,6 +4933,29 @@
 	<option name="relationship" value="Russians:French:Allied"/>
 </attachment>
 
+<!-- Russian Surrender Conditions -->
+<attachment name="conditionAttachment_Russians_SurrenderTo_Germans" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:Germans:Russian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Russians_SurrenderTo_Japanese" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:Japanese:Russian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Russians_SurrenderTo_Americans" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:Americans:Russian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Russians_SurrenderTo_Chinese" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:Chinese:Russian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Russians_SurrenderTo_British" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:British:Russian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Russians_SurrenderTo_Italians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:Italians:Russian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Russians_SurrenderTo_French" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Russians:French:Russian Surrender"/>
+</attachment>
+
 <!--Japanese Conditions-->
 <!--War-->
 <attachment name="conditionAttachment_Japanese_American_War" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4524,6 +5020,29 @@
 	<option name="relationship" value="Japanese:French:Allied"/>
 </attachment>
 
+<!-- Japanese Surrender Conditions -->
+<attachment name="conditionAttachment_Japanese_SurrenderTo_Germans" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:Germans:Japanese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Japanese_SurrenderTo_Russians" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:Russians:Japanese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Japanese_SurrenderTo_Americans" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:Americans:Japanese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Japanese_SurrenderTo_Chinese" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:Chinese:Japanese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Japanese_SurrenderTo_British" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:British:Japanese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Japanese_SurrenderTo_Italians" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:Italians:Japanese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Japanese_SurrenderTo_French" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Japanese:French:Japanese Surrender"/>
+</attachment>
+
 <!--American Conditions-->
 <!--War-->
 <attachment name="conditionAttachment_American_Chinese_War" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4576,6 +5095,29 @@
 	<option name="relationship" value="Americans:French:Allied"/>
 </attachment>
 
+<!-- American Surrender Conditions -->
+<attachment name="conditionAttachment_Americans_SurrenderTo_Germans" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:Germans:American Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Americans_SurrenderTo_Russians" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:Russians:American Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Americans_SurrenderTo_Japanese" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:Japanese:American Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Americans_SurrenderTo_Chinese" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:Chinese:American Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Americans_SurrenderTo_British" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:British:American Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Americans_SurrenderTo_Italians" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:Italians:American Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Americans_SurrenderTo_French" attachTo="Americans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Americans:French:American Surrender"/>
+</attachment>
+
 <!--Chinese Conditions-->
 <!--War-->
 <attachment name="conditionAttachment_Chinese_British_War" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4616,6 +5158,29 @@
 	<option name="relationship" value="Chinese:French:Allied"/>
 </attachment>
 
+<!-- Chinese Surrender Conditions -->
+<attachment name="conditionAttachment_Chinese_SurrenderTo_Germans" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:Germans:Chinese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Chinese_SurrenderTo_Russians" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:Russians:Chinese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Chinese_SurrenderTo_Japanese" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:Japanese:Chinese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Chinese_SurrenderTo_Americans" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:Americans:Chinese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Chinese_SurrenderTo_British" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:British:Chinese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Chinese_SurrenderTo_Italians" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:Italians:Chinese Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Chinese_SurrenderTo_French" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Chinese:French:Chinese Surrender"/>
+</attachment>
+
 <!--British Conditions-->
 <!--War-->
 <attachment name="conditionAttachment_British_Italian_War" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4644,6 +5209,29 @@
 	<option name="relationship" value="British:French:Allied"/>
 </attachment>
 
+<!-- British Surrender Conditions -->
+<attachment name="conditionAttachment_British_SurrenderTo_Germans" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:Germans:British Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_British_SurrenderTo_Russians" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:Russians:British Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_British_SurrenderTo_Japanese" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:Japanese:British Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_British_SurrenderTo_Americans" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:Americans:British Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_British_SurrenderTo_Chinese" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:Chinese:British Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_British_SurrenderTo_Italians" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:Italians:British Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_British_SurrenderTo_French" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="British:French:British Surrender"/>
+</attachment>
+
 <!--Italian Conditions-->
 <!--War-->
 <attachment name="conditionAttachment_Italian_French_War" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4658,6 +5246,53 @@
 <!--Alliance-->
 <attachment name="conditionAttachment_Italian_French_Alliance" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
 	<option name="relationship" value="Italians:French:Allied"/>
+</attachment>
+
+<!-- Italian Surrender Conditions -->
+<attachment name="conditionAttachment_Italians_SurrenderTo_Germans" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:Germans:Italian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Italians_SurrenderTo_Russians" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:Russians:Italian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Italians_SurrenderTo_Japanese" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:Japanese:Italian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Italians_SurrenderTo_Americans" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:Americans:Italian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Italians_SurrenderTo_Chinese" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:Chinese:Italian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Italians_SurrenderTo_British" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:British:Italian Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_Italians_SurrenderTo_French" attachTo="Italians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="Italians:French:Italian Surrender"/>
+</attachment>
+
+<!-- Only French Surrender Conditions are necessary because all other relationships are defined and can be utilized -->
+<!-- French Surrender Conditions -->
+<attachment name="conditionAttachment_French_SurrenderTo_Germans" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:Germans:French Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_French_SurrenderTo_Russians" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:Russians:French Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_French_SurrenderTo_Japanese" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:Japanese:French Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_French_SurrenderTo_Americans" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:Americans:French Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_French_SurrenderTo_Chinese" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:Chinese:French Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_French_SurrenderTo_British" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:British:French Surrender"/>
+</attachment>
+<attachment name="conditionAttachment_French_SurrenderTo_Italians" attachTo="French" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="relationship" value="French:Italians:French Surrender"/>
 </attachment>
 
 <!--Political Actions Definitions-->
@@ -4713,13 +5348,103 @@
 	<option name="costResources" value="1:Influence"/>
 </attachment>
 
-<!--Neutrality Switches-->
+<!--Neutrality and Surrender Switches-->
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_Russians" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Russian_War"/>
+	<option name="relationshipChange" value="Germans:Russians:German Surrender"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="text" value="Germans_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_Japanese" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Japanese_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Germans:Japanese:German Surrender"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="text" value="Germans_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_Americans" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_American_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Germans:Americans:German Surrender"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="text" value="Germans_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_Chinese" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Germans:Chinese:German Surrender"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="text" value="Germans_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_British" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_British_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Germans:British:German Surrender"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="text" value="Germans_SurrenderTo_British"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_Italians" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Germans:Italians:German Surrender"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="text" value="Germans_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Germans_SurrenderTo_French" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_French_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Germans:French:German Surrender"/>
+	<option name="text" value="Germans_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="Germans"/>
+</attachment>
+
 <attachment name="politicalActionAttachment_German_Russian_Ceasefire" attachTo="Germans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Russian_War"/>
 	<option name="relationshipChange" value="Germans:Russians:Neutrality"/>
 	<option name="text" value="German_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -4941,7 +5666,98 @@
 	<option name="costResources" value="1:Influence"/>
 </attachment>
 
-<!--Neutral Switches (Ceasefire)-->
+<!--Ceasefire and Surrender Switches-->
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_Germans" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Russian_War"/>
+	<option name="relationshipChange" value="Germans:Russians:Russian Surrender"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="text" value="Russians_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_Japanese" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_Japanese_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:Russian Surrender"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="text" value="Russians_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_Americans" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_American_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Americans:Russian Surrender"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="text" value="Russians_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_Chinese" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:Russian Surrender"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="text" value="Russians_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_British" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_British_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:British:Russian Surrender"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="text" value="Russians_SurrenderTo_British"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_Italians" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Russians:Italians:Russian Surrender"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="text" value="Russians_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Russians_SurrenderTo_French" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_French_War"/>
+	<option name="relationshipChange" value="Germans:Russians:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Russians:French:Russian Surrender"/>
+	<option name="text" value="Russians_SurrenderTo_French"/>
+	<option name="actionAccept" value="Russians"/>
+</attachment>
+
 <attachment name="politicalActionAttachment_Russian_German_Ceasefire" attachTo="Russians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_Russian_War"/>
 	<option name="relationshipChange" value="Russians:Germans:Neutrality"/>
@@ -5168,6 +5984,98 @@
 	<option name="relationshipChange" value="Japanese:French:War"/>
 	<option name="text" value="Japanese_French_War"/>
 	<option name="costResources" value="1:Influence"/>
+</attachment>
+
+<!--Surrender Switches-->
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_Germans" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Japanese_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:Japanese Surrender"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="text" value="Japanese_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="Japanese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_Russians" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_Japanese_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:Japanese Surrender"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="text" value="Japanese_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="Japanese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_Americans" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_American_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:Japanese Surrender"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="text" value="Japanese_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="Japanese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_Chinese" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:Japanese Surrender"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="text" value="Japanese_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="Japanese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_British" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_British_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:British:Japanese Surrender"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="text" value="Japanese_SurrenderTo_British"/>
+	<option name="actionAccept" value="Japanese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_Italians" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:Japanese Surrender"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="text" value="Japanese_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="Japanese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Japanese_SurrenderTo_French" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_French_War"/>
+	<option name="relationshipChange" value="Germans:Japanese:X"/>
+	<option name="relationshipChange" value="Russians:Japanese:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:French:Japanese Surrender"/>
+	<option name="text" value="Japanese_SurrenderTo_French"/>
+	<option name="actionAccept" value="Japanese"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -5399,6 +6307,98 @@
 	<option name="costResources" value="1:Influence"/>
 </attachment>
 
+<!--Surrender Switches-->
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_Germans" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_American_War"/>
+	<option name="relationshipChange" value="Germans:Americans:American Surrender"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="text" value="Americans_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_Russians" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_American_War"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Americans:American Surrender"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="text" value="Americans_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_Japanese" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_American_War"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:American Surrender"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="text" value="Americans_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_Chinese" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:American Surrender"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="text" value="Americans_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_British" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_British_War"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:British:American Surrender"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="text" value="Americans_SurrenderTo_British"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_Italians" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Americans:Italians:American Surrender"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="text" value="Americans_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Americans_SurrenderTo_French" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_French_War"/>
+	<option name="relationshipChange" value="Germans:Americans:X"/>
+	<option name="relationshipChange" value="Russians:Americans:X"/>
+	<option name="relationshipChange" value="Japanese:Americans:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Americans:French:American Surrender"/>
+	<option name="text" value="Americans_SurrenderTo_French"/>
+	<option name="actionAccept" value="Americans"/>
+</attachment>
+
 <!--Neutral Switches (Ceasefire)-->
 <attachment name="politicalActionAttachment_American_German_Ceasefire" attachTo="Americans" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_American_War"/>
@@ -5626,6 +6626,98 @@
 	<option name="relationshipChange" value="Chinese:French:War"/>
 	<option name="text" value="Chinese_French_War"/>
 	<option name="costResources" value="1:Influence"/>
+</attachment>
+
+<!--Surrender Switches-->
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_Germans" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:Chinese Surrender"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="text" value="Chinese_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="Chinese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_Russians" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:Chinese Surrender"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="text" value="Chinese_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="Chinese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_Japanese" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:Chinese Surrender"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="text" value="Chinese_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="Chinese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_Americans" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_Chinese_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:Chinese Surrender"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="text" value="Chinese_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="Chinese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_British" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Chinese_British_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Chinese:British:Chinese Surrender"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="text" value="Chinese_SurrenderTo_British"/>
+	<option name="actionAccept" value="Chinese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_Italians" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Chinese_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:Chinese Surrender"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="text" value="Chinese_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="Chinese"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Chinese_SurrenderTo_French" attachTo="Chinese" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Chinese_French_War"/>
+	<option name="relationshipChange" value="Germans:Chinese:X"/>
+	<option name="relationshipChange" value="Russians:Chinese:X"/>
+	<option name="relationshipChange" value="Japanese:Chinese:X"/>
+	<option name="relationshipChange" value="Americans:Chinese:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:French:Chinese Surrender"/>
+	<option name="text" value="Chinese_SurrenderTo_French"/>
+	<option name="actionAccept" value="Chinese"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -5857,6 +6949,98 @@
 	<option name="costResources" value="1:Influence"/>
 </attachment>
 
+<!--Surrender Switches-->
+<attachment name="politicalActionAttachment_British_SurrenderTo_Germans" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_British_War"/>
+	<option name="relationshipChange" value="Germans:British:British Surrender"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="text" value="British_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_British_SurrenderTo_Russians" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_British_War"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Russians:British:British Surrender"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="text" value="British_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_British_SurrenderTo_Japanese" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_British_War"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Japanese:British:British Surrender"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="text" value="British_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_British_SurrenderTo_Americans" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_British_War"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Americans:British:British Surrender"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="text" value="British_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_British_SurrenderTo_Chinese" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Chinese_British_War"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Chinese:British:British Surrender"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="text" value="British_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_British_SurrenderTo_Italians" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_British_Italian_War"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="British:Italians:British Surrender"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="text" value="British_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_British_SurrenderTo_French" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_British_French_War"/>
+	<option name="relationshipChange" value="Germans:British:X"/>
+	<option name="relationshipChange" value="Russians:British:X"/>
+	<option name="relationshipChange" value="Japanese:British:X"/>
+	<option name="relationshipChange" value="Americans:British:X"/>
+	<option name="relationshipChange" value="Chinese:British:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="British:French:British Surrender"/>
+	<option name="text" value="British_SurrenderTo_French"/>
+	<option name="actionAccept" value="British"/>
+</attachment>
+
 <!--Neutral Switches (Ceasefire)-->
 <attachment name="politicalActionAttachment_British_German_Ceasefire" attachTo="British" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_British_War"/>
@@ -6084,6 +7268,98 @@
 	<option name="relationshipChange" value="Italians:French:War"/>
 	<option name="text" value="Italian_French_War"/>
 	<option name="costResources" value="1:Influence"/>
+</attachment>
+
+<!--Surrender Switches-->
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_Germans" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Italians:Italian Surrender"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="Italians_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="Italians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_Russians" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Russians:Italians:Italian Surrender"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="Italians_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="Italians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_Japanese" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:Italian Surrender"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="Italians_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="Italians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_Americans" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Americans:Italians:Italian Surrender"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="Italians_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="Italians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_Chinese" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Chinese_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:Italian Surrender"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="Italians_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="Italians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_British" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_British_Italian_War"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="British:Italians:Italian Surrender"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="Italians_SurrenderTo_British"/>
+	<option name="actionAccept" value="Italians"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_Italians_SurrenderTo_French" attachTo="Italians" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Italian_French_War"/>
+	<option name="relationshipChange" value="Germans:Italians:X"/>
+	<option name="relationshipChange" value="Russians:Italians:X"/>
+	<option name="relationshipChange" value="Japanese:Italians:X"/>
+	<option name="relationshipChange" value="Americans:Italians:X"/>
+	<option name="relationshipChange" value="Chinese:Italians:X"/>
+	<option name="relationshipChange" value="British:Italians:X"/>
+	<option name="relationshipChange" value="Italians:French:Italian Surrender"/>
+	<option name="text" value="Italians_SurrenderTo_French"/>
+	<option name="actionAccept" value="Italians"/>
 </attachment>
 
 <!--Neutral Switches (Ceasefire)-->
@@ -6315,13 +7591,104 @@
 	<option name="costResources" value="1:Influence"/>
 </attachment>
 
+<!--Surrender Switches-->
+<attachment name="politicalActionAttachment_French_SurrenderTo_Germans" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_German_French_War"/>
+	<option name="relationshipChange" value="Germans:French:French Surrender"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="French_SurrenderTo_Germans"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_French_SurrenderTo_Russians" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Russian_French_War"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="relationshipChange" value="Russians:French:French Surrender"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="French_SurrenderTo_Russians"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_French_SurrenderTo_Japanese" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Japanese_French_War"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="relationshipChange" value="Japanese:French:French Surrender"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="French_SurrenderTo_Japanese"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_French_SurrenderTo_Americans" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_American_French_War"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="relationshipChange" value="Americans:French:French Surrender"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="French_SurrenderTo_Americans"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_French_SurrenderTo_Chinese" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Chinese_French_War"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="relationshipChange" value="Chinese:French:French Surrender"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="relationshipChange" value="Italians:French:X"/>
+	<option name="text" value="French_SurrenderTo_Chinese"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_French_SurrenderTo_British" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_British_French_War"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="relationshipChange" value="British:French:French Surrender"/>
+	<option name="relationshipChange" value="French:French:X"/>
+	<option name="text" value="French_SurrenderTo_British"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
+<attachment name="politicalActionAttachment_French_SurrenderTo_Italians" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Italian_French_War"/>
+	<option name="relationshipChange" value="Germans:French:X"/>
+	<option name="relationshipChange" value="Russians:French:X"/>
+	<option name="relationshipChange" value="Japanese:French:X"/>
+	<option name="relationshipChange" value="Americans:French:X"/>
+	<option name="relationshipChange" value="Chinese:French:X"/>
+	<option name="relationshipChange" value="British:French:X"/>
+	<option name="relationshipChange" value="Italians:French:French Surrender"/>
+	<option name="text" value="French_SurrenderTo_Italians"/>
+	<option name="actionAccept" value="French"/>
+</attachment>
+
 <!--Neutrality Switches (Ceasefire)-->
 <attachment name="politicalActionAttachment_French_German_Ceasefire" attachTo="French" javaClass="games.strategy.triplea.attachments.PoliticalActionAttachment" type="player">
 	<option name="conditions" value="conditionAttachment_German_French_War"/>
 	<option name="relationshipChange" value="French:Germans:Neutrality"/>
 	<option name="text" value="French_German_Ceasefire"/>
 	<option name="actionAccept" value="Germans"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6330,7 +7697,6 @@
 	<option name="relationshipChange" value="French:Russians:Neutrality"/>
 	<option name="text" value="French_Russian_Ceasefire"/>
 	<option name="actionAccept" value="Russians"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6339,7 +7705,6 @@
 	<option name="relationshipChange" value="French:Japanese:Neutrality"/>
 	<option name="text" value="French_Japanese_Ceasefire"/>
 	<option name="actionAccept" value="Japanese"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6348,7 +7713,6 @@
 	<option name="relationshipChange" value="French:Americans:Neutrality"/>
 	<option name="text" value="French_American_Ceasefire"/>
 	<option name="actionAccept" value="Americans"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6357,7 +7721,6 @@
 	<option name="relationshipChange" value="French:Chinese:Neutrality"/>
 	<option name="text" value="French_Chinese_Ceasefire"/>
 	<option name="actionAccept" value="Chinese"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6366,7 +7729,6 @@
 	<option name="relationshipChange" value="French:British:Neutrality"/>
 	<option name="text" value="French_British_Ceasefire"/>
 	<option name="actionAccept" value="British"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6375,7 +7737,6 @@
 	<option name="relationshipChange" value="French:Italians:Neutrality"/>
 	<option name="text" value="French_Italian_Ceasefire"/>
 	<option name="actionAccept" value="Italians"/>
-	
 	<option name="costResources" value="2:Influence"/>
 </attachment>
 
@@ -6435,7 +7796,6 @@
 	<option name="relationshipChange" value="French:Germans:Allied"/>
 	<option name="text" value="French_German_Alliance"/>
 	<option name="actionAccept" value="Germans"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6444,7 +7804,6 @@
 	<option name="relationshipChange" value="French:Russians:Allied"/>
 	<option name="text" value="French_Russian_Alliance"/>
 	<option name="actionAccept" value="Russians"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6453,7 +7812,6 @@
 	<option name="relationshipChange" value="French:Japanese:Allied"/>
 	<option name="text" value="French_Japanese_Alliance"/>
 	<option name="actionAccept" value="Japanese"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6462,7 +7820,6 @@
 	<option name="relationshipChange" value="French:Americans:Allied"/>
 	<option name="text" value="French_American_Alliance"/>
 	<option name="actionAccept" value="Americans"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6471,7 +7828,6 @@
 	<option name="relationshipChange" value="French:Chinese:Allied"/>
 	<option name="text" value="French_Chinese_Alliance"/>
 	<option name="actionAccept" value="Chinese"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6480,7 +7836,6 @@
 	<option name="relationshipChange" value="French:British:Allied"/>
 	<option name="text" value="French_British_Alliance"/>
 	<option name="actionAccept" value="British"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6489,7 +7844,6 @@
 	<option name="relationshipChange" value="French:Italians:Allied"/>
 	<option name="text" value="French_Italian_Alliance"/>
 	<option name="actionAccept" value="Italians"/>
-	
 	<option name="costResources" value="3:Influence"/>
 </attachment>
 
@@ -6654,10 +8008,82 @@
 	<option name="resourceCount" value="-3"/> <!--Remove 3 Influence (value cannot be negative, therefore it will always become 0)-->
 </attachment>
 
+<!-- Surrender Ownership Transfer System -->
+
+<attachment foreach="$AllPlayers$" name="conditionAttachment_AlwaysTrue" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+	<option name="rounds" value="0-+"/>
+</attachment>
+
+<!--
+<attachment foreach="$Territory$" name="triggerAttachment_Germans_SurrenderTo_Russians_@Territory@_RemoveUnits" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="when" value="after:germansPlace"/>
+	<option name="removeUnits" value="@Territory@:all"/>
+	<option name="changeOwnership" value="@Territory@:Germans:Russians:true"/>
+</attachment>
+-->
+<attachment foreach="$Territory$" name="triggerAttachment_Germans_SurrenderTo_Russians_@Territory@_ChangeOwnership" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="when" value="after:germansPolitics"/>
+	<option name="changeOwnership" value="@Territory@:Germans:Russians:false"/>
+</attachment>
+
+<!-- change military units canBeGivenByTerritoryTo-->
+<attachment name="triggerAttachment_canBeGivenByTerritoryTo_GermansToRussians" attachTo="Germans" javaClass="TriggerAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+	<option name="unitType" value="$AllUnits$"/>
+	<option name="unitProperty" value="canBeGivenByTerritoryTo" count="Russians"/>
+	<option name="when" value="after:germansPolitics"/>
+</attachment>
+
+<!-- Give by territories Germans to Russians -->
+<!-- Should not need to reset this because Germans are out of the Game -->
+<attachment name="triggerAttachment_GiveByTerritory_GermansToRussians" attachTo="Germans" javaClass="TriggerAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="playerAttachmentName" value="PlayerAttachment" count="playerAttachment"/>
+	<option name="players" value="Germans"/>
+	<option name="playerProperty" value="giveUnitControlInAllTerritories" count="true"/>
+	<option name="when" value="before:germansEndTurn"/>
+</attachment>
+
+<!-- reset military units canBeGivenByTerritoryTo -->
+<attachment name="triggerAttachment_Reset_canBeGivenByTerritoryTo" attachTo="Germans" javaClass="TriggerAttachment" type="player">
+	<option name="conditions" value="conditionAttachment_AlwaysTrue"/>
+	<option name="unitAttachmentName" value="UnitAttachment" count="unitAttachment"/>
+	<option name="unitType" value="$AllUnits$"/>
+	<option name="unitProperty" value="canBeGivenByTerritoryTo" count="-reset-"/>
+	<option name="when" value="after:germansEndTurn"/>
+</attachment>
+
+<!--
+<attachment name="triggerAttachment_Germans_SurrenderTo_Russians_UnitControl" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="when" value="after:germansPolitics"/>
+	<option name="players" value="Russians"/>
+	<option name="playerProperty" value="giveUnitControlInAllTerritories" count="true"/>
+</attachment>
+-->
+
+<!--
+<attachment foreach="$SeaZones$" name="triggerAttachment_Germans_SurrenderTo_Russians_@SeaZones@_NavyControl" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="when" value="after:germansPolitics"/>
+	<option name="changeUnitOwners" value="Russians"/>
+</attachment>
+-->
+
+<attachment name="triggerAttachment_Germans_SurrenderTo_Russians_EconomyDrain" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+	<option name="trigger" value="conditionAttachment_Germans_SurrenderTo_Russians"/>
+	<option name="when" value="before:germansEndTurn"/>
+	<option name="resource" value="PUs"/>
+	<option name="resourceCount" value="-1000000"/>
+</attachment>
+
 <!--VICTORY SYSTEM-->
 <!-- Notify All Players that a Player is near Victory -->
     <attachment foreach="$AllPlayers$" name="conditionAttachmentNotifySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="directOwnershipTerritories" value="$Victory$" count="114"/>
+		<option name="directOwnershipTerritories" value="$VictoryTerritory$" count="114"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentNotifySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 		<option name="trigger" value="conditionAttachmentNotifySolo@AllPlayers@"/>
@@ -6667,7 +8093,7 @@
 
 <!--Notify All Players that an Alliance is near Victory-->
 	<attachment foreach="$AllPlayers$" name="conditionAttachmentNotifyAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="alliedOwnershipTerritories" value="$Victory$" count="152"/>
+		<option name="alliedOwnershipTerritories" value="$VictoryTerritory$" count="152"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentNotifyAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 		<option name="trigger" value="conditionAttachmentNotifyAllied@AllPlayers@"/>
@@ -6678,7 +8104,7 @@
 <!-- Trigger Victory for a Player or Alliance -->
 <!--Solo Victory Trigger-->
     <attachment foreach="$AllPlayers$" name="conditionAttachmentVictorySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="directOwnershipTerritories" value="$Victory$" count="152"/>
+		<option name="directOwnershipTerritories" value="$VictoryTerritory$" count="152"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentVictorySolo@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 		<option name="trigger" value="conditionAttachmentVictorySolo@AllPlayers@"/>
@@ -6688,7 +8114,7 @@
 	
 <!--Allied Victory Trigger-->
 	<attachment foreach="$AllPlayers$" name="conditionAttachmentVictoryAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-		<option name="alliedOwnershipTerritories" value="$Victory$" count="227"/>
+		<option name="alliedOwnershipTerritories" value="$VictoryTerritory$" count="227"/>
 	</attachment>
     <attachment foreach="$AllPlayers$" name="triggerAttachmentVictoryAllied@AllPlayers@" attachTo="@AllPlayers@" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 		<option name="trigger" value="conditionAttachmentVictoryAllied@AllPlayers@"/>
