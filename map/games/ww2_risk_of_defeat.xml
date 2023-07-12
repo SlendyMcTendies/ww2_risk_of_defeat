@@ -39,6 +39,7 @@
 		<element name="factory_minor"/>
 		<element name="factory_medium"/>
 		<element name="factory_major"/>
+		<element name="bunker"/>
 	</variable>
 	
 	<variable name="Territory">			<!-- 229 territories -->
@@ -2557,7 +2558,6 @@
       <option name="movement" value="1"/>
       <option name="transportCost" value="3"/>
       <option name="isInfantry" value="true"/>
-	  <!--<option name="isParatroop" value="true"/>--> <!--Not sure if this does anything-->
       <option name="attack" value="1"/>
       <option name="defense" value="2"/>
       <option name="isAirTransportable" value="true"/>
@@ -2565,6 +2565,7 @@
 	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
 	
     <!-- Mech Infantry -->
@@ -2578,6 +2579,7 @@
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="receivesAbilityWhenWith" value="canBlitz:armor"/>
       <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
     
 	<!-- Artillery -->
@@ -2590,6 +2592,7 @@
 	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
     
 	<!-- Armor -->
@@ -2599,11 +2602,11 @@
       <option name="canBlitz" value="true"/>
       <option name="attack" value="3"/>
       <option name="defense" value="3"/>
-      <option name="isLandTransport" value="true"/>
 	  <option name="requiresUnits" value="factory_minor"/>
 	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
       <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
 	
     <!-- Marine -->
@@ -2619,6 +2622,7 @@
 	  <option name="requiresUnits" value="factory_medium"/>
 	  <option name="requiresUnits" value="factory_major"/>
 	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
 	
     <!-- Fighter -->
@@ -2638,6 +2642,7 @@
       <option name="blockade" value="0"/>
 	  <option name="requiresUnits" value="airfield"/>
 	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
 	
     <!-- Strategic Bomber -->
@@ -2657,6 +2662,7 @@
 	  <option name="requiresUnits" value="airfield:factory_medium"/>
 	  <option name="requiresUnits" value="airfield:factory_major"/>
 	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
 	
     <!-- Tactical Bomber -->
@@ -2677,6 +2683,7 @@
 	  <option name="requiresUnits" value="airfield"/>
       <option name="bombingTargets" value="airfield:harbor:aaGun"/>
 	  <option name="canBeGivenByTerritoryTo" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
+	  <option name="canNotTarget" value="bunker"/>
     </attachment>
 	
     <!-- Transport -->
@@ -2772,8 +2779,9 @@
 	
     <!-- Factory Minor -->
     <attachment name="unitAttachment" attachTo="factory_minor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isFactory" value="true"/>
 	  <option name="isInfrastructure" value="true"/>
+	  <option name="isConstruction" value="true"/>
+	  <option name="constructionType" value="factory_structure"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="1"/>
@@ -2790,8 +2798,9 @@
     
 	<!-- Factory Major -->
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isFactory" value="true"/>
 	  <option name="isInfrastructure" value="true"/>
+	  <option name="isConstruction" value="true"/>
+	  <option name="constructionType" value="major_factory_structure"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="3"/>
@@ -2809,8 +2818,9 @@
     
 	<!-- Factory Medium -->
     <attachment name="unitAttachment" attachTo="factory_medium" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="isFactory" value="true"/>
 	  <option name="isInfrastructure" value="true"/>
+	  <option name="isConstruction" value="true"/>
+	  <option name="constructionType" value="medium_factory_structure"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
@@ -2828,7 +2838,6 @@
     <!-- Airfield -->
     <attachment name="unitAttachment" attachTo="airfield" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
-	  <option name="isFactory" value="true"/>
 	  <option name="canProduceXUnits" value="10"/>
       <option name="canBeDamaged" value="true"/>
       <option name="maxDamage" value="20"/>
@@ -2856,7 +2865,6 @@
     <!-- Harbor -->
     <attachment name="unitAttachment" attachTo="harbor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
-	  <option name="isFactory" value="true"/>
 	  <option name="canProduceXUnits" value="10"/>
       <option name="canBeDamaged" value="true"/>
       <option name="maxDamage" value="20"/>
@@ -2905,8 +2913,6 @@
 	<!-- Bunker -->
     <attachment name="unitAttachment" attachTo="bunker" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="isInfrastructure" value="true"/>
-	  <option name="isFactory" value="false"/>
-	  <option name="canProduceXUnits" value="0"/>
       <option name="canBeDamaged" value="true"/>
       <option name="maxDamage" value="40"/>
       <option name="maxOperationalDamage" value="30"/>
@@ -2914,6 +2920,8 @@
       <option name="constructionType" value="bunker_structure"/>
       <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
       <option name="maxConstructionsPerTypePerTerr" value="1"/>
+	  <option name="defense" value="0"/>
+	  <option name="canNotTarget" value="$AllUnits$"/>
       <option name="movement" value="0"/>
 	  <option name="maxAAattacks" value="0"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians:Japanese:Chinese"/>
@@ -4615,7 +4623,6 @@
       <option name="side" value="defence"/>
       <option name="dice" value="strength"/>
       <option name="bonus" value="1"/>
-      <option name="number" value="1"/>
       <option name="bonusType" value="bunker_bonus"/>
       <option name="players" value="Germans:Russians:Americans:British:French:Italians:Japanese:Chinese"/>
     </attachment>
@@ -15223,7 +15230,7 @@ FRENCH TOTAL SURRENDER
     <property name="Limit Rocket Damage Per Turn" value="false" editable="false">
       <boolean/>
     </property>
-    <property name="maxFactoriesPerTerritory" value="1" editable="false">
+    <property name="maxFactoriesPerTerritory" value="2" editable="false">
       <number min="1" max="4"/>
     </property>
     <property name="Placement Restricted By Factory" value="true" editable="false">
