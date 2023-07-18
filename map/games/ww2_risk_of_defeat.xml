@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-        <info name="WW2 Risk of Defeat" version="0.3.0"/>
+        <info name="WW2 Risk of Defeat" version="0.3.1"/>
         <loader javaClass="games.strategy.triplea.TripleA"/>
 	<triplea minimumVersion="1.8"/>
   	<diceSides value="6"/>
@@ -2780,6 +2780,7 @@
     <!-- Factory Minor -->
     <attachment name="unitAttachment" attachTo="factory_minor" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
 	  <option name="isInfrastructure" value="true"/>
+	  <option name="isFactory" value="true"/>
 	  <option name="isConstruction" value="true"/>
 	  <option name="constructionType" value="factory_structure"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
@@ -2799,6 +2800,7 @@
 	<!-- Factory Major -->
     <attachment name="unitAttachment" attachTo="factory_major" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
 	  <option name="isInfrastructure" value="true"/>
+	  <option name="isFactory" value="true"/>
 	  <option name="isConstruction" value="true"/>
 	  <option name="constructionType" value="major_factory_structure"/>
 	  <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
@@ -2819,6 +2821,7 @@
 	<!-- Factory Medium -->
     <attachment name="unitAttachment" attachTo="factory_medium" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
 	  <option name="isInfrastructure" value="true"/>
+	  <option name="isFactory" value="true"/>
 	  <option name="isConstruction" value="true"/>
 	  <option name="constructionType" value="medium_factory_structure"/>
 	  <option name="canOnlyBePlacedInTerritoryValuedAtX" value="2"/>
